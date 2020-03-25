@@ -1,6 +1,7 @@
 {
   "name": "material-kit-react",
   "version": "1.8.0",
+  "homepage": "",
   "description": "Material Kit React. Coded by Creative Tim",
   "private": true,
   "main": "dist/index.js",
@@ -26,6 +27,7 @@
     "@babel/plugin-proposal-class-properties": "7.8.3",
     "@babel/preset-env": "7.9.0",
     "@babel/preset-react": "7.9.1",
+    "concurrently": "^5.1.0",
     "eslint-config-prettier": "6.10.1",
     "eslint-plugin-prettier": "3.1.2",
     "eslint-plugin-react": "7.19.0",
@@ -40,6 +42,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build && gulp licenses",
+    "publish": "concurrently \"npm run build\" \"gh-pages -d build\"",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "lint:check": "eslint . --ext=js,jsx;  exit 0",
