@@ -34,7 +34,7 @@ export default function HeaderLinks(props) {
           >
             <i className={classes.socialIcons + " fab fa-github"} />
             <Hidden mdUp>
-              {'GitHub'}
+              {'My GitHub'}
             </Hidden>
           </Button>
         </Tooltip>
@@ -54,7 +54,7 @@ export default function HeaderLinks(props) {
           >
             <i className={classes.socialIcons + " fab fa-linkedin"} />
             <Hidden mdUp>
-              {'Linkedin'}
+              {'My Linkedin'}
             </Hidden>
           </Button>
         </Tooltip>
