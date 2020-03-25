@@ -1,7 +1,7 @@
 {
   "name": "material-kit-react",
   "version": "1.8.0",
-  "homepage": "http://nppersonal.github.io/PersonalWeb/",
+  "homepage": "https://nppersonal.github.io/PersonalWeb/",
   "description": "Material Kit React. Coded by Creative Tim",
   "private": true,
   "main": "dist/index.js",

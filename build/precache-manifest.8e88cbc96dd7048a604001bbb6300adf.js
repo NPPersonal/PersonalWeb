@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "bda1222e4bc3b64c7f3cb37c853d3c78",
+    "revision": "e81bd932b0b9a719d582abb2acf32902",
     "url": "/PersonalWeb/index.html"
   },
   {
-    "revision": "270f41433da86965aa30",
+    "revision": "7f1b133774370f84777c",
     "url": "/PersonalWeb/static/css/main.7747be13.chunk.css"
   },
   {
-    "revision": "eeb04eb3d234650f6c4e",
-    "url": "/PersonalWeb/static/js/2.11c76a06.chunk.js"
+    "revision": "e4183c076ef0346620f4",
+    "url": "/PersonalWeb/static/js/2.5bdc49dc.chunk.js"
   },
   {
-    "revision": "16d53488b817f86afb8533c0c939c7fb",
-    "url": "/PersonalWeb/static/js/2.11c76a06.chunk.js.LICENSE.txt"
+    "revision": "d09ac505fec0e9130a1d5b85fb3fa6dc",
+    "url": "/PersonalWeb/static/js/2.5bdc49dc.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "270f41433da86965aa30",
-    "url": "/PersonalWeb/static/js/main.8f3d827a.chunk.js"
+    "revision": "7f1b133774370f84777c",
+    "url": "/PersonalWeb/static/js/main.747d76be.chunk.js"
   },
   {
     "revision": "4604440a8edf9017cf3e",
@@ -26,22 +26,6 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "f1d71f777331fd7e3de116edf4ee3b67",
     "url": "/PersonalWeb/static/media/avatar.f1d71f77.jpg"
-  },
-  {
-    "revision": "e52419719dd0c4c8b172136f0b625008",
-    "url": "/PersonalWeb/static/media/bg.e5241971.jpg"
-  },
-  {
-    "revision": "843781834b1db2908f08d921c6460c81",
-    "url": "/PersonalWeb/static/media/bg2.84378183.jpg"
-  },
-  {
-    "revision": "e76de24b6d8ab5e920bb4d49241ad15f",
-    "url": "/PersonalWeb/static/media/bg3.e76de24b.jpg"
-  },
-  {
-    "revision": "199e9ec14308832c6a8a49bd96c1fde6",
-    "url": "/PersonalWeb/static/media/bg4.199e9ec1.jpg"
   },
   {
     "revision": "b08234a2b7e8e4fb2e3c4e713252021c",
@@ -72,10 +56,6 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/PersonalWeb/static/media/landing-bg.df8fd3ef.jpg"
   },
   {
-    "revision": "08e18cb904f0f3c6dd9e3d4ed72e0eca",
-    "url": "/PersonalWeb/static/media/landing.08e18cb9.jpg"
-  },
-  {
     "revision": "4575c40bfb8dec6713d2da51c4c4066e",
     "url": "/PersonalWeb/static/media/mariya-georgieva.4575c40b.jpg"
   },
@@ -86,14 +66,6 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "baf6b40a654b078399e93e3d9cb6d455",
     "url": "/PersonalWeb/static/media/profile-bg.baf6b40a.jpg"
-  },
-  {
-    "revision": "090a5aabae505f67ee0981613d02ee05",
-    "url": "/PersonalWeb/static/media/profile.090a5aab.jpg"
-  },
-  {
-    "revision": "cf8b686b294041d0925f4e745b1fabb9",
-    "url": "/PersonalWeb/static/media/sign.cf8b686b.jpg"
   },
   {
     "revision": "ae0150c08dbcc95e4f50458e02e5bd5c",

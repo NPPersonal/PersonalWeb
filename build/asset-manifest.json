@@ -1,22 +1,18 @@
 {
   "files": {
     "main.css": "/PersonalWeb/static/css/main.7747be13.chunk.css",
-    "main.js": "/PersonalWeb/static/js/main.8f3d827a.chunk.js",
-    "main.js.map": "/PersonalWeb/static/js/main.8f3d827a.chunk.js.map",
+    "main.js": "/PersonalWeb/static/js/main.747d76be.chunk.js",
+    "main.js.map": "/PersonalWeb/static/js/main.747d76be.chunk.js.map",
     "runtime-main.js": "/PersonalWeb/static/js/runtime-main.6ba5b592.js",
     "runtime-main.js.map": "/PersonalWeb/static/js/runtime-main.6ba5b592.js.map",
-    "static/js/2.11c76a06.chunk.js": "/PersonalWeb/static/js/2.11c76a06.chunk.js",
-    "static/js/2.11c76a06.chunk.js.map": "/PersonalWeb/static/js/2.11c76a06.chunk.js.map",
+    "static/js/2.5bdc49dc.chunk.js": "/PersonalWeb/static/js/2.5bdc49dc.chunk.js",
+    "static/js/2.5bdc49dc.chunk.js.map": "/PersonalWeb/static/js/2.5bdc49dc.chunk.js.map",
     "index.html": "/PersonalWeb/index.html",
-    "precache-manifest.2545863473c86a988abbccb4a157e0ac.js": "/PersonalWeb/precache-manifest.2545863473c86a988abbccb4a157e0ac.js",
+    "precache-manifest.8e88cbc96dd7048a604001bbb6300adf.js": "/PersonalWeb/precache-manifest.8e88cbc96dd7048a604001bbb6300adf.js",
     "service-worker.js": "/PersonalWeb/service-worker.js",
     "static/css/main.7747be13.chunk.css.map": "/PersonalWeb/static/css/main.7747be13.chunk.css.map",
-    "static/js/2.11c76a06.chunk.js.LICENSE.txt": "/PersonalWeb/static/js/2.11c76a06.chunk.js.LICENSE.txt",
+    "static/js/2.5bdc49dc.chunk.js.LICENSE.txt": "/PersonalWeb/static/js/2.5bdc49dc.chunk.js.LICENSE.txt",
     "static/media/avatar.jpg": "/PersonalWeb/static/media/avatar.f1d71f77.jpg",
-    "static/media/bg.jpg": "/PersonalWeb/static/media/bg.e5241971.jpg",
-    "static/media/bg2.jpg": "/PersonalWeb/static/media/bg2.84378183.jpg",
-    "static/media/bg3.jpg": "/PersonalWeb/static/media/bg3.e76de24b.jpg",
-    "static/media/bg4.jpg": "/PersonalWeb/static/media/bg4.199e9ec1.jpg",
     "static/media/bg7.jpg": "/PersonalWeb/static/media/bg7.b08234a2.jpg",
     "static/media/christian.jpg": "/PersonalWeb/static/media/christian.56633ed3.jpg",
     "static/media/clem-onojegaw.jpg": "/PersonalWeb/static/media/clem-onojegaw.c058841b.jpg",
@@ -24,12 +20,9 @@
     "static/media/cynthia-del-rio.jpg": "/PersonalWeb/static/media/cynthia-del-rio.9813593c.jpg",
     "static/media/kendall.jpg": "/PersonalWeb/static/media/kendall.e0508cc9.jpg",
     "static/media/landing-bg.jpg": "/PersonalWeb/static/media/landing-bg.df8fd3ef.jpg",
-    "static/media/landing.jpg": "/PersonalWeb/static/media/landing.08e18cb9.jpg",
     "static/media/mariya-georgieva.jpg": "/PersonalWeb/static/media/mariya-georgieva.4575c40b.jpg",
     "static/media/olu-eletu.jpg": "/PersonalWeb/static/media/olu-eletu.4112cbc1.jpg",
     "static/media/profile-bg.jpg": "/PersonalWeb/static/media/profile-bg.baf6b40a.jpg",
-    "static/media/profile.jpg": "/PersonalWeb/static/media/profile.090a5aab.jpg",
-    "static/media/sign.jpg": "/PersonalWeb/static/media/sign.cf8b686b.jpg",
     "static/media/studio-1.jpg": "/PersonalWeb/static/media/studio-1.ae0150c0.jpg",
     "static/media/studio-2.jpg": "/PersonalWeb/static/media/studio-2.76e2987e.jpg",
     "static/media/studio-3.jpg": "/PersonalWeb/static/media/studio-3.1d5451ce.jpg",
@@ -38,8 +31,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.6ba5b592.js",
-    "static/js/2.11c76a06.chunk.js",
+    "static/js/2.5bdc49dc.chunk.js",
     "static/css/main.7747be13.chunk.css",
-    "static/js/main.8f3d827a.chunk.js"
+    "static/js/main.747d76be.chunk.js"
   ]
 }
