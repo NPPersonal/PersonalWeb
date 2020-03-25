@@ -1,7 +1,7 @@
 {
   "name": "material-kit-react",
   "version": "1.8.0",
-  "homepage": "https://nppersonal.github.io/PersonalWeb/",
+  "homepage": "http://nppersonal.github.io/PersonalWeb/",
   "description": "Material Kit React. Coded by Creative Tim",
   "private": true,
   "main": "dist/index.js",
@@ -42,7 +42,9 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build && gulp licenses",
-    "publish": "concurrently \"npm run build\" \"gh-pages -d build\"",
+    "pre-deploy": "concurrently \"rm -rf build\" \"npm run build\"",
+    "deploy": "gh-pages -d build",
+    "publish": "npm run pre-deploy && npm run deploy",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "lint:check": "eslint . --ext=js,jsx;  exit 0",
