@@ -16,6 +16,7 @@ import GridItem from "components/Grid/GridItem.js";
 import HeaderLinks from "components/Header/HeaderLinks.js";
 import NavPills from "components/NavPills/NavPills.js";
 import Parallax from "components/Parallax/Parallax.js";
+import Tooltip from '@material-ui/core/Tooltip';
 
 import profile from "assets/img/faces/christian.jpg";
 
@@ -60,36 +61,33 @@ export default function ProfilePage(props) {
       <div className={classNames(classes.main, classes.mainRaised)}>
         <div>
           <div className={classes.container}>
-            <GridContainer justify="center">
+            <GridContainer justify="center" alignItems='center' direction='column'>
               <GridItem xs={12} sm={12} md={6}>
                 <div className={classes.profile}>
                   <div>
                     <img src={profile} alt="..." className={imageClasses} />
                   </div>
                   <div className={classes.name}>
-                    <h3 className={classes.title}>Christian Louboutin</h3>
-                    <h6>DESIGNER</h6>
-                    <Button justIcon link className={classes.margin5}>
-                      <i className={"fab fa-twitter"} />
-                    </Button>
-                    <Button justIcon link className={classes.margin5}>
-                      <i className={"fab fa-instagram"} />
-                    </Button>
-                    <Button justIcon link className={classes.margin5}>
-                      <i className={"fab fa-facebook"} />
-                    </Button>
+                    <Tooltip title='Nelson' placement='bottom'
+                    classes={{tooltip:classes.tooltip}} >
+                      <h3 className={classes.title}>Ming-Chun Hung</h3>
+                    </Tooltip>
+                    <h6>Programmer</h6>
                   </div>
                 </div>
               </GridItem>
+              <GridItem xs={12} sm={12} md={10}>
+                <div className={classes.description}>
+                  <p>
+                    An artist of considerable range, Chet Faker — the name taken by
+                    Melbourne-raised, Brooklyn-based Nick Murphy — writes, performs
+                    and records all of his own music, giving it a warm, intimate
+                    feel with a solid groove structure.{" "}
+                  </p>
+                </div>
+              </GridItem>
             </GridContainer>
-            <div className={classes.description}>
-              <p>
-                An artist of considerable range, Chet Faker — the name taken by
-                Melbourne-raised, Brooklyn-based Nick Murphy — writes, performs
-                and records all of his own music, giving it a warm, intimate
-                feel with a solid groove structure.{" "}
-              </p>
-            </div>
+            
             <GridContainer justify="center">
               <GridItem xs={12} sm={12} md={8} className={classes.navWrapper}>
                 <NavPills

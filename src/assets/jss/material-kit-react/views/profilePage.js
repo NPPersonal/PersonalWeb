@@ -1,8 +1,10 @@
 import { container, title } from "assets/jss/material-kit-react.js";
 
 import imagesStyle from "assets/jss/material-kit-react/imagesStyles.js";
+import tooltipStyle from 'assets/jss/material-kit-react/tooltipsStyle.js';
 
 const profilePageStyle = {
+  ...tooltipStyle,
   container,
   profile: {
     textAlign: "center",
@@ -16,7 +18,10 @@ const profilePageStyle = {
   description: {
     margin: "1.071rem auto 0",
     maxWidth: "600px",
-    color: "#999",
+    color: "#000000",
+    fontWeight: '600',
+    fontStyle: 'normal',
+    letterSpacing: '1.5px',
     textAlign: "center !important"
   },
   name: {
