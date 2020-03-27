@@ -97,7 +97,7 @@ export default function ProfilePage(props) {
                   color="primary"
                   tabs={[
                     {
-                      tabButton: "Studio",
+                      tabButton: "Skills",
                       tabIcon: Camera,
                       tabContent: (
                         <GridContainer justify="center">
