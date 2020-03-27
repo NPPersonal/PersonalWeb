@@ -1,13 +1,11 @@
 import React, {useState} from 'react';
 
 //import from material-ui core
-import {makeStyles} from '@material-ui/core/styles';
+import {makeStyles, ThemeProvider} from '@material-ui/core/styles';
 import ExpansionPanel from '@material-ui/core/ExpansionPanel';
 import ExpansionPanelSummary from '@material-ui/core/ExpansionPanelSummary';
 import ExpansionPanelDetails from '@material-ui/core/ExpansionPanelDetails';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
-import Divider from '@material-ui/core/Divider';
-
 
 //import from template componets
 import GridContainer from "components/Grid/GridContainer.js";
@@ -15,6 +13,7 @@ import GridItem from "components/Grid/GridItem.js";
 
 
 import skillStyle from 'assets/jss/material-kit-react/sections/skillsStyle.js';
+import skillTheme from 'assets/theme/skillsTheme.js';
 
 const programmingLangs = [
     'JavaScript',
@@ -84,6 +83,7 @@ const SectionSkills = ()=>{
     }
 
     return (
+        <ThemeProvider theme={skillTheme}>
         <GridContainer direction='column' justify="center" alignItems='center'>
             <GridItem {...breakPoints}>
                 <div className={classes.title}>Skills</div>
@@ -99,57 +99,67 @@ const SectionSkills = ()=>{
                 </div>
             </GridItem>
             <GridItem {...breakPoints}>
-                <ExpansionPanel expanded={expand === 'panel1'} onChange={()=>handlePanelExpand('panel1')}>
+                <ExpansionPanel
+                expanded={expand === 'panel1'} 
+                onChange={()=>handlePanelExpand('panel1')}>
                     <ExpansionPanelSummary
                     expandIcon={<ExpandMoreIcon />}
                     >
-                        <div>Programming languages</div>
+                        <div className={classes.panelTitle}>Programming languages</div>
                     </ExpansionPanelSummary>
-                    <ExpansionPanelDetails>
+                    <ExpansionPanelDetails
+                    >
                         {createList(programmingLangs)}
                     </ExpansionPanelDetails>
                 </ExpansionPanel>
             </GridItem>
-            <Divider />
             <GridItem {...breakPoints}>
-                <ExpansionPanel expanded={expand === 'panel2'} onChange={()=>handlePanelExpand('panel2')}>
+                <ExpansionPanel
+                expanded={expand === 'panel2'} 
+                onChange={()=>handlePanelExpand('panel2')}>
                     <ExpansionPanelSummary
                     expandIcon={<ExpandMoreIcon />}
                     >
-                        <div>Frameworks</div>
+                        <div className={classes.panelTitle}>Frameworks</div>
                     </ExpansionPanelSummary>
-                    <ExpansionPanelDetails>
+                    <ExpansionPanelDetails
+                    >
                         {createList(frameworks)}
                     </ExpansionPanelDetails>
                 </ExpansionPanel>
             </GridItem>
-            <Divider />
             <GridItem {...breakPoints}>
-                <ExpansionPanel expanded={expand === 'panel3'} onChange={()=>handlePanelExpand('panel3')}>
+                <ExpansionPanel
+                expanded={expand === 'panel3'} 
+                onChange={()=>handlePanelExpand('panel3')}>
                     <ExpansionPanelSummary
                     expandIcon={<ExpandMoreIcon />}
                     >
-                        <div>Package Management</div>
+                        <div className={classes.panelTitle}>Package Management</div>
                     </ExpansionPanelSummary>
-                    <ExpansionPanelDetails>
+                    <ExpansionPanelDetails
+                    >
                         {createList(packageManagements)}
                     </ExpansionPanelDetails>
                 </ExpansionPanel>
             </GridItem>
-            <Divider />
             <GridItem {...breakPoints}>
-                <ExpansionPanel expanded={expand === 'panel4'} onChange={()=>handlePanelExpand('panel4')}>
+                <ExpansionPanel 
+                expanded={expand === 'panel4'} 
+                onChange={()=>handlePanelExpand('panel4')}>
                     <ExpansionPanelSummary
                     expandIcon={<ExpandMoreIcon />}
                     >
-                        <div>Version Control</div>
+                        <div className={classes.panelTitle}>Version Control</div>
                     </ExpansionPanelSummary>
-                    <ExpansionPanelDetails>
+                    <ExpansionPanelDetails
+                    >
                         {createList(versionControls)}
                     </ExpansionPanelDetails>
                 </ExpansionPanel>
             </GridItem>
         </GridContainer>
+        </ThemeProvider>
     )
 }
 
