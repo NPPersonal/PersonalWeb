@@ -1,6 +1,7 @@
 import { createMuiTheme } from '@material-ui/core/styles';
 
 const borderRadius = '25px';
+const roundedMargin = '1.5% auto 1.5% auto';
 const panelColor = '#fcf8f3';
 
 const theme = createMuiTheme({
@@ -8,17 +9,38 @@ const theme = createMuiTheme({
         MuiExpansionPanel: {
             root: {
                 border: '1px solid #dee3e2',
-                margin: '0.5% auto 0.5% auto',
+                margin: roundedMargin,
                 backgroundColor: panelColor,
-                '&$rounded:first-child&$expanded:first-child': {
+                '&:before': {
+                    backgroundColor: 'transparent',
+                },
+                '&$rounded': {
                     borderRadius,
-                    margin: '0.5% auto 0.5% auto',
+                    margin: roundedMargin
+                },
+                '&$rounded:first-child': {
+                    borderTopLeftRadius: borderRadius,
+                    borderTopRightRadius: borderRadius,
+                    margin: roundedMargin,
                 },
                 '&$rounded:last-child': {
+                    borderBottomLeftRadius: borderRadius,
+                    borderBottomRightRadius: borderRadius,
+                    margin: roundedMargin,
+                },
+                '&$expanded': {
                     borderRadius,
+                    margin: roundedMargin
+                },
+                '&$expanded:first-child': {
+                    borderTopLeftRadius: borderRadius,
+                    borderTopRightRadius: borderRadius,
+                    margin: roundedMargin,
                 },
                 '&$expanded:last-child': {
-                    borderRadius,
+                    borderBottomLeftRadius: borderRadius,
+                    borderBottomRightRadius: borderRadius,
+                    margin: roundedMargin,
                 },
             },
         },

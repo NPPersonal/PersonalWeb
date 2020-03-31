@@ -19,6 +19,7 @@ ReactDOM.render(
       <Route exact path="/landing-page" component={LandingPage} />
       <Route exact path="/profile-page" component={ProfilePage} />
       <Route exact path="/login-page" component={LoginPage} />
+      <Route exact path="/skill" component={SectionSkills} />
       <Route path="/" component={ProfilePage} />
     </Switch>
   </BrowserRouter>,

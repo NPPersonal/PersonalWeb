@@ -15,7 +15,9 @@ import GridItem from "components/Grid/GridItem.js";
 import skillStyle from 'assets/jss/material-kit-react/sections/skillsStyle.js';
 import skillTheme from 'assets/theme/skillsTheme.js';
 
-const programmingLangs = [
+const programmingLangs = {
+    title: 'Programming languages',
+    content: [
     'JavaScript',
     'Swift',
     'Objective-C',
@@ -24,45 +26,46 @@ const programmingLangs = [
     'C#',
     'Java',
     'C++'
-];
+    ]
+};
 
-const frameworks = [
+const frameworks = {
+    title: 'Frameworks',
+    content: [
     'Node.js',
     'React.js',
     'Redux.js',
     'Express.js',
     'IOS MVC',
     'CodeIgniter'
-];
+    ]
+};
 
-const packageManagements = [
+const packageManagements = {
+    title: 'Package Management',
+    content: [
     'NPM',
     'CocoaPods',
-];
+    ]
+};
 
-const versionControls = [
+const versionControls = {
+    title: 'Version Control',
+    content: [
     'Git',
     'GitHub',
     'Bitbucket'
-];
+    ]
+};
+
+const skills = [
+    programmingLangs,
+    frameworks,
+    packageManagements,
+    versionControls
+]
 
 const useStyle = makeStyles(skillStyle);
-
-
-const createList = (data, classStyle)=>{
- 
-    return (
-        <GridContainer direction='column' justify="center" alignItems='center'>
-        {
-            data.map((value, index)=>{
-                return(<GridItem key={index}>
-                    <div className={classStyle.item}>{value}</div>
-                </GridItem>);
-            })
-        }
-       </GridContainer>
-    );
-}
 
 const breakPoints = {
     xs: 11,
@@ -74,6 +77,7 @@ const SectionSkills = ()=>{
 
     const classes = useStyle();
     const [expand, setExpand] = useState('');
+
     const handlePanelExpand = panelName=>{
         if(expand === panelName){
             setExpand('');
@@ -84,83 +88,58 @@ const SectionSkills = ()=>{
         
     }
 
+    const renderSkillList = (data)=>{
+        return data.map((skill, index)=>{
+            return (
+                <ExpansionPanel
+                key={index}
+                expanded={expand === `panel${index+1}`} 
+                onChange={()=>handlePanelExpand(`panel${index+1}`)}>
+                    <ExpansionPanelSummary
+                    expandIcon={<ExpandMoreIcon />}
+                    >
+                        <div className={classes.panelTitle}>{skill.title}}</div>
+                    </ExpansionPanelSummary>
+                    <ExpansionPanelDetails
+                    >
+                        <GridContainer direction='column' justify="center" alignItems='center'>
+                        {
+                            skill.content.map((value, index)=>{
+                                return(<GridItem key={index}>
+                                    <div className={classes.item}>{value}</div>
+                                </GridItem>);
+                            })
+                        }
+                    </GridContainer>
+                    </ExpansionPanelDetails>
+                </ExpansionPanel>
+                
+            ); 
+        })
+    }
+
     return (
         <ThemeProvider theme={skillTheme}>
-        <GridContainer direction='column' justify="center" alignItems='center'>
-            <GridItem {...breakPoints}>
-                <div className={classes.title}>Skills</div>
-            </GridItem>
-            <GridItem {...breakPoints}>
-                <div>
-                    <p className={classes.description}>
-                    An artist of considerable range, Chet Faker — the name taken by
-                    Melbourne-raised, Brooklyn-based Nick Murphy — writes, performs
-                    and records all of his own music, giving it a warm, intimate
-                    feel with a solid groove structure.
-                    </p>
-                </div>
-            </GridItem>
-            <GridItem {...breakPoints}>
-                <ExpansionPanel
-                expanded={expand === 'panel1'} 
-                onChange={()=>handlePanelExpand('panel1')}>
-                    <ExpansionPanelSummary
-                    expandIcon={<ExpandMoreIcon />}
-                    >
-                        <div className={classes.panelTitle}>Programming languages</div>
-                    </ExpansionPanelSummary>
-                    <ExpansionPanelDetails
-                    >
-                        {createList(programmingLangs, classes)}
-                    </ExpansionPanelDetails>
-                </ExpansionPanel>
-            </GridItem>
-            <GridItem {...breakPoints}>
-                <ExpansionPanel
-                expanded={expand === 'panel2'} 
-                onChange={()=>handlePanelExpand('panel2')}>
-                    <ExpansionPanelSummary
-                    expandIcon={<ExpandMoreIcon />}
-                    >
-                        <div className={classes.panelTitle}>Frameworks</div>
-                    </ExpansionPanelSummary>
-                    <ExpansionPanelDetails
-                    >
-                        {createList(frameworks, classes)}
-                    </ExpansionPanelDetails>
-                </ExpansionPanel>
-            </GridItem>
-            <GridItem {...breakPoints}>
-                <ExpansionPanel
-                expanded={expand === 'panel3'} 
-                onChange={()=>handlePanelExpand('panel3')}>
-                    <ExpansionPanelSummary
-                    expandIcon={<ExpandMoreIcon />}
-                    >
-                        <div className={classes.panelTitle}>Package Management</div>
-                    </ExpansionPanelSummary>
-                    <ExpansionPanelDetails
-                    >
-                        {createList(packageManagements, classes)}
-                    </ExpansionPanelDetails>
-                </ExpansionPanel>
-            </GridItem>
-            <GridItem {...breakPoints}>
-                <ExpansionPanel 
-                expanded={expand === 'panel4'} 
-                onChange={()=>handlePanelExpand('panel4')}>
-                    <ExpansionPanelSummary
-                    expandIcon={<ExpandMoreIcon />}
-                    >
-                        <div className={classes.panelTitle}>Version Control</div>
-                    </ExpansionPanelSummary>
-                    <ExpansionPanelDetails
-                    >
-                        {createList(versionControls, classes)}
-                    </ExpansionPanelDetails>
-                </ExpansionPanel>
-            </GridItem>
-        </GridContainer>
+            <GridContainer direction='column' justify="center" alignItems='center'>
+                <GridItem {...breakPoints}>
+                    <div className={classes.title}>Skills</div>
+                </GridItem>
+                <GridItem {...breakPoints}>
+                    <div>
+                        <p className={classes.description}>
+                        An artist of considerable range, Chet Faker — the name taken by
+                        Melbourne-raised, Brooklyn-based Nick Murphy — writes, performs
+                        and records all of his own music, giving it a warm, intimate
+                        feel with a solid groove structure.
+                        </p>
+                    </div>
+                </GridItem>
+                <GridItem {...breakPoints}>
+                {
+                    renderSkillList(skills)
+                }
+                </GridItem>
+            </GridContainer>
         </ThemeProvider>
     )
 }
