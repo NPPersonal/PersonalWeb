@@ -46,13 +46,17 @@ const versionControls = [
     'Bitbucket'
 ];
 
-const createList = (data)=>{
+const useStyle = makeStyles(skillStyle);
+
+
+const createList = (data, classStyle)=>{
+ 
     return (
         <GridContainer direction='column' justify="center" alignItems='center'>
         {
             data.map((value, index)=>{
                 return(<GridItem key={index}>
-                    <div>{value}</div>
+                    <div className={classStyle.item}>{value}</div>
                 </GridItem>);
             })
         }
@@ -61,16 +65,14 @@ const createList = (data)=>{
 }
 
 const breakPoints = {
-    xs: 12,
-    sm: 12,
+    xs: 11,
+    sm: 11,
     md: 8
 }
 
-const useStyle = makeStyles(skillStyle);
-
 const SectionSkills = ()=>{
-    const classes = useStyle();
 
+    const classes = useStyle();
     const [expand, setExpand] = useState('');
     const handlePanelExpand = panelName=>{
         if(expand === panelName){
@@ -89,8 +91,8 @@ const SectionSkills = ()=>{
                 <div className={classes.title}>Skills</div>
             </GridItem>
             <GridItem {...breakPoints}>
-                <div className={classes.description}>
-                    <p>
+                <div>
+                    <p className={classes.description}>
                     An artist of considerable range, Chet Faker — the name taken by
                     Melbourne-raised, Brooklyn-based Nick Murphy — writes, performs
                     and records all of his own music, giving it a warm, intimate
@@ -109,7 +111,7 @@ const SectionSkills = ()=>{
                     </ExpansionPanelSummary>
                     <ExpansionPanelDetails
                     >
-                        {createList(programmingLangs)}
+                        {createList(programmingLangs, classes)}
                     </ExpansionPanelDetails>
                 </ExpansionPanel>
             </GridItem>
@@ -124,7 +126,7 @@ const SectionSkills = ()=>{
                     </ExpansionPanelSummary>
                     <ExpansionPanelDetails
                     >
-                        {createList(frameworks)}
+                        {createList(frameworks, classes)}
                     </ExpansionPanelDetails>
                 </ExpansionPanel>
             </GridItem>
@@ -139,7 +141,7 @@ const SectionSkills = ()=>{
                     </ExpansionPanelSummary>
                     <ExpansionPanelDetails
                     >
-                        {createList(packageManagements)}
+                        {createList(packageManagements, classes)}
                     </ExpansionPanelDetails>
                 </ExpansionPanel>
             </GridItem>
@@ -154,7 +156,7 @@ const SectionSkills = ()=>{
                     </ExpansionPanelSummary>
                     <ExpansionPanelDetails
                     >
-                        {createList(versionControls)}
+                        {createList(versionControls, classes)}
                     </ExpansionPanelDetails>
                 </ExpansionPanel>
             </GridItem>
