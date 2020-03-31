@@ -9,7 +9,6 @@ import "assets/scss/material-kit-react.scss?v=1.8.0";
 import LandingPage from "views/LandingPage/LandingPage.js";
 import ProfilePage from "views/ProfilePage/ProfilePage.js";
 import LoginPage from "views/LoginPage/LoginPage.js";
-import SectionSkills from 'views/Sections/SectionSkills.js';
 
 console.log(process.env.PUBLIC_URL);
 
