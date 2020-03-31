@@ -21,6 +21,9 @@ import ReactMarkdown from 'react-markdown/with-html';
 //work exp markdown
 import jtiotMD from 'assets/markdownSrc/experience/jtiot.md';
 import artechMD from 'assets/markdownSrc/experience/artech.md'
+import luckyMD from 'assets/markdownSrc/experience/lucky.md';
+import weiQiaoMD from 'assets/markdownSrc/experience/wei-qiao.md';
+import mobiliStudioMD from 'assets/markdownSrc/experience/mobili-studio.md'
 
 const breakPoints = {
     xs: 11,
@@ -37,6 +40,18 @@ const experiences = [
     {
         title: 'Artech',
         mdSrc: artechMD
+    },
+    {
+        title: 'Lucky',
+        mdSrc: luckyMD
+    },
+    {
+        title: 'Wei Qiao',
+        mdSrc: weiQiaoMD
+    },
+    {
+        title: 'Mobili Studio',
+        mdSrc: mobiliStudioMD
     }
 ]
 
