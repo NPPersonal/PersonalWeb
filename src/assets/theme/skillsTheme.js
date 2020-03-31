@@ -10,14 +10,14 @@ const theme = createMuiTheme({
                 border: '1px solid #dee3e2',
                 margin: '0.5% auto 0.5% auto',
                 backgroundColor: panelColor,
-                '&$rounded:first-child&$expanded:first-child': {
+                '&$rounded:first-child&$expanded:first-child&$rounded&$expanded': {
                     borderRadius,
                     margin: '0.5% auto 0.5% auto',
                 },
-                '&$rounded:last-child': {
+                '&$rounded:last-child&$rounded': {
                     borderRadius,
                 },
-                '&$expanded:last-child': {
+                '&$expanded:last-child&$expanded': {
                     borderRadius,
                 },
             },
