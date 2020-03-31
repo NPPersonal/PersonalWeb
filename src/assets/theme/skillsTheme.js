@@ -10,15 +10,11 @@ const theme = createMuiTheme({
             root: {
                 border: '1px solid #dee3e2',
                 margin: roundedMargin,
-                backgroundColor: panelColor,
-<<<<<<< HEAD
-                '&$rounded:first-child&$expanded:first-child&$rounded&$expanded': {
-=======
+                backgroundColor: panelColor, 
                 '&:before': {
                     backgroundColor: 'transparent',
                 },
                 '&$rounded': {
->>>>>>> dev
                     borderRadius,
                     margin: roundedMargin
                 },
@@ -27,16 +23,12 @@ const theme = createMuiTheme({
                     borderTopRightRadius: borderRadius,
                     margin: roundedMargin,
                 },
-<<<<<<< HEAD
-                '&$rounded:last-child&$rounded': {
-=======
                 '&$rounded:last-child': {
                     borderBottomLeftRadius: borderRadius,
                     borderBottomRightRadius: borderRadius,
                     margin: roundedMargin,
                 },
                 '&$expanded': {
->>>>>>> dev
                     borderRadius,
                     margin: roundedMargin
                 },
@@ -45,15 +37,10 @@ const theme = createMuiTheme({
                     borderTopRightRadius: borderRadius,
                     margin: roundedMargin,
                 },
-<<<<<<< HEAD
-                '&$expanded:last-child&$expanded': {
-                    borderRadius,
-=======
                 '&$expanded:last-child': {
                     borderBottomLeftRadius: borderRadius,
                     borderBottomRightRadius: borderRadius,
                     margin: roundedMargin,
->>>>>>> dev
                 },
             },
         },
