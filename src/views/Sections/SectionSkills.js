@@ -98,7 +98,7 @@ const SectionSkills = ()=>{
                     <ExpansionPanelSummary
                     expandIcon={<ExpandMoreIcon />}
                     >
-                        <div className={classes.panelTitle}>{skill.title}}</div>
+                        <div className={classes.panelTitle}>{skill.title}</div>
                     </ExpansionPanelSummary>
                     <ExpansionPanelDetails
                     >
