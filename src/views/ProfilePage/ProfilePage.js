@@ -19,6 +19,7 @@ import Parallax from "components/Parallax/Parallax.js";
 import Tooltip from '@material-ui/core/Tooltip';
 
 import SectionSkills from 'views/Sections/SectionSkills';
+import SectionExp from 'views/Sections/SectionExperience';
 
 import profile from "assets/img/faces/christian.jpg";
 
@@ -104,40 +105,10 @@ export default function ProfilePage(props) {
                       )
                     },
                     {
-                      tabButton: "Work",
+                      tabButton: "Experience",
                       tabIcon: Palette,
                       tabContent: (
-                        <GridContainer justify="center">
-                          <GridItem xs={12} sm={12} md={4}>
-                            <img
-                              alt="..."
-                              src={work1}
-                              className={navImageClasses}
-                            />
-                            <img
-                              alt="..."
-                              src={work2}
-                              className={navImageClasses}
-                            />
-                            <img
-                              alt="..."
-                              src={work3}
-                              className={navImageClasses}
-                            />
-                          </GridItem>
-                          <GridItem xs={12} sm={12} md={4}>
-                            <img
-                              alt="..."
-                              src={work4}
-                              className={navImageClasses}
-                            />
-                            <img
-                              alt="..."
-                              src={work5}
-                              className={navImageClasses}
-                            />
-                          </GridItem>
-                        </GridContainer>
+                        <SectionExp />
                       )
                     },
                     {

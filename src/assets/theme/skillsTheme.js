@@ -10,7 +10,7 @@ const theme = createMuiTheme({
             root: {
                 border: '1px solid #dee3e2',
                 margin: roundedMargin,
-                backgroundColor: panelColor,
+                backgroundColor: panelColor, 
                 '&:before': {
                     backgroundColor: 'transparent',
                 },
