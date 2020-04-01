@@ -1,18 +1,14 @@
 import React from 'react';
 
 //import from material-ui core
-import {withStyles, ThemeProvider} from '@material-ui/core/styles';
-import ExpansionPanel from '@material-ui/core/ExpansionPanel';
-import ExpansionPanelSummary from '@material-ui/core/ExpansionPanelSummary';
-import ExpansionPanelDetails from '@material-ui/core/ExpansionPanelDetails';
-import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
+import {withStyles} from '@material-ui/core/styles';
 
 //import from template componets
 import TitleGridContainer from 'views/Components/TitleGridContainer';
+import ListPanel from 'views/Components/ListPanel';
 
 //style and theme
 import experienceStyle from 'assets/jss/material-kit-react/sections/experienceStyle.js';
-import panelTheme from 'assets/theme/expansionPanelTheme.js';
 
 //react-markdown
 import ReactMarkdown from 'react-markdown/with-html';
@@ -35,52 +31,26 @@ class SectionExperience extends React.Component {
         .then(res=>this.setState({...this.state, md:res}));
     }
 
-    handlePanelExpand(panelName){
-        if(this.state.expand === panelName){
-            this.setState({...this.state, expand: ''})
-        }
-        else{
-            this.setState({...this.state, expand: panelName})
-        } 
-    }
-
-    renderExpMD(exps){
-        const {classes} = this.props;
+    transformExpToPanel(exps){
         if(!exps) return null;
-        return(
-            <ThemeProvider theme={panelTheme}>
+        const {classes} = this.props;
+        return exps.map(exp=>{
+            return {
+                summary: (<div className={classes.panelTitle}>{exp.title}</div>),
+                detail: (
                 <div>
-                {
-                    exps.map((exp, index)=>{
-                        return (
-                            <ExpansionPanel
-                            key={index}
-                            expanded={this.state.expand === `panel${index+1}`} 
-                            onChange={()=>this.handlePanelExpand(`panel${index+1}`)}>
-                                <ExpansionPanelSummary
-                                expandIcon={<ExpandMoreIcon />}
-                                >
-                                    <div className={classes.panelTitle}>{exp.title}</div>
-                                </ExpansionPanelSummary>
-                                <ExpansionPanelDetails>
-                                    <div>
-                                        <ReactMarkdown source={exp.content} escapeHtml={false} />
-                                    </div>
-                                </ExpansionPanelDetails>
-                            </ExpansionPanel>
-                        );
-                    })
-                }
+                    <ReactMarkdown source={exp.content} escapeHtml={false} />
                 </div>
-            </ThemeProvider>
-        )
+                ),
+            }
+        })
     }
 
     render(){
         return (
             <TitleGridContainer title='Experiences' desc={expDescription}>
             {
-                this.renderExpMD(this.state.md)
+                <ListPanel panelList={this.transformExpToPanel(this.state.md)} />
             }
             </TitleGridContainer>
         );
