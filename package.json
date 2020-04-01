@@ -40,7 +40,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build && gulp licenses",
+    "build": "react-scripts build",
     "pre-deploy": "concurrently \"rm -rf build\" \"npm run build\"",
     "deploy": "gh-pages -d build",
     "publish": "npm run pre-deploy && npm run deploy",
