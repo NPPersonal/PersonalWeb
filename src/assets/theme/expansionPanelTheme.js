@@ -12,7 +12,7 @@ const theme = createMuiTheme({
                 margin: roundedMargin,
                 backgroundColor: panelColor, 
                 '&:before': {
-                    backgroundColor: 'transparent',
+                    backgroundColor: 'transparent !important',
                 },
                 '&$rounded': {
                     borderRadius,
