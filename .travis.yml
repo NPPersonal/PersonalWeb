@@ -1,7 +1,9 @@
 language: node_js
 node_js:
   - "stable"
-cache: npm
+cache:
+  directories:
+  - node_modules
 script:
   - "npm run build"
 deploy:
