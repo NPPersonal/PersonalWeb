@@ -1,10 +1,8 @@
 {
-  "name": "material-kit-react",
-  "version": "1.8.0",
+  "name": "personal-web",
+  "version": "1.0.0",
   "homepage": "https://nppersonal.github.io/PersonalWeb/",
-  "description": "Material Kit React. Coded by Creative Tim",
-  "private": true,
-  "main": "dist/index.js",
+  "description": "Personal web",
   "dependencies": {
     "@material-ui/core": "4.9.7",
     "@material-ui/icons": "4.9.1",
@@ -17,6 +15,7 @@
     "react": "16.13.1",
     "react-datetime": "2.16.3",
     "react-dom": "16.13.1",
+    "react-markdown": "^4.3.1",
     "react-router-dom": "5.1.2",
     "react-scripts": "3.4.1",
     "react-slick": "0.25.2",
