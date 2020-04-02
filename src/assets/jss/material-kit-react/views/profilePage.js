@@ -15,6 +15,13 @@ const profilePageStyle = {
       transform: "translate3d(0, -50%, 0)"
     }
   },
+  subtitle:{
+    color: 'grey',
+    padding: '2% 0 2% 0',
+    fontSize: '1.2rem',
+    fontWeight: '800',
+    textAlign: 'center !important'
+  },
   description: {
     margin: "1.071rem auto 0",
     maxWidth: "600px",

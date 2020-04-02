@@ -9,7 +9,6 @@ import "assets/scss/material-kit-react.scss?v=1.8.0";
 import LandingPage from "views/LandingPage/LandingPage.js";
 import ProfilePage from "views/ProfilePage/ProfilePage.js";
 import LoginPage from "views/LoginPage/LoginPage.js";
-import projPage from 'views/Sections/SectionProjects';
 
 ReactDOM.render(
   <BrowserRouter basename={process.env.PUBLIC_URL}>
@@ -17,7 +16,6 @@ ReactDOM.render(
       <Route exact path="/landing-page" component={LandingPage} />
       <Route exact path="/profile-page" component={ProfilePage} />
       <Route exact path="/login-page" component={LoginPage} />
-      <Route exact path="/proj" component={projPage} />
       <Route path="/" component={ProfilePage} />
     </Switch>
   </BrowserRouter>,

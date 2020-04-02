@@ -22,6 +22,8 @@ import SectionSkills from 'views/Sections/SectionSkills';
 import SectionExp from 'views/Sections/SectionExperience';
 import SectionProj from 'views/Sections/SectionProjects';
 
+import aboutMeData from 'assets/data/aboutMeData';
+
 import profile from "assets/img/faces/christian.jpg";
 
 import studio1 from "assets/img/examples/studio-1.jpg";
@@ -82,11 +84,9 @@ export default function ProfilePage(props) {
               </GridItem>
               <GridItem xs={12} sm={12} md={10}>
                 <div className={classes.description}>
+                  <div className={classes.subtitle}>About Me</div>
                   <p>
-                    An artist of considerable range, Chet Faker — the name taken by
-                    Melbourne-raised, Brooklyn-based Nick Murphy — writes, performs
-                    and records all of his own music, giving it a warm, intimate
-                    feel with a solid groove structure.{" "}
+                  {aboutMeData}
                   </p>
                 </div>
               </GridItem>
