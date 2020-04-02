@@ -12,7 +12,7 @@ import LoginPage from "views/LoginPage/LoginPage.js";
 import projPage from 'views/Sections/SectionProjects';
 
 ReactDOM.render(
-  <BrowserRouter /*basename={process.env.PUBLIC_URL}*/>
+  <BrowserRouter basename={process.env.PUBLIC_URL}>
     <Switch>
       <Route exact path="/landing-page" component={LandingPage} />
       <Route exact path="/profile-page" component={ProfilePage} />
