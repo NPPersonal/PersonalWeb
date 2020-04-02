@@ -1,10 +1,8 @@
 {
-  "name": "material-kit-react",
-  "version": "1.8.0",
+  "name": "personal-web",
+  "version": "1.0.0",
   "homepage": "https://nppersonal.github.io/PersonalWeb/",
-  "description": "Material Kit React. Coded by Creative Tim",
-  "private": true,
-  "main": "dist/index.js",
+  "description": "Personal web",
   "dependencies": {
     "@material-ui/core": "4.9.7",
     "@material-ui/icons": "4.9.1",
