@@ -48,7 +48,7 @@ class SectionExperience extends React.Component {
 
     render(){
         return (
-            <TitleGridContainer title='Experiences' desc={expDescription}>
+            <TitleGridContainer desc={expDescription}>
             {
                 <ListPanel panelList={this.transformExpToPanel(this.state.md)} />
             }

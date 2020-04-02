@@ -47,7 +47,7 @@ class SectionProjects extends React.Component{
 
     render(){
         return (
-            <TitleGridContainer title='Projects' desc={projectDescription}>
+            <TitleGridContainer desc={projectDescription}>
                 <ListPanel panelList={this.transformProjectToPanels(this.state.md)} />
             </TitleGridContainer>
         )
