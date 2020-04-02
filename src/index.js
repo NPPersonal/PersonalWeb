@@ -11,8 +11,6 @@ import ProfilePage from "views/ProfilePage/ProfilePage.js";
 import LoginPage from "views/LoginPage/LoginPage.js";
 import projPage from 'views/Sections/SectionProjects';
 
-console.log(process.env.PUBLIC_URL);
-
 ReactDOM.render(
   <BrowserRouter basename={process.env.PUBLIC_URL}>
     <Switch>
