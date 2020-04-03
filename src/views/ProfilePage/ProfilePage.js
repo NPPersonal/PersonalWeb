@@ -18,6 +18,7 @@ import NavPills from "components/NavPills/NavPills.js";
 import Parallax from "components/Parallax/Parallax.js";
 import Tooltip from '@material-ui/core/Tooltip';
 
+import SectionIntro from 'views/Sections/SectionIntro';
 import SectionSkills from 'views/Sections/SectionSkills';
 import SectionExp from 'views/Sections/SectionExperience';
 import SectionProj from 'views/Sections/SectionProjects';
@@ -83,12 +84,7 @@ export default function ProfilePage(props) {
                 </div>
               </GridItem>
               <GridItem xs={12} sm={12} md={10}>
-                <div className={classes.description}>
-                  <div className={classes.subtitle}>About Me</div>
-                  <p>
-                  {aboutMeData}
-                  </p>
-                </div>
+                <SectionIntro />
               </GridItem>
             </GridContainer>
             
