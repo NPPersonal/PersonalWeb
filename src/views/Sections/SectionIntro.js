@@ -14,12 +14,14 @@ const SectionIntro = () => {
     const classes = useStyle();
 
     return (
-        <div>
-            <div className={classes.title}>About Me</div>
-            <div className={classes.description}>
-                <p>
-                {aboutMeData}
-                </p>
+        <div className={classes.backdrop}>
+            <div className={classes.sectionContent}>
+                <div className={classes.title}>About Me</div>
+                <div>
+                    <p className={classes.description}>
+                    {aboutMeData}
+                    </p>
+                </div>
             </div>
         </div>
     );

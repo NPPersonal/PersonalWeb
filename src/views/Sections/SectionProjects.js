@@ -46,10 +46,16 @@ class SectionProjects extends React.Component{
     }
 
     render(){
+        const {classes} = this.props;
+
         return (
-            <TitleGridContainer desc={projectDescription}>
-                <ListPanel panelList={this.transformProjectToPanels(this.state.md)} />
-            </TitleGridContainer>
+            <div className={classes.backdrop}>
+                <div className={classes.sectionContent}>
+                    <TitleGridContainer desc={projectDescription}>
+                        <ListPanel panelList={this.transformProjectToPanels(this.state.md)} />
+                    </TitleGridContainer>
+                </div>
+            </div>
         )
     }
 };

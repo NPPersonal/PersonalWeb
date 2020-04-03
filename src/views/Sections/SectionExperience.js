@@ -47,12 +47,17 @@ class SectionExperience extends React.Component {
     }
 
     render(){
+        const {classes} = this.props;
         return (
-            <TitleGridContainer desc={expDescription}>
-            {
-                <ListPanel panelList={this.transformExpToPanel(this.state.md)} />
-            }
-            </TitleGridContainer>
+            <div className={classes.backdrop}>
+                <div className={classes.sectionContent}>
+                    <TitleGridContainer desc={expDescription}>
+                    {
+                        <ListPanel panelList={this.transformExpToPanel(this.state.md)} />
+                    }
+                    </TitleGridContainer>
+                </div>
+            </div>
         );
     }
     

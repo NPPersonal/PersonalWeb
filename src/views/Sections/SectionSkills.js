@@ -41,9 +41,13 @@ const SectionSkills = ()=>{
     }
 
     return (
-        <TitleGridContainer desc={skillDescription}>
-            <ListPanel panelList={transformSkillListToPanels(skillList)} />
-        </TitleGridContainer>
+        <div className={classes.backdrop}>
+            <div className={classes.sectionContent}>
+                <TitleGridContainer desc={skillDescription}>
+                    <ListPanel panelList={transformSkillListToPanels(skillList)} />
+                </TitleGridContainer>
+            </div>
+        </div>
     )
 }
 

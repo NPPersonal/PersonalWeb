@@ -67,9 +67,9 @@ export default function ProfilePage(props) {
       <Parallax small filter image={require("assets/img/profile-bg.jpg")} />
       <div className={classNames(classes.main, classes.mainRaised)}>
         <div>
-          <div className={classes.container}>
+          <div>
             <GridContainer justify="center" alignItems='center' direction='column'>
-              <GridItem xs={12} sm={12} md={6}>
+              <GridItem xs={12} sm={12} md={10}>
                 <div className={classes.profile}>
                   <div>
                     <img src={profile} alt="..." className={imageClasses} />
@@ -83,40 +83,17 @@ export default function ProfilePage(props) {
                   </div>
                 </div>
               </GridItem>
-              <GridItem xs={12} sm={12} md={10}>
+              <GridItem xs={12}>
                 <SectionIntro />
               </GridItem>
-            </GridContainer>
-            
-            <GridContainer justify="center">
-              <GridItem xs={12} sm={12} md={8} className={classes.navWrapper}>
-                <NavPills
-                  alignCenter
-                  color="primary"
-                  tabs={[
-                    {
-                      tabButton: "Skills",
-                      tabIcon: Camera,
-                      tabContent: (
-                        <SectionSkills />
-                      )
-                    },
-                    {
-                      tabButton: "Experience",
-                      tabIcon: Palette,
-                      tabContent: (
-                        <SectionExp />
-                      )
-                    },
-                    {
-                      tabButton: "Projects",
-                      tabIcon: Favorite,
-                      tabContent: (
-                        <SectionProj />
-                      )
-                    }
-                  ]}
-                />
+              <GridItem xs={12}>
+                <SectionSkills />
+              </GridItem>
+              <GridItem xs={12}>
+                <SectionExp />
+              </GridItem>
+              <GridItem xs={12}>
+                <SectionProj />
               </GridItem>
             </GridContainer>
           </div>
