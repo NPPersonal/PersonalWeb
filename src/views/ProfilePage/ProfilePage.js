@@ -111,7 +111,7 @@ export default function ProfilePage(props) {
           </div>
         </div>
       </div>
-      <SectionNav actions={actions} scrollOffset={-72} />
+      <SectionNav actions={actions.reverse()} scrollOffset={-72} />
     </div>
   );
 }
