@@ -48,10 +48,10 @@ class SectionProjects extends React.Component{
     }
 
     render(){
-        const {classes} = this.props;
+        const {classes,forwardRef} = this.props;
 
         return (
-            <div className={classes.backdrop}>
+            <div ref={forwardRef} className={classes.backdrop}>
                 <div className={classes.sectionContent}>
                     <div className={classes.sectionTitle}>
                         <Title title='Projects' subtitle='Projects I worked on' />
@@ -65,4 +65,6 @@ class SectionProjects extends React.Component{
     }
 };
 
-export default withStyles(projectStyle)(SectionProjects);
+export default withStyles(projectStyle)(
+    React.forwardRef((props, ref)=><SectionProjects forwardRef={ref} {...props} />)
+);

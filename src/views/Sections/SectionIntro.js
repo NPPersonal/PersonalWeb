@@ -11,12 +11,12 @@ import introStyle from 'assets/jss/material-kit-react/sections/introStyle';
 
 const useStyle = makeStyles(introStyle);
 
-const SectionIntro = () => {
+const SectionIntro = ({forwardRef}) => {
 
     const classes = useStyle();
 
     return (
-        <div className={classes.backdrop}>
+        <div ref={forwardRef} className={classes.backdrop}>
             <div className={classes.sectionContent}>
                 <div className={classes.sectionTitle}>
                     <Title title='About Me' subtitle='everything about me' />
@@ -31,4 +31,4 @@ const SectionIntro = () => {
     );
 };
 
-export default SectionIntro;
+export default React.forwardRef((props, ref)=><SectionIntro forwardRef={ref} {...props} />);

@@ -19,7 +19,7 @@ import {skillList, skillDescription} from 'assets/data/skillsData';
 
 const useStyle = makeStyles(skillStyle);
 
-const SectionSkills = ()=>{
+const SectionSkills = ({forwardRef})=>{
 
     const classes = useStyle();
 
@@ -43,7 +43,7 @@ const SectionSkills = ()=>{
     }
 
     return (
-        <div className={classes.backdrop}>
+        <div ref={forwardRef} className={classes.backdrop}>
             <div className={classes.sectionContent}>
                 <div className={classes.sectionTitle}>
                     <Title title='Skills' subtitle='I am experience in these skills' />
@@ -56,4 +56,4 @@ const SectionSkills = ()=>{
     )
 }
 
-export default SectionSkills;
+export default React.forwardRef((props, ref)=><SectionSkills forwardRef={ref} {...props}/>);

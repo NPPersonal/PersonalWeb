@@ -3,6 +3,7 @@ import React from "react";
 import classNames from "classnames";
 // @material-ui/core components
 import { makeStyles } from "@material-ui/core/styles";
+import FileCopyIcon from '@material-ui/icons/FileCopyOutlined';
 // @material-ui/icons
 import Camera from "@material-ui/icons/Camera";
 import Palette from "@material-ui/icons/Palette";
@@ -22,8 +23,7 @@ import SectionIntro from 'views/Sections/SectionIntro';
 import SectionSkills from 'views/Sections/SectionSkills';
 import SectionExp from 'views/Sections/SectionExperience';
 import SectionProj from 'views/Sections/SectionProjects';
-
-import aboutMeData from 'assets/data/aboutMeData';
+import SectionNav from 'views/Components/SectionNav';
 
 import profile from "assets/img/faces/christian.jpg";
 
@@ -41,6 +41,18 @@ import work5 from "assets/img/examples/clem-onojegaw.jpg";
 import styles from "assets/jss/material-kit-react/views/profilePage.js";
 
 const useStyles = makeStyles(styles);
+
+const introRef = React.createRef();
+const skillsRef = React.createRef();
+const projectsRef = React.createRef();
+const experiencesRef = React.createRef();
+
+const actions = [
+  { icon: <FileCopyIcon />, name: 'About Me', sectionRef:introRef },
+  { icon: <FileCopyIcon />, name: 'Skills', sectionRef:skillsRef },
+  { icon: <FileCopyIcon />, name: 'Experiences', sectionRef:experiencesRef },
+  { icon: <FileCopyIcon />, name: 'Projects', sectionRef:projectsRef },
+];
 
 export default function ProfilePage(props) {
   const classes = useStyles();
@@ -84,21 +96,22 @@ export default function ProfilePage(props) {
                 </div>
               </GridItem>
               <GridItem xs={12}>
-                <SectionIntro />
+                <SectionIntro ref={introRef} />
               </GridItem>
               <GridItem xs={12}>
-                <SectionSkills />
+                <SectionSkills ref={skillsRef} />
               </GridItem>
               <GridItem xs={12}>
-                <SectionExp />
+                <SectionExp ref={experiencesRef} />
               </GridItem>
               <GridItem xs={12}>
-                <SectionProj />
+                <SectionProj ref={projectsRef} />
               </GridItem>
             </GridContainer>
           </div>
         </div>
       </div>
+      <SectionNav actions={actions} scrollOffset={-72} />
     </div>
   );
 }
