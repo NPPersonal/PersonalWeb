@@ -3,6 +3,7 @@ import React from "react";
 import classNames from "classnames";
 // @material-ui/core components
 import { makeStyles } from "@material-ui/core/styles";
+import FileCopyIcon from '@material-ui/icons/FileCopyOutlined';
 // @material-ui/icons
 import Camera from "@material-ui/icons/Camera";
 import Palette from "@material-ui/icons/Palette";
@@ -18,9 +19,11 @@ import NavPills from "components/NavPills/NavPills.js";
 import Parallax from "components/Parallax/Parallax.js";
 import Tooltip from '@material-ui/core/Tooltip';
 
+import SectionIntro from 'views/Sections/SectionIntro';
 import SectionSkills from 'views/Sections/SectionSkills';
 import SectionExp from 'views/Sections/SectionExperience';
 import SectionProj from 'views/Sections/SectionProjects';
+import SectionNav from 'views/Components/SectionNav';
 
 import profile from "assets/img/faces/christian.jpg";
 
@@ -38,6 +41,18 @@ import work5 from "assets/img/examples/clem-onojegaw.jpg";
 import styles from "assets/jss/material-kit-react/views/profilePage.js";
 
 const useStyles = makeStyles(styles);
+
+const introRef = React.createRef();
+const skillsRef = React.createRef();
+const projectsRef = React.createRef();
+const experiencesRef = React.createRef();
+
+const actions = [
+  { icon: <FileCopyIcon />, name: 'About Me', sectionRef:introRef },
+  { icon: <FileCopyIcon />, name: 'Skills', sectionRef:skillsRef },
+  { icon: <FileCopyIcon />, name: 'Experiences', sectionRef:experiencesRef },
+  { icon: <FileCopyIcon />, name: 'Projects', sectionRef:projectsRef },
+];
 
 export default function ProfilePage(props) {
   const classes = useStyles();
@@ -64,9 +79,9 @@ export default function ProfilePage(props) {
       <Parallax small filter image={require("assets/img/profile-bg.jpg")} />
       <div className={classNames(classes.main, classes.mainRaised)}>
         <div>
-          <div className={classes.container}>
+          <div>
             <GridContainer justify="center" alignItems='center' direction='column'>
-              <GridItem xs={12} sm={12} md={6}>
+              <GridItem xs={12} sm={12} md={10}>
                 <div className={classes.profile}>
                   <div>
                     <img src={profile} alt="..." className={imageClasses} />
@@ -80,52 +95,23 @@ export default function ProfilePage(props) {
                   </div>
                 </div>
               </GridItem>
-              <GridItem xs={12} sm={12} md={10}>
-                <div className={classes.description}>
-                  <p>
-                    An artist of considerable range, Chet Faker — the name taken by
-                    Melbourne-raised, Brooklyn-based Nick Murphy — writes, performs
-                    and records all of his own music, giving it a warm, intimate
-                    feel with a solid groove structure.{" "}
-                  </p>
-                </div>
+              <GridItem xs={12}>
+                <SectionIntro ref={introRef} />
               </GridItem>
-            </GridContainer>
-            
-            <GridContainer justify="center">
-              <GridItem xs={12} sm={12} md={8} className={classes.navWrapper}>
-                <NavPills
-                  alignCenter
-                  color="primary"
-                  tabs={[
-                    {
-                      tabButton: "Skills",
-                      tabIcon: Camera,
-                      tabContent: (
-                        <SectionSkills />
-                      )
-                    },
-                    {
-                      tabButton: "Experience",
-                      tabIcon: Palette,
-                      tabContent: (
-                        <SectionExp />
-                      )
-                    },
-                    {
-                      tabButton: "Projects",
-                      tabIcon: Favorite,
-                      tabContent: (
-                        <SectionProj />
-                      )
-                    }
-                  ]}
-                />
+              <GridItem xs={12}>
+                <SectionSkills ref={skillsRef} />
+              </GridItem>
+              <GridItem xs={12}>
+                <SectionExp ref={experiencesRef} />
+              </GridItem>
+              <GridItem xs={12}>
+                <SectionProj ref={projectsRef} />
               </GridItem>
             </GridContainer>
           </div>
         </div>
       </div>
+      <SectionNav actions={actions.reverse()} scrollOffset={-72} />
     </div>
   );
 }

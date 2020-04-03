@@ -1,7 +1,9 @@
 import React from 'react';
 
+import Title from 'views/Components/Title';
+
 //import from material-ui core
-import {withStyles, ThemeProvider} from '@material-ui/core/styles';
+import {withStyles} from '@material-ui/core/styles';
 
 //import from template componets
 import TitleGridContainer from 'views/Components/TitleGridContainer';
@@ -46,12 +48,23 @@ class SectionProjects extends React.Component{
     }
 
     render(){
+        const {classes,forwardRef} = this.props;
+
         return (
-            <TitleGridContainer title='Projects' desc={projectDescription}>
-                <ListPanel panelList={this.transformProjectToPanels(this.state.md)} />
-            </TitleGridContainer>
+            <div ref={forwardRef} className={classes.backdrop}>
+                <div className={classes.sectionContent}>
+                    <div className={classes.sectionTitle}>
+                        <Title title='Projects' subtitle='Projects I worked on' />
+                    </div>
+                    <TitleGridContainer desc={projectDescription}>
+                        <ListPanel panelList={this.transformProjectToPanels(this.state.md)} />
+                    </TitleGridContainer>
+                </div>
+            </div>
         )
     }
 };
 
-export default withStyles(projectStyle)(SectionProjects);
+export default withStyles(projectStyle)(
+    React.forwardRef((props, ref)=><SectionProjects forwardRef={ref} {...props} />)
+);

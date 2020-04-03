@@ -1,5 +1,7 @@
 import React from 'react';
 
+import Title from 'views/Components/Title';
+
 //import from material-ui core
 import {withStyles} from '@material-ui/core/styles';
 
@@ -47,15 +49,25 @@ class SectionExperience extends React.Component {
     }
 
     render(){
+        const {classes, forwardRef} = this.props;
         return (
-            <TitleGridContainer title='Experiences' desc={expDescription}>
-            {
-                <ListPanel panelList={this.transformExpToPanel(this.state.md)} />
-            }
-            </TitleGridContainer>
+            <div ref={forwardRef} className={classes.backdrop}>
+                <div className={classes.sectionContent}>
+                    <div className={classes.sectionTitle}>
+                        <Title title='Experience' subtitle='Work experiences' />
+                    </div>
+                    <TitleGridContainer desc={expDescription}>
+                    {
+                        <ListPanel panelList={this.transformExpToPanel(this.state.md)} />
+                    }
+                    </TitleGridContainer>
+                </div>
+            </div>
         );
     }
     
 }
 
-export default withStyles(experienceStyle)(SectionExperience);
+export default withStyles(experienceStyle)(
+    React.forwardRef((props, ref)=><SectionExperience forwardRef={ref} {...props} />)
+);
