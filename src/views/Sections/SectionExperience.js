@@ -1,5 +1,7 @@
 import React from 'react';
 
+import Title from 'views/Components/Title';
+
 //import from material-ui core
 import {withStyles} from '@material-ui/core/styles';
 
@@ -51,6 +53,9 @@ class SectionExperience extends React.Component {
         return (
             <div className={classes.backdrop}>
                 <div className={classes.sectionContent}>
+                    <div className={classes.sectionTitle}>
+                        <Title title='Experience' subtitle='Work experiences' />
+                    </div>
                     <TitleGridContainer desc={expDescription}>
                     {
                         <ListPanel panelList={this.transformExpToPanel(this.state.md)} />

@@ -1,5 +1,7 @@
 import React from 'react';
 
+import Title from 'views/Components/Title';
+
 //import from material-ui core
 import {makeStyles} from '@material-ui/core/styles';
 
@@ -16,7 +18,9 @@ const SectionIntro = () => {
     return (
         <div className={classes.backdrop}>
             <div className={classes.sectionContent}>
-                <div className={classes.title}>About Me</div>
+                <div className={classes.sectionTitle}>
+                    <Title title='About Me' subtitle='everything about me' />
+                </div>
                 <div>
                     <p className={classes.description}>
                     {aboutMeData}

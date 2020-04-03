@@ -1,7 +1,9 @@
 import React from 'react';
 
+import Title from 'views/Components/Title';
+
 //import from material-ui core
-import {withStyles, ThemeProvider} from '@material-ui/core/styles';
+import {withStyles} from '@material-ui/core/styles';
 
 //import from template componets
 import TitleGridContainer from 'views/Components/TitleGridContainer';
@@ -51,6 +53,9 @@ class SectionProjects extends React.Component{
         return (
             <div className={classes.backdrop}>
                 <div className={classes.sectionContent}>
+                    <div className={classes.sectionTitle}>
+                        <Title title='Projects' subtitle='Projects I worked on' />
+                    </div>
                     <TitleGridContainer desc={projectDescription}>
                         <ListPanel panelList={this.transformProjectToPanels(this.state.md)} />
                     </TitleGridContainer>

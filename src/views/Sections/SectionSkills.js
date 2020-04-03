@@ -1,4 +1,6 @@
-import React, {useState} from 'react';
+import React from 'react';
+
+import Title from 'views/Components/Title';
 
 //import from material-ui core
 import {makeStyles} from '@material-ui/core/styles';
@@ -43,6 +45,9 @@ const SectionSkills = ()=>{
     return (
         <div className={classes.backdrop}>
             <div className={classes.sectionContent}>
+                <div className={classes.sectionTitle}>
+                    <Title title='Skills' subtitle='I am experience in these skills' />
+                </div>
                 <TitleGridContainer desc={skillDescription}>
                     <ListPanel panelList={transformSkillListToPanels(skillList)} />
                 </TitleGridContainer>
