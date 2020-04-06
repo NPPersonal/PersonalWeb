@@ -1,6 +1,7 @@
 import React from 'react';
 
 import Title from 'views/Components/Title';
+import SectionContainer from 'views/Components/SectionContainer';
 
 //import from material-ui core
 import {makeStyles} from '@material-ui/core/styles';
@@ -8,7 +9,6 @@ import {makeStyles} from '@material-ui/core/styles';
 //import from template componets
 import GridContainer from "components/Grid/GridContainer.js";
 import GridItem from "components/Grid/GridItem.js";
-import TitleGridContainer from 'views/Components/TitleGridContainer';
 import ListPanel from 'views/Components/ListPanel';
 
 
@@ -42,17 +42,32 @@ const SectionSkills = ({forwardRef})=>{
         })
     }
 
-    return (
-        <div ref={forwardRef} className={classes.backdrop}>
-            <div className={classes.sectionContent}>
-                <div className={classes.sectionTitle}>
-                    <Title title='Skills' subtitle='I am experience in these skills' />
-                </div>
-                <TitleGridContainer desc={skillDescription}>
-                    <ListPanel panelList={transformSkillListToPanels(skillList)} />
-                </TitleGridContainer>
+    const getTitle = ()=>{
+        return <Title title='Skills' subtitle='I am experience in these skills' />;
+    }
+
+    const getDesc = ()=>{
+        return (
+            <div>
+                <p className={classes.descText}>
+                {skillDescription}
+                </p>
             </div>
-        </div>
+        );
+    }
+
+    const getContent = ()=>{
+        return <ListPanel panelList={transformSkillListToPanels(skillList)} />;
+    }
+
+    return (
+        <SectionContainer
+        ref={forwardRef}
+        title={getTitle()}
+        desc={getDesc()}
+        content={getContent()}
+        backdropColor='#B1A64C'
+        />
     )
 }
 

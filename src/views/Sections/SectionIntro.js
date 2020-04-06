@@ -1,6 +1,7 @@
 import React from 'react';
 
 import Title from 'views/Components/Title';
+import SectionContainer from 'views/Components/SectionContainer';
 
 //import from material-ui core
 import {makeStyles} from '@material-ui/core/styles';
@@ -15,19 +16,27 @@ const SectionIntro = ({forwardRef}) => {
 
     const classes = useStyle();
 
-    return (
-        <div ref={forwardRef} className={classes.backdrop}>
-            <div className={classes.sectionContent}>
-                <div className={classes.sectionTitle}>
-                    <Title title='About Me' subtitle='everything about me' />
-                </div>
-                <div>
-                    <p className={classes.description}>
-                    {aboutMeData}
-                    </p>
-                </div>
+    const getTitle = ()=>{
+        return <Title title='About Me' subtitle='everything about me' />;
+    }
+
+    const getDesc = ()=>{
+        return (
+            <div>
+                <p className={classes.descText}>
+                {aboutMeData}
+                </p>
             </div>
-        </div>
+        );
+    }
+
+    return (
+        <SectionContainer
+        ref={forwardRef}
+        title={getTitle()}
+        desc={getDesc()}
+        backdropColor='#d9ddd3'
+        />
     );
 };
 
