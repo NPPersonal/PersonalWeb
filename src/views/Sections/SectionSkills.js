@@ -14,7 +14,7 @@ import CardMedia from '@material-ui/core/CardMedia';
 import CardContent from '@material-ui/core/CardContent';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
-import ListItemText from '@material-ui/core/ListItemText';
+import Collapse from '@material-ui/core/Collapse';
 
 import skillStyle from 'assets/jss/material-kit-react/sections/skillsStyle.js';
 
@@ -31,14 +31,14 @@ const SectionSkills = ({forwardRef})=>{
         const breakPoints={
             xs:12,
             sm:6,
-            md:3
+            md:4
         }
        return (
         <GridContainer direction='row' justify='center'  alignItems="stretch">
         {
         langs.map((lang, langIndex)=>{
             return (
-            <GridItem key={langIndex} {...breakPoints} style={{padding:'10px'}}>
+            <GridItem key={langIndex} {...breakPoints} style={{padding:'1em'}}>
                 <Card className={classes.cardHeight}>
                     <CardMedia>
                         <div className={classes.imageContainer}>
@@ -84,7 +84,20 @@ const SectionSkills = ({forwardRef})=>{
 
     const getContent = ()=>{
         // return <ListPanel panelList={transformSkillListToPanels(skillList)} />;
-        return transformLangsToCards(programLangs);
+        return (
+            <GridContainer >
+                <GridItem>
+                {transformLangsToCards(programLangs)}
+                </GridItem>
+                <GridItem style={{paddingTop:'1em'}}>
+                    <GridContainer direction='column' justify='center' alignItems='center'>
+                        <GridItem>
+                            <Title title='Tools' subtitle='Tools I have used' />
+                        </GridItem>
+                    </GridContainer>
+                </GridItem>
+            </GridContainer>
+        )
     }
 
     return (
