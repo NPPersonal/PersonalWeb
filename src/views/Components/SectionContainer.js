@@ -28,7 +28,7 @@ const SectionContainer = ({
     content,
     padding='4% 4%',
     backdropColor='#ffffff',
-    breakPoints={defaultBreakPoints}
+    breakPoints=defaultBreakPoints
 }) => {
     const style = {
         backdrop:{
