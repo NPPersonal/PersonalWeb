@@ -48,6 +48,18 @@ export const skillList = [
     versionControls
 ]
 
+export const programLangs = [
+    {
+        title: 'JavaScript',
+        imageSource: '',
+        frameworks: [
+            'Express.js',
+            'React.js',
+            'Redux.js',
+        ]
+    }
+]
+
 export const skillDescription = `An artist of considerable range, Chet Faker — the name taken by
 Melbourne-raised, Brooklyn-based Nick Murphy — writes, performs
 and records all of his own music, giving it a warm, intimate

@@ -10,12 +10,19 @@ import {makeStyles} from '@material-ui/core/styles';
 import GridContainer from "components/Grid/GridContainer.js";
 import GridItem from "components/Grid/GridItem.js";
 import ListPanel from 'views/Components/ListPanel';
+import Card from '@material-ui/core/Card';
+import CardActionArea from '@material-ui/core/CardActionArea';
+import CardMedia from '@material-ui/core/CardMedia';
+import CardContent from '@material-ui/core/CardContent';
+import List from '@material-ui/core/List';
+import ListItem from '@material-ui/core/ListItem';
+import ListItemText from '@material-ui/core/ListItemText';
 
 
 import skillStyle from 'assets/jss/material-kit-react/sections/skillsStyle.js';
 
 //skill data
-import {skillList, skillDescription} from 'assets/data/skillsData';
+import {skillList, skillDescription, programLangs} from 'assets/data/skillsData';
 
 const useStyle = makeStyles(skillStyle);
 
@@ -42,6 +49,40 @@ const SectionSkills = ({forwardRef})=>{
         })
     }
 
+    const transformLangsToCards = (langs)=>{
+       return (
+        <GridContainer direction='row' justify="center">
+        {
+        langs.map((lang, langIndex)=>{
+            return (
+            <Card key={langIndex}>
+                <CardActionArea>
+                    <CardMedia
+                    image={lang.imageSource}
+                    title={lang.title}
+                    />
+                    <CardContent>
+                        <List>
+                        {
+                        lang.frameworks.map((framework, index)=>{
+                            return (
+                                <ListItem key={index}>
+                                    <ListItemText primary={framework} />
+                                </ListItem>
+                            ) 
+                        })
+                        }
+                        </List>
+                    </CardContent>
+                </CardActionArea>
+            </Card>
+            );
+        })
+        }
+        </GridContainer>
+       );
+    }
+
     const getTitle = ()=>{
         return <Title title='Skills' subtitle='I am experience in these skills' />;
     }
@@ -57,7 +98,8 @@ const SectionSkills = ({forwardRef})=>{
     }
 
     const getContent = ()=>{
-        return <ListPanel panelList={transformSkillListToPanels(skillList)} />;
+        // return <ListPanel panelList={transformSkillListToPanels(skillList)} />;
+        return transformLangsToCards(programLangs);
     }
 
     return (
