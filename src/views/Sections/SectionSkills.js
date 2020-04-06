@@ -31,7 +31,7 @@ const SectionSkills = ({forwardRef})=>{
         const breakPoints={
             xs:12,
             sm:6,
-            md:4
+            md:3
         }
        return (
         <GridContainer direction='row' justify='center'  alignItems="stretch">
