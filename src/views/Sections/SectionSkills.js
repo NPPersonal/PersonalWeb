@@ -9,15 +9,12 @@ import {makeStyles} from '@material-ui/core/styles';
 //import from template componets
 import GridContainer from "components/Grid/GridContainer.js";
 import GridItem from "components/Grid/GridItem.js";
-import ListPanel from 'views/Components/ListPanel';
 import Card from '@material-ui/core/Card';
-import CardActionArea from '@material-ui/core/CardActionArea';
 import CardMedia from '@material-ui/core/CardMedia';
 import CardContent from '@material-ui/core/CardContent';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
-
 
 import skillStyle from 'assets/jss/material-kit-react/sections/skillsStyle.js';
 
@@ -30,52 +27,40 @@ const SectionSkills = ({forwardRef})=>{
 
     const classes = useStyle();
 
-    const transformSkillListToPanels = (skills) => {
-        return skills.map(skill=>{
-            return {
-                summary: (<div className={classes.panelTitle}>{skill.title}</div>),
-                detail: (
-                <GridContainer direction='column' justify="center" alignItems='center'>
-                {
-                    skill.content.map((value, index)=>{
-                        return(<GridItem key={index}>
-                            <div className={classes.item}>{value}</div>
-                        </GridItem>);
-                    })
-                }
-                </GridContainer>
-            ),
-            }
-        })
-    }
-
     const transformLangsToCards = (langs)=>{
+        const breakPoints={
+            xs:12,
+            sm:6,
+            md:4
+        }
        return (
-        <GridContainer direction='row' justify="center">
+        <GridContainer direction='row' justify='center'  alignItems="stretch">
         {
         langs.map((lang, langIndex)=>{
             return (
-            <Card key={langIndex}>
-                <CardActionArea>
-                    <CardMedia
-                    image={lang.imageSource}
-                    title={lang.title}
-                    />
+            <GridItem key={langIndex} {...breakPoints} style={{padding:'10px'}}>
+                <Card className={classes.cardHeight}>
+                    <CardMedia>
+                        <div className={classes.imageContainer}>
+                            <img className={classes.image} src={lang.imageSource} />
+                        </div>
+                    </CardMedia>
                     <CardContent>
+                        <div className={classes.cardTitle}>{lang.title}</div>
                         <List>
                         {
                         lang.frameworks.map((framework, index)=>{
                             return (
-                                <ListItem key={index}>
-                                    <ListItemText primary={framework} />
+                                <ListItem key={index} dense>
+                                    <div className={classes.itemText}>{framework}</div>
                                 </ListItem>
                             ) 
                         })
                         }
                         </List>
                     </CardContent>
-                </CardActionArea>
-            </Card>
+                </Card>
+            </GridItem>
             );
         })
         }

@@ -1,3 +1,9 @@
+import javascriptLogo from 'assets/img/lang-logo/javascript.png';
+import swiftLogo from 'assets/img/lang-logo/swift.png';
+import objcLogo from 'assets/img/lang-logo/objc.png';
+import csharpLogo from 'assets/img/lang-logo/csharp.png';
+import othersLogo from 'assets/img/lang-logo/others.png';
+
 const programmingLangs = {
     title: 'Programming languages',
     content: [
@@ -47,17 +53,48 @@ export const skillList = [
     packageManagements,
     versionControls
 ]
-
 export const programLangs = [
     {
         title: 'JavaScript',
-        imageSource: '',
+        imageSource: javascriptLogo,
         frameworks: [
             'Express.js',
             'React.js',
             'Redux.js',
         ]
-    }
+    },
+    {
+        title: 'Swift',
+        imageSource: swiftLogo,
+        frameworks: [
+            'IOS'
+        ]
+    },
+    {
+        title: 'Objective-C',
+        imageSource: objcLogo,
+        frameworks: [
+            'IOS'
+        ]
+    },
+    {
+        title: 'C#',
+        imageSource: csharpLogo,
+        frameworks: [
+            'Unity3D'
+        ]
+    },
+    {
+        title: 'Others',
+        imageSource: othersLogo,
+        frameworks: [
+            'SQL',
+            'HTML',
+            'CSS',
+            'C++',
+        ]
+    },
+    
 ]
 
 export const skillDescription = `An artist of considerable range, Chet Faker — the name taken by
