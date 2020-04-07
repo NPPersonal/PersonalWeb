@@ -17,7 +17,10 @@ const SectionIntro = ({forwardRef}) => {
     const classes = useStyle();
 
     const getTitle = ()=>{
-        return <Title title='About Me' subtitle='everything about me' />;
+        return <Title 
+        title='About Me' 
+        subtitle='everything about me' 
+        subtitleColor='#787772' />;
     }
 
     const getDesc = ()=>{
@@ -35,7 +38,7 @@ const SectionIntro = ({forwardRef}) => {
         ref={forwardRef}
         title={getTitle()}
         desc={getDesc()}
-        backdropColor='#d9ddd3'
+        backdropColor='#decef2'
         />
     );
 };
