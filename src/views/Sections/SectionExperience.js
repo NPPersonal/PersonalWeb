@@ -1,12 +1,12 @@
 import React from 'react';
 
 import Title from 'views/Components/Title';
+import SectionContainer from 'views/Components/SectionContainer';
 
 //import from material-ui core
 import {withStyles} from '@material-ui/core/styles';
 
 //import from template componets
-import TitleGridContainer from 'views/Components/TitleGridContainer';
 import ListPanel from 'views/Components/ListPanel';
 
 //style and theme
@@ -48,22 +48,37 @@ class SectionExperience extends React.Component {
         })
     }
 
-    render(){
-        const {classes, forwardRef} = this.props;
+    getTitle = ()=>{
+        return <Title title='Experience' subtitle='Work experiences' />;
+    }
+
+    getDesc = ()=>{
+        const {classes} = this.props;
         return (
-            <div ref={forwardRef} className={classes.backdrop}>
-                <div className={classes.sectionContent}>
-                    <div className={classes.sectionTitle}>
-                        <Title title='Experience' subtitle='Work experiences' />
-                    </div>
-                    <TitleGridContainer desc={expDescription}>
-                    {
-                        <ListPanel panelList={this.transformExpToPanel(this.state.md)} />
-                    }
-                    </TitleGridContainer>
-                </div>
+            <div>
+                <p className={classes.descText}>
+                {expDescription}
+                </p>
             </div>
         );
+    }
+
+    getContent = ()=>{
+        return <ListPanel panelList={this.transformExpToPanel(this.state.md)} />;
+    }
+
+    render(){
+        const {forwardRef} = this.props;
+
+        return (
+            <SectionContainer
+            ref={forwardRef}
+            title={this.getTitle()}
+            desc={this.getDesc()}
+            content={this.getContent()}
+            backdropColor='#317264'
+            />
+        )
     }
     
 }

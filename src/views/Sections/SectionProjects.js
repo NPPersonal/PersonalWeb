@@ -1,12 +1,12 @@
 import React from 'react';
 
 import Title from 'views/Components/Title';
+import SectionContainer from 'views/Components/SectionContainer';
 
 //import from material-ui core
 import {withStyles} from '@material-ui/core/styles';
 
 //import from template componets
-import TitleGridContainer from 'views/Components/TitleGridContainer';
 import ListPanel from 'views/Components/ListPanel';
 
 //react-markdown
@@ -47,20 +47,36 @@ class SectionProjects extends React.Component{
         })
     }
 
+    getTitle = ()=>{
+        return <Title title='Projects' subtitle='Projects I worked on' />;
+    }
+
+    getDesc = ()=>{
+        const {classes} = this.props;
+        return (
+            <div>
+                <p className={classes.descText}>
+                {projectDescription}
+                </p>
+            </div>
+        );
+    }
+
+    getContent = ()=>{
+        return <ListPanel panelList={this.transformProjectToPanels(this.state.md)} />;
+    }
+
     render(){
-        const {classes,forwardRef} = this.props;
+        const {forwardRef} = this.props;
 
         return (
-            <div ref={forwardRef} className={classes.backdrop}>
-                <div className={classes.sectionContent}>
-                    <div className={classes.sectionTitle}>
-                        <Title title='Projects' subtitle='Projects I worked on' />
-                    </div>
-                    <TitleGridContainer desc={projectDescription}>
-                        <ListPanel panelList={this.transformProjectToPanels(this.state.md)} />
-                    </TitleGridContainer>
-                </div>
-            </div>
+            <SectionContainer
+            ref={forwardRef}
+            title={this.getTitle()}
+            desc={this.getDesc()}
+            content={this.getContent()}
+            backdropColor='#e5ecee'
+            />
         )
     }
 };
