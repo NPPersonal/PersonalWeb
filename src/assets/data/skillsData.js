@@ -104,7 +104,34 @@ export const tools = [
             'Mac OSX',
             'Windows'
         ]
-    }
+    },
+    {
+        title:'IDE',
+        list:[
+            'Visual Studio Code',
+            'Xcode'
+        ]
+    },
+    {
+        title:'Continuous integration',
+        list:[
+            'Travis-CI'
+        ]
+    },
+    {
+        title:'Version control',
+        list:[
+            'GitHub'
+        ]
+    },
+    {
+        title:'Package management',
+        list:[
+            'NPM',
+            'CocoaPods'
+        ]
+    },
+
 ]
 
 export const skillDescription = `An artist of considerable range, Chet Faker — the name taken by
