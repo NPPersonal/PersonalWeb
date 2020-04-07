@@ -106,7 +106,7 @@ const SectionSkills = ({forwardRef})=>{
         title={getTitle()}
         desc={getDesc()}
         content={getContent()}
-        backdropColor='#ebe7dd'
+        backdropColor='#e6e6e6'
         />
     )
 }
