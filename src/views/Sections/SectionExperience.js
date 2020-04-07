@@ -2,6 +2,10 @@ import React from 'react';
 
 import Title from 'views/Components/Title';
 import SectionContainer from 'views/Components/SectionContainer';
+import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timeline-component';
+import 'react-vertical-timeline-component/style.min.css';
+
+import WorkOutlineIcon from '@material-ui/icons/WorkOutline';
 
 //import from material-ui core
 import {withStyles} from '@material-ui/core/styles';
@@ -16,7 +20,7 @@ import experienceStyle from 'assets/jss/material-kit-react/sections/experienceSt
 import ReactMarkdown from 'react-markdown/with-html';
 
 //experience data
-import {getExperiences, expDescription} from 'assets/data/expData';
+import {getExperiences, expDescription, exps} from 'assets/data/expData';
 
 class SectionExperience extends React.Component {
     constructor(){
@@ -48,6 +52,33 @@ class SectionExperience extends React.Component {
         })
     }
 
+    transformExpToTimeline(exps){
+        return (
+            <VerticalTimeline>
+            {
+                exps.map((exp,index)=>{
+                    return (
+                        <VerticalTimelineElement
+                        key={index}
+                        className='vertical-timeline-element--work'
+                        contentStyle={{...exp.contentStyle}}
+                        contentArrowStyle={{...exp.contentArrowStyle}}
+                        iconStyle={{...exp.iconStyle}}
+                        icon={<WorkOutlineIcon />}
+                        >
+                            <h3 className="vertical-timeline-element-title">{exp.title}</h3>
+                            <h4 className="vertical-timeline-element-subtitle">{exp.location}</h4>
+                            <p>
+                            {exp.desc}
+                            </p>
+                        </VerticalTimelineElement>
+                    )
+                })
+            }
+            </VerticalTimeline>
+        );
+    }
+
     getTitle = ()=>{
         return <Title 
         title='Experience' 
@@ -67,7 +98,8 @@ class SectionExperience extends React.Component {
     }
 
     getContent = ()=>{
-        return <ListPanel panelList={this.transformExpToPanel(this.state.md)} />;
+        // return <ListPanel panelList={this.transformExpToPanel(this.state.md)} />;
+        return this.transformExpToTimeline(exps);
     }
 
     render(){
