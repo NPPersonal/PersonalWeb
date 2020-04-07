@@ -49,7 +49,10 @@ class SectionExperience extends React.Component {
     }
 
     getTitle = ()=>{
-        return <Title title='Experience' subtitle='Work experiences' />;
+        return <Title 
+        title='Experience' 
+        subtitle='Work experiences' 
+        subtitleColor='#787772' />;
     }
 
     getDesc = ()=>{
@@ -76,7 +79,7 @@ class SectionExperience extends React.Component {
             title={this.getTitle()}
             desc={this.getDesc()}
             content={this.getContent()}
-            backdropColor='#317264'
+            backdropColor='#decef2'
             />
         )
     }

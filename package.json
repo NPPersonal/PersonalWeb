@@ -20,7 +20,8 @@
     "react-router-dom": "5.1.2",
     "react-scripts": "3.4.1",
     "react-slick": "0.25.2",
-    "react-swipeable-views": "0.13.9"
+    "react-swipeable-views": "0.13.9",
+    "react-vertical-timeline-component": "^2.5.0"
   },
   "devDependencies": {
     "@babel/cli": "7.8.4",
