@@ -41,12 +41,12 @@ class SectionProjects extends React.Component{
             md:4
         }
        return (
-            <GridContainer direction='row' justify='center'  alignItems="stretch">
+            <div className={classes.cardContainer}>
             {
             projects.map((project, index)=>{
                 console.log(project);
                 return (
-                <GridItem key={index} {...breakPoints} style={{padding:'1em'}}>
+                <div key={index} className={classes.cardWrapper}>
                     <Card 
                     className={classes.cardHeight}
                     title={project.title}
@@ -54,11 +54,11 @@ class SectionProjects extends React.Component{
                     actions={[<Button color='primary'>More</Button>]}
                     />
 
-                </GridItem>
+                </div>
                 );
             })
             }
-            </GridContainer>
+            </div>
        )
     }
 

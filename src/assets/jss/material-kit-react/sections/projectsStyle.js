@@ -14,6 +14,15 @@ const experienceStyle = {
     cardHeight:{
         height:'100%'
     },
+    cardContainer:{
+        display:'flex',
+        flexWrap:'wrap',
+        justifyContent:'center'
+    },
+    cardWrapper:{
+        width:'250px',
+        padding:'10px'
+    }
 }
 
 export default experienceStyle;
