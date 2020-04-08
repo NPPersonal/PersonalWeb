@@ -14,7 +14,6 @@ const ProjectCard = ({
     actions,
     ...rest
 }) => {
-    console.log(title)
     return (
         <ThemeProvider theme={ProjectCardTheme}>
             <Card {...rest}>
