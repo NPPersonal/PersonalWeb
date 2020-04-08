@@ -18,7 +18,7 @@ const getContent = (value) => {
 const defaultBreakPoints = {
     xs: 11,
     sm: 11,
-    md: 8
+    md: 10
 }
 
 const SectionContainer = ({
@@ -26,7 +26,7 @@ const SectionContainer = ({
     title,
     desc,
     content,
-    padding='4% 4%',
+    padding='2% 2%',
     backdropColor='#ffffff',
     breakPoints=defaultBreakPoints
 }) => {
