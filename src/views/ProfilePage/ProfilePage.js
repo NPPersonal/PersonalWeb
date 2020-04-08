@@ -25,6 +25,9 @@ import SectionExp from 'views/Sections/SectionExperience';
 import SectionProj from 'views/Sections/SectionProjects';
 import SectionNav from 'views/Components/SectionNav';
 
+import {ThemeProvider} from '@material-ui/core/styles';
+import profileTheme from 'assets/theme/profileTheme';
+
 import profile from "assets/img/faces/christian.jpg";
 
 import studio1 from "assets/img/examples/studio-1.jpg";
@@ -64,54 +67,56 @@ export default function ProfilePage(props) {
   );
   const navImageClasses = classNames(classes.imgRounded, classes.imgGallery);
   return (
-    <div>
-      <Header
-        color="transparent"
-        brand="Profile"
-        rightLinks={<HeaderLinks />}
-        fixed
-        changeColorOnScroll={{
-          height: 200,
-          color: "white"
-        }}
-        {...rest}
-      />
-      <Parallax small filter image={require("assets/img/profile-bg.jpg")} />
-      <div className={classNames(classes.main, classes.mainRaised)}>
-        <div>
+    <ThemeProvider theme={profileTheme}>
+      <div>
+        <Header
+          color="transparent"
+          brand="Profile"
+          rightLinks={<HeaderLinks />}
+          fixed
+          changeColorOnScroll={{
+            height: 200,
+            color: "white"
+          }}
+          {...rest}
+        />
+        <Parallax small filter image={require("assets/img/profile-bg.jpg")} />
+        <div className={classNames(classes.main, classes.mainRaised)}>
           <div>
-            <GridContainer justify="center" alignItems='center' direction='column'>
-              <GridItem xs={12} sm={12} md={10}>
-                <div className={classes.profile}>
-                  <div>
-                    <img src={profile} alt="..." className={imageClasses} />
+            <div>
+              <GridContainer justify="center" alignItems='center' direction='column'>
+                <GridItem xs={12} sm={12} md={10}>
+                  <div className={classes.profile}>
+                    <div>
+                      <img src={profile} alt="..." className={imageClasses} />
+                    </div>
+                    <div className={classes.name}>
+                      <Tooltip title='Nelson' placement='bottom'
+                      classes={{tooltip:classes.tooltip}} >
+                        <h3 className={classes.title}>Ming-Chun Hung</h3>
+                      </Tooltip>
+                      <h6>Programmer</h6>
+                    </div>
                   </div>
-                  <div className={classes.name}>
-                    <Tooltip title='Nelson' placement='bottom'
-                    classes={{tooltip:classes.tooltip}} >
-                      <h3 className={classes.title}>Ming-Chun Hung</h3>
-                    </Tooltip>
-                    <h6>Programmer</h6>
-                  </div>
-                </div>
-              </GridItem>
-              <GridItem xs={12}>
-                <SectionIntro ref={introRef} />
-              </GridItem>
-              <GridItem xs={12}>
-                <SectionSkills ref={skillsRef} />
-              </GridItem>
-              <GridItem xs={12}>
-                <SectionExp ref={experiencesRef} />
-              </GridItem>
-              <GridItem xs={12}>
-                <SectionProj ref={projectsRef} />
-              </GridItem>
-            </GridContainer>
+                </GridItem>
+                <GridItem xs={12}>
+                  <SectionIntro ref={introRef} />
+                </GridItem>
+                <GridItem xs={12}>
+                  <SectionSkills ref={skillsRef} />
+                </GridItem>
+                <GridItem xs={12}>
+                  <SectionExp ref={experiencesRef} />
+                </GridItem>
+                <GridItem xs={12}>
+                  <SectionProj ref={projectsRef} />
+                </GridItem>
+              </GridContainer>
+            </div>
           </div>
         </div>
+        <SectionNav actions={actions.reverse()} scrollOffset={-72} />
       </div>
-      <SectionNav actions={actions.reverse()} scrollOffset={-72} />
-    </div>
+    </ThemeProvider>
   );
 }

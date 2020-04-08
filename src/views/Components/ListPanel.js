@@ -1,15 +1,13 @@
 import React, {useState} from 'react';
 
 //import from material-ui core
-import {ThemeProvider} from '@material-ui/core/styles';
+
 import ExpansionPanel from '@material-ui/core/ExpansionPanel';
 import ExpansionPanelSummary from '@material-ui/core/ExpansionPanelSummary';
 import ExpansionPanelDetails from '@material-ui/core/ExpansionPanelDetails';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 
-import panelTheme from 'assets/theme/expansionPanelTheme.js';
-
-const ListPanel = ({panelList, theme}) => {
+const ListPanel = ({panelList}) => {
 
     const [expand, setExpand] = useState('');
 
@@ -24,7 +22,6 @@ const ListPanel = ({panelList, theme}) => {
     }
 
     return (
-        <ThemeProvider theme={theme?theme:panelTheme}>
             <div>
             {
                 panelList?
@@ -55,7 +52,6 @@ const ListPanel = ({panelList, theme}) => {
                 null
             }
             </div>
-        </ThemeProvider>
     );
 }
 

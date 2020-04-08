@@ -10,6 +10,18 @@ const experienceStyle = {
     },
     backdrop:{
         backgroundColor: '#e5ecee'
+    },
+    cardHeight:{
+        height:'100%'
+    },
+    cardContainer:{
+        display:'flex',
+        flexWrap:'wrap',
+        justifyContent:'center'
+    },
+    cardWrapper:{
+        width:'250px',
+        padding:'10px'
     }
 }
 

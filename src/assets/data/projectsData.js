@@ -11,38 +11,69 @@ import vtcMD from 'assets/markdownSrc/project/visual-traveling-checklist.md';
 const projects = [
     {
         title: 'Visual Music',
+        brief: `
+        Not only enjoy your music by ears but also 
+        look your music dancing on web.
+        `,
         mdSrc: visualMusicMD
     },
     {
         title: 'eShop',
+        brief: `
+        A e-commerce web app for clothes shopping.
+        `,
         mdSrc: eShopMD
     },
     {
         title: 'Face Detection',
+        brief: `
+        Detect how many faces appear in photo.
+        `,
         mdSrc: faceDetectionMD
     },
     {
         title: 'Finder E-Book',
+        brief: `
+        Electronic book in your phone.
+        `,
         mdSrc: finderEBookMD
     },
     {
         title: 'Mobile Disk',
+        brief: `
+        Turn your personal mobile phone into 
+        a disk to store everything you need.
+        `,
         mdSrc: mobileDiskMD
     },
     {
         title: 'Neat Converter',
+        brief: `
+        Convert between different units on your phone 
+        easily.
+        `,
         mdSrc: neatConverterMD
     },
     {
         title: 'Stiky Hive',
+        brief: `
+        Looking for person whoes skill is in your need on your phone. 
+        `,
         mdSrc: stikyHiveMD
     },
     {
         title: 'Virtual Gift',
+        brief: `
+        Send a virtual gift to your friend on your phone. 
+        `,
         mdSrc: virtualGiftMD
     },
     {
         title: 'Visual Traveling Checklist',
+        brief: `
+        Organize everyting your need for your trip on 
+        your phone. 
+        `,
         mdSrc: vtcMD
     },
 ]
@@ -59,6 +90,7 @@ export const getProjects = async () => {
         return res.map((mdText, index)=>{
             return {
                 title: projects[index].title,
+                brief: projects[index].brief,
                 content: mdText
             }
         })
