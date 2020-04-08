@@ -6,11 +6,11 @@ import SectionContainer from 'views/Components/SectionContainer';
 //import from material-ui core
 import {withStyles} from '@material-ui/core/styles';
 
-//import from template componets
-import ListPanel from 'views/Components/ListPanel';
+import GridContainer from "components/Grid/GridContainer.js";
+import GridItem from "components/Grid/GridItem.js";
+import Card from 'views/Components/ProjectCard';
 
-//react-markdown
-import ReactMarkdown from 'react-markdown/with-html';
+import Button from '@material-ui/core/Button';
 
 //style and theme
 import projectStyle from 'assets/jss/material-kit-react/sections/projectsStyle';
@@ -32,19 +32,34 @@ class SectionProjects extends React.Component{
         .then(res=>this.setState({...this.state, md:res}))
     }
 
-    transformProjectToPanels(projects){
+    transformProjectToCard(projects){
         if(!projects) return null;
         const {classes} = this.props;
-        return projects.map(project=>{
-            return {
-                summary: (<div className={classes.panelTitle}>{project.title}</div>),
-                detail: (
-                <div>
-                    <ReactMarkdown source={project.content} escapeHtml={false} />
-                </div>
-                ),
+        const breakPoints={
+            xs:12,
+            sm:6,
+            md:4
+        }
+       return (
+            <GridContainer direction='row' justify='center'  alignItems="stretch">
+            {
+            projects.map((project, index)=>{
+                console.log(project);
+                return (
+                <GridItem key={index} {...breakPoints} style={{padding:'1em'}}>
+                    <Card 
+                    className={classes.cardHeight}
+                    title={project.title}
+                    content={<div>{project.brief}</div>}
+                    actions={[<Button color='primary'>More</Button>]}
+                    />
+
+                </GridItem>
+                );
+            })
             }
-        })
+            </GridContainer>
+       )
     }
 
     getTitle = ()=>{
@@ -63,7 +78,7 @@ class SectionProjects extends React.Component{
     }
 
     getContent = ()=>{
-        return <ListPanel panelList={this.transformProjectToPanels(this.state.md)} />;
+        return this.transformProjectToCard(this.state.md);
     }
 
     render(){

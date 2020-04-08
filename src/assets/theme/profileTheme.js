@@ -55,7 +55,7 @@ const theme = createMuiTheme({
                 backgroundColor: panelColor,
                 borderRadius
             }
-        }
+        },
     }
 });
 

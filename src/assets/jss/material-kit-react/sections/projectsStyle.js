@@ -10,7 +10,10 @@ const experienceStyle = {
     },
     backdrop:{
         backgroundColor: '#e5ecee'
-    }
+    },
+    cardHeight:{
+        height:'100%'
+    },
 }
 
 export default experienceStyle;
