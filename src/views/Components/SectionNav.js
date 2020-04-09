@@ -4,16 +4,25 @@ import { makeStyles } from '@material-ui/core/styles';
 import SpeedDial from '@material-ui/lab/SpeedDial';
 import SpeedDialIcon from '@material-ui/lab/SpeedDialIcon';
 import SpeedDialAction from '@material-ui/lab/SpeedDialAction';
+import MenuIcon from '@material-ui/icons/Menu';
+import MenuOpenIcon from '@material-ui/icons/MenuOpen';
+import Backdrop from '@material-ui/core/Backdrop';
 
-const useStyles = makeStyles({
+const useStyles = makeStyles(theme=>({
     
     speedDail: {
       position: 'fixed',
       right: '3%',
       bottom: '3%',
-      zIndex: '3'
+      zIndex: theme.zIndex.drawer+1,
     },
-});
+    backdrop:{
+        zIndex:theme.zIndex.drawer+1,
+    },
+    toolTipTitle:{
+        width:'100px'
+    }
+}));
 
 const SectionNav = ({actions, scrollBlock='start', scrollOffset=0}) => {
     const classes = useStyles();
@@ -36,16 +45,18 @@ const SectionNav = ({actions, scrollBlock='start', scrollOffset=0}) => {
         if(action && action.sectionRef){
             console.log(action.sectionRef);
             const top = action.sectionRef.current.getBoundingClientRect().top;
-            window.scrollTo({top:window.pageYOffset+top+scrollOffset, behavior:'smooth'})
+            window.scroll({top:window.pageYOffset+top+scrollOffset, behavior:'smooth'})
         }
     }
 
     return (
+        <React.Fragment>
+        <Backdrop className={classes.backdrop} open={open} />
         <SpeedDial
         className={classes.speedDail}
         ariaLabel="SpeedDial example"
         hidden={hidden}
-        icon={<SpeedDialIcon />}
+        icon={<SpeedDialIcon icon={<MenuIcon />} openIcon={<MenuOpenIcon/>} />}
         onClose={handleClose}
         onOpen={handleOpen}
         open={open}
@@ -57,13 +68,15 @@ const SectionNav = ({actions, scrollBlock='start', scrollOffset=0}) => {
                 <SpeedDialAction
                 key={index}
                 icon={action.icon}
-                tooltipTitle={action.name}
+                tooltipTitle={<div className={classes.toolTipTitle}>{action.name}</div>}
                 onClick={()=>handleActionClick(index)}
+                tooltipOpen
                 />
                 )
             })
         }
         </SpeedDial>
+        </React.Fragment>
     );
 };
 
