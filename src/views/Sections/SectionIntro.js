@@ -2,11 +2,12 @@ import React from 'react';
 
 import Title from 'views/Components/Title';
 import SectionContainer from 'views/Components/SectionContainer';
+import SpeakLangsPage from 'views/SpeakLangsPage/SpeakLangsPage';
 
 //import from material-ui core
 import {makeStyles} from '@material-ui/core/styles';
 
-import aboutMeData from 'assets/data/aboutMeData';
+import {aboutMe} from 'assets/data/aboutMeData';
 
 import introStyle from 'assets/jss/material-kit-react/sections/introStyle';
 
@@ -27,10 +28,14 @@ const SectionIntro = ({forwardRef}) => {
         return (
             <div>
                 <p className={classes.descText}>
-                {aboutMeData}
+                {aboutMe}
                 </p>
             </div>
         );
+    }
+
+    const getContent = ()=>{
+        return <SpeakLangsPage />
     }
 
     return (
@@ -39,6 +44,7 @@ const SectionIntro = ({forwardRef}) => {
         title={getTitle()}
         desc={getDesc()}
         backdropColor='#decef2'
+        content={getContent()}
         />
     );
 };
