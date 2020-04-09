@@ -3,19 +3,17 @@ import React from "react";
 import classNames from "classnames";
 // @material-ui/core components
 import { makeStyles } from "@material-ui/core/styles";
-import FileCopyIcon from '@material-ui/icons/FileCopyOutlined';
 // @material-ui/icons
-import Camera from "@material-ui/icons/Camera";
-import Palette from "@material-ui/icons/Palette";
-import Favorite from "@material-ui/icons/Favorite";
+import FaceIcon from '@material-ui/icons/Face';
+import BuildIcon from '@material-ui/icons/Build';
+import WorkIcon from '@material-ui/icons/Work';
+import CodeIcon from '@material-ui/icons/Code';
+
 // core components
 import Header from "components/Header/Header.js";
-import Footer from "components/Footer/Footer.js";
-import Button from "components/CustomButtons/Button.js";
 import GridContainer from "components/Grid/GridContainer.js";
 import GridItem from "components/Grid/GridItem.js";
 import HeaderLinks from "components/Header/HeaderLinks.js";
-import NavPills from "components/NavPills/NavPills.js";
 import Parallax from "components/Parallax/Parallax.js";
 import Tooltip from '@material-ui/core/Tooltip';
 
@@ -30,16 +28,6 @@ import profileTheme from 'assets/theme/profileTheme';
 
 import profile from "assets/img/faces/christian.jpg";
 
-import studio1 from "assets/img/examples/studio-1.jpg";
-import studio2 from "assets/img/examples/studio-2.jpg";
-import studio3 from "assets/img/examples/studio-3.jpg";
-import studio4 from "assets/img/examples/studio-4.jpg";
-import studio5 from "assets/img/examples/studio-5.jpg";
-import work1 from "assets/img/examples/olu-eletu.jpg";
-import work2 from "assets/img/examples/clem-onojeghuo.jpg";
-import work3 from "assets/img/examples/cynthia-del-rio.jpg";
-import work4 from "assets/img/examples/mariya-georgieva.jpg";
-import work5 from "assets/img/examples/clem-onojegaw.jpg";
 
 import styles from "assets/jss/material-kit-react/views/profilePage.js";
 
@@ -50,11 +38,12 @@ const skillsRef = React.createRef();
 const projectsRef = React.createRef();
 const experiencesRef = React.createRef();
 
+//Speed Dial actions
 const actions = [
-  { icon: <FileCopyIcon />, name: 'About Me', sectionRef:introRef },
-  { icon: <FileCopyIcon />, name: 'Skills', sectionRef:skillsRef },
-  { icon: <FileCopyIcon />, name: 'Experiences', sectionRef:experiencesRef },
-  { icon: <FileCopyIcon />, name: 'Projects', sectionRef:projectsRef },
+  { icon: <FaceIcon />, name: 'About Me', sectionRef:introRef },
+  { icon: <CodeIcon />, name: 'Skills', sectionRef:skillsRef },
+  { icon: <WorkIcon />, name: 'Experiences', sectionRef:experiencesRef },
+  { icon: <BuildIcon />, name: 'Projects', sectionRef:projectsRef },
 ];
 
 export default function ProfilePage(props) {
@@ -65,7 +54,7 @@ export default function ProfilePage(props) {
     classes.imgRoundedCircle,
     classes.imgFluid
   );
-  const navImageClasses = classNames(classes.imgRounded, classes.imgGallery);
+
   return (
     <ThemeProvider theme={profileTheme}>
       <div>
