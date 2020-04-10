@@ -2,8 +2,11 @@ import generalStyle from 'assets/jss/material-kit-react/sections/generalStyle';
 
 const hobbiesStyle = {
     ...generalStyle,
-    backdrop:{
-        backgroundColor: '#317264'
+    cardCollection:{
+        display:'flex',
+        flexWrap:'wrap',
+        justifyContent:'center',
+        alignItems:'flex-start'
     }
 }
 

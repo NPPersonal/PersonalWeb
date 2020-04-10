@@ -5,8 +5,11 @@ import hobbiesStyle from 'assets/jss/material-kit-react/sections/hobbiesStyle';
 
 import Title from 'views/Components/Title';
 import SectionContainer from 'views/Components/SectionContainer';
+import HobbieCard from 'views/Components/HobbieCard';
 
-import {hobbiesDescription} from 'assets/data/hobbiesData';
+import AccessAlarmsIcon from '@material-ui/icons/AccessAlarms';
+
+import {hobbiesDescription, hobbies} from 'assets/data/hobbiesData';
 
 const useStyle = makeStyles(hobbiesStyle);
 
@@ -32,8 +35,40 @@ const SectionHobbies = ({
         );
     }
 
-    const getContent = ()=>{
-        return <div>content here</div>
+    const getContent = (hobbies)=>{
+        const cardStyle={
+            width:'150px',
+            height:'150px',
+        }
+        const contentStyle={
+            backgroundColor: '#d903c0'
+        }
+        const iconStyle = {
+            color:'#ffffff'
+        }
+        const titleStyle={
+            color:'#ffffff'
+        }
+
+        return ( 
+        <div className={classes.cardCollection}>
+        {
+            hobbies.map((hobbie, index)=>{
+                return (
+                    <HobbieCard 
+                    key={index}
+                    icon={hobbie.icon}
+                    title={hobbie.title}
+                    cardStyle={cardStyle}
+                    contentStyle={contentStyle}
+                    iconStyle={iconStyle}
+                    titleStyle={titleStyle}
+                    />
+                );
+            })
+        }
+        </div>
+        )
     }
 
     return (
@@ -41,7 +76,7 @@ const SectionHobbies = ({
         ref={forwardRef}
         title={getTitle()}
         desc={getDesc()}
-        content={getContent()}
+        content={getContent(hobbies)}
         backdropColor='#decef2'
         />
     );
