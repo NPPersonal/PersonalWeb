@@ -8,6 +8,7 @@ import FaceIcon from '@material-ui/icons/Face';
 import BuildIcon from '@material-ui/icons/Build';
 import WorkIcon from '@material-ui/icons/Work';
 import CodeIcon from '@material-ui/icons/Code';
+import DirectionsRunIcon from '@material-ui/icons/DirectionsRun';
 
 // core components
 import Header from "components/Header/Header.js";
@@ -21,6 +22,7 @@ import SectionIntro from 'views/Sections/SectionIntro';
 import SectionSkills from 'views/Sections/SectionSkills';
 import SectionExp from 'views/Sections/SectionExperience';
 import SectionProj from 'views/Sections/SectionProjects';
+import SectionHobbies from 'views/Sections/SectionHobbies';
 import SectionNav from 'views/Components/SectionNav';
 
 import {ThemeProvider} from '@material-ui/core/styles';
@@ -37,6 +39,7 @@ const introRef = React.createRef();
 const skillsRef = React.createRef();
 const projectsRef = React.createRef();
 const experiencesRef = React.createRef();
+const hobbiesRef = React.createRef();
 
 //Speed Dial actions
 const actions = [
@@ -44,6 +47,7 @@ const actions = [
   { icon: <CodeIcon />, name: 'Skills', sectionRef:skillsRef },
   { icon: <WorkIcon />, name: 'Experiences', sectionRef:experiencesRef },
   { icon: <BuildIcon />, name: 'Projects', sectionRef:projectsRef },
+  { icon: <DirectionsRunIcon />, name: 'Hobbies', sectionRef:hobbiesRef },
 ];
 
 export default function ProfilePage(props) {
@@ -99,6 +103,9 @@ export default function ProfilePage(props) {
                 </GridItem>
                 <GridItem xs={12}>
                   <SectionProj ref={projectsRef} />
+                </GridItem>
+                <GridItem xs={12}>
+                  <SectionHobbies ref={hobbiesRef} />
                 </GridItem>
               </GridContainer>
             </div>
