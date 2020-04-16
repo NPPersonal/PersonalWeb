@@ -7,8 +7,6 @@ import Title from 'views/Components/Title';
 import SectionContainer from 'views/Components/SectionContainer';
 import HobbieCard from 'views/Components/HobbieCard';
 
-import AccessAlarmsIcon from '@material-ui/icons/AccessAlarms';
-
 import {hobbiesDescription, hobbies} from 'assets/data/hobbiesData';
 
 const useStyle = makeStyles(hobbiesStyle);

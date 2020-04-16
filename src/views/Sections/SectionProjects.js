@@ -6,8 +6,6 @@ import SectionContainer from 'views/Components/SectionContainer';
 //import from material-ui core
 import {withStyles} from '@material-ui/core/styles';
 
-import GridContainer from "components/Grid/GridContainer.js";
-import GridItem from "components/Grid/GridItem.js";
 import Card from 'views/Components/ProjectCard';
 import DialogActions from '@material-ui/core/DialogActions';
 import DialogContent from '@material-ui/core/DialogContent';

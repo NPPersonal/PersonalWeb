@@ -8,51 +8,21 @@ import 'react-vertical-timeline-component/style.min.css';
 import WorkOutlineIcon from '@material-ui/icons/WorkOutline';
 
 //import from material-ui core
-import {withStyles} from '@material-ui/core/styles';
-
-//import from template componets
-import ListPanel from 'views/Components/ListPanel';
+import {makeStyles} from '@material-ui/core/styles';
 
 //style and theme
 import experienceStyle from 'assets/jss/material-kit-react/sections/experienceStyle.js';
 
-//react-markdown
-import ReactMarkdown from 'react-markdown/with-html';
-
 //experience data
-import {getExperiences, expDescription, exps} from 'assets/data/expData';
+import {expDescription, exps} from 'assets/data/expData';
 
-class SectionExperience extends React.Component {
-    constructor(){
-        super();
-        this.state = {
-            expand: '',
-            md: null
-        }
-    }
+const useStyle = makeStyles(experienceStyle);
 
-    componentWillMount(){
+const SectionExperience = ({forwardRef})=>{
 
-        getExperiences()
-        .then(res=>this.setState({...this.state, md:res}));
-    }
+    const classes = useStyle();
 
-    transformExpToPanel(exps){
-        if(!exps) return null;
-        const {classes} = this.props;
-        return exps.map(exp=>{
-            return {
-                summary: (<div className={classes.panelTitle}>{exp.title}</div>),
-                detail: (
-                <div>
-                    <ReactMarkdown source={exp.content} escapeHtml={false} />
-                </div>
-                ),
-            }
-        })
-    }
-
-    transformExpToTimeline(exps){
+    const transformExpToTimeline = (exps)=>{
         return (
             <VerticalTimeline>
             {
@@ -79,15 +49,14 @@ class SectionExperience extends React.Component {
         );
     }
 
-    getTitle = ()=>{
+    const getTitle = ()=>{
         return <Title 
         title='Experience' 
         subtitle='Work experiences' 
         subtitleColor='#787772' />;
     }
 
-    getDesc = ()=>{
-        const {classes} = this.props;
+    const getDesc = ()=>{
         return (
             <div>
                 <p className={classes.descText}>
@@ -97,27 +66,20 @@ class SectionExperience extends React.Component {
         );
     }
 
-    getContent = ()=>{
-        // return <ListPanel panelList={this.transformExpToPanel(this.state.md)} />;
-        return this.transformExpToTimeline(exps);
+    const getContent = ()=>{
+        return transformExpToTimeline(exps);
     }
 
-    render(){
-        const {forwardRef} = this.props;
-
-        return (
-            <SectionContainer
-            ref={forwardRef}
-            title={this.getTitle()}
-            desc={this.getDesc()}
-            content={this.getContent()}
-            backdropColor='#decef2'
-            />
-        )
-    }
+    return (
+        <SectionContainer
+        ref={forwardRef}
+        title={getTitle()}
+        desc={getDesc()}
+        content={getContent()}
+        backdropColor='#decef2'
+        />
+    )
     
 }
 
-export default withStyles(experienceStyle)(
-    React.forwardRef((props, ref)=><SectionExperience forwardRef={ref} {...props} />)
-);
+export default React.forwardRef((props, ref)=><SectionExperience forwardRef={ref} {...props} />);
