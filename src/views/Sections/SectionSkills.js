@@ -19,7 +19,7 @@ import ListItem from '@material-ui/core/ListItem';
 import skillStyle from 'assets/jss/material-kit-react/sections/skillsStyle.js';
 
 //skill data
-import {skillDescription, programLangs, tools} from 'assets/data/skillsData';
+import {skillDescription, programLangs} from 'assets/data/skillsData';
 
 const useStyle = makeStyles(skillStyle);
 

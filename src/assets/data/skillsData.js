@@ -4,55 +4,6 @@ import objcLogo from 'assets/img/lang-logo/objc.png';
 import csharpLogo from 'assets/img/lang-logo/csharp.png';
 import othersLogo from 'assets/img/lang-logo/others.png';
 
-const programmingLangs = {
-    title: 'Programming languages',
-    content: [
-    'JavaScript',
-    'Swift',
-    'Objective-C',
-    'HTML',
-    'CSS',
-    'C#',
-    'Java',
-    'C++'
-    ]
-};
-
-const frameworks = {
-    title: 'Frameworks',
-    content: [
-    'Node.js',
-    'React.js',
-    'Redux.js',
-    'Express.js',
-    'IOS MVC',
-    'CodeIgniter'
-    ]
-};
-
-const packageManagements = {
-    title: 'Package Management',
-    content: [
-    'NPM',
-    'CocoaPods',
-    ]
-};
-
-const versionControls = {
-    title: 'Version Control',
-    content: [
-    'Git',
-    'GitHub',
-    'Bitbucket'
-    ]
-};
-
-export const skillList = [
-    programmingLangs,
-    frameworks,
-    packageManagements,
-    versionControls
-]
 export const programLangs = [
     {
         title: 'JavaScript',
