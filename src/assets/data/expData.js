@@ -1,64 +1,12 @@
-//work exp markdown
-import jtiotMD from 'assets/markdownSrc/experience/jtiot.md';
-import artechMD from 'assets/markdownSrc/experience/artech.md'
-import luckyMD from 'assets/markdownSrc/experience/lucky.md';
-import weiQiaoMD from 'assets/markdownSrc/experience/wei-qiao.md';
-import mobiliStudioMD from 'assets/markdownSrc/experience/mobili-studio.md'
-
-//experience data
-const experiences = [
-    {
-        title: 'JTIOT',
-        mdSrc: jtiotMD
-    },
-    {
-        title: 'Artech',
-        mdSrc: artechMD
-    },
-    {
-        title: 'Lucky',
-        mdSrc: luckyMD
-    },
-    {
-        title: 'Wei Qiao',
-        mdSrc: weiQiaoMD
-    },
-    {
-        title: 'Mobili Studio',
-        mdSrc: mobiliStudioMD
-    }
-]
-
-export const getExperiences = async () => {
-    const mdSrcs = experiences.map(exp=>{
-        return fetch(exp.mdSrc)
-        .then(res=>res.text())
-        .catch(err=>console.log(err));
-    });
-
-    try{
-        const res = await Promise.all(mdSrcs);
-        return res.map((mdText, index)=>{
-            return {
-                title: experiences[index].title,
-                content: mdText
-            }
-        })
-    }
-    catch(err){
-        console.log(err);
-    }
-}
-
 //experience data
 const lastJobStyle={
-    contentStyle:{ background: 'rgb(224, 224, 224)', color: '#000' },
-    contentArrowStyle:{ borderRight: '7px solid  rgb(224, 224, 224)' },
+    contentStyle:{ background: 'rgb(224, 224, 224)', color: '#000', border:'1px solid rgb(60, 22, 209)' },
+    contentArrowStyle:{ borderRight: '7px solid  rgb(60, 22, 209)' },
     iconStyle:{ background: 'rgb(60, 22, 209)', color: '#fff' }
 }
 const previousJobStyle={
-    contentStyle:{ background: 'rgb(252, 252, 252)', color: '#000' },
-    contentArrowStyle:{ borderRight: '7px solid  rgb(252, 252, 252)' },
+    contentStyle:{ background: 'rgb(252, 252, 252)', color: '#000', border:'1px solid rgb(60, 22, 209)' },
+    contentArrowStyle:{ borderRight: '7px solid  rgb(60, 22, 209)' },
     iconStyle:{ background: 'rgb(60, 22, 209)', color: '#fff' }
 }
 export const exps = [

@@ -1,7 +1,7 @@
 import generalStyle from 'assets/jss/material-kit-react/sections/generalStyle';
 
-const experienceStyle = {
+const learnStyle = {
     ...generalStyle,
 }
 
-export default experienceStyle;
+export default learnStyle;
