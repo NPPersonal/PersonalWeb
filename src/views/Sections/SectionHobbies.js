@@ -33,12 +33,22 @@ const SectionHobbies = ({
         );
     }
 
+    const getFlippedCardDesc = (desc)=>{
+        return (
+        <div 
+        className={classes.flippedCardText}
+        >
+        {desc}
+        </div>
+        );
+    }
+
     const getContent = (hobbies)=>{
         const cardStyle={
             width:'150px',
             height:'150px',
         }
-        const contentStyle={
+        const frontContentStyle={
             backgroundColor: '#d903c0'
         }
         const iconStyle = {
@@ -57,8 +67,10 @@ const SectionHobbies = ({
                     key={index}
                     icon={hobbie.icon}
                     title={hobbie.title}
+                    flipContent={getFlippedCardDesc(hobbie.desc)}
                     cardStyle={cardStyle}
-                    contentStyle={contentStyle}
+                    frontContentStyle={frontContentStyle}
+                    backContentStyle={frontContentStyle}
                     iconStyle={iconStyle}
                     titleStyle={titleStyle}
                     />
