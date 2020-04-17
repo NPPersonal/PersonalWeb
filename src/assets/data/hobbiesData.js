@@ -9,23 +9,28 @@ const iconProps={style:{fontSize:40}}
 export const hobbies = [
     {
         title:'Travel',
-        icon:<AirplanemodeActiveIcon {...iconProps} />
+        icon:<AirplanemodeActiveIcon {...iconProps} />,
+        desc:'Explor, Culture, Scenic tour, Activity'
     },
     {
         title:'Gym',
-        icon:<FitnessCenterIcon {...iconProps} />
+        icon:<FitnessCenterIcon {...iconProps} />,
+        desc:'Weight lifting'
     },
     {
         title:'Music',
-        icon:<MusicNoteIcon {...iconProps} />
+        icon:<MusicNoteIcon {...iconProps} />,
+        desc:'Rock, 80\'s, 90\'s, Pop'
     },
     {
         title:'Movie',
-        icon:<LocalMoviesIcon {...iconProps} />
+        icon:<LocalMoviesIcon {...iconProps} />,
+        desc:'Action, Sci-fi'
     },
     {
         title:'Game',
-        icon:<SportsEsportsIcon {...iconProps} />
+        icon:<SportsEsportsIcon {...iconProps} />,
+        desc:'Simulation, FPS'
     },
 ]
 export const hobbiesDescription = `An artist of considerable range, Chet Faker — the name taken by
