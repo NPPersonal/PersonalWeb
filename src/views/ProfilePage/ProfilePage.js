@@ -82,7 +82,7 @@ export default function ProfilePage(props) {
           <div>
             <div>
               <GridContainer justify="center" alignItems='center' direction='column'>
-                <GridItem xs={12} sm={12} md={10}>
+                <GridItem xs={12}>
                   <div className={classes.profile}>
                     <div>
                       <img src={profile} alt="..." className={imageClasses} />

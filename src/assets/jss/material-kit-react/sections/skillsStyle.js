@@ -7,11 +7,10 @@ const skillStyle = {
         justifyContent:'center',
         alignItems:'center',
         width:'100%',
-        backgroundColor:'#f5f2f2'
     },
     image:{
         width:'100%',
-        objectFit: 'cover'
+        objectFit: 'contain'
     },
     cardHeight:{
         height:'100%'

@@ -43,7 +43,7 @@ const SectionIntro = ({forwardRef}) => {
         ref={forwardRef}
         title={getTitle()}
         desc={getDesc()}
-        backdropColor='#decef2'
+        backdropColor='#e0e0e0'
         content={getContent()}
         />
     );

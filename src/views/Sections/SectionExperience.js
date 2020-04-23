@@ -76,7 +76,7 @@ const SectionExperience = ({forwardRef})=>{
         title={getTitle()}
         desc={getDesc()}
         content={getContent()}
-        backdropColor='#decef2'
+        backdropColor='#e0e0e0'
         />
     )
     

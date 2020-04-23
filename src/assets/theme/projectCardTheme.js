@@ -8,6 +8,7 @@ const theme = createMuiTheme({
                 flexDirection:'column',
                 justifyContent:'space-between',
                 alignItems:'center',
+                border:'1px solid #a1a1a1',
             }
         },
         MuiCardContent:{

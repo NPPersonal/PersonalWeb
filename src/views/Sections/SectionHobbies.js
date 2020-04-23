@@ -87,7 +87,7 @@ const SectionHobbies = ({
         title={getTitle()}
         desc={getDesc()}
         content={getContent(hobbies)}
-        backdropColor='#decef2'
+        backdropColor='#e0e0e0'
         />
     );
 };

@@ -42,7 +42,9 @@ const SectionSkills = ({forwardRef})=>{
                 <Card className={classes.cardHeight}>
                     <CardMedia>
                         <div className={classes.imageContainer}>
-                            <img className={classes.image} src={lang.imageSource} />
+                            <div style={{width:'100%'}}>
+                                <img className={classes.image} src={lang.imageSource} />
+                            </div>
                         </div>
                     </CardMedia>
                     <CardContent>
@@ -106,7 +108,7 @@ const SectionSkills = ({forwardRef})=>{
         title={getTitle()}
         desc={getDesc()}
         content={getContent()}
-        backdropColor='#e6e6e6'
+        backdropColor='#ffffff'
         />
     )
 }
