@@ -38,11 +38,11 @@ const SectionSkills = ({forwardRef})=>{
         {
         langs.map((lang, langIndex)=>{
             return (
-            <GridItem key={langIndex} {...breakPoints} style={{padding:'1em'}}>
+            <GridItem key={langIndex} className={classes.gridItem} {...breakPoints} >
                 <Card className={classes.cardHeight}>
                     <CardMedia>
                         <div className={classes.imageContainer}>
-                            <div style={{width:'100%'}}>
+                            <div className={classes.imageWrapper}>
                                 <img className={classes.image} src={lang.imageSource} />
                             </div>
                         </div>
@@ -74,7 +74,7 @@ const SectionSkills = ({forwardRef})=>{
         return <Title 
         title='Skills' 
         subtitle='I am experience in these skills' 
-        subtitleColor='#787772' />;
+        />;
     }
 
     const getDesc = ()=>{
@@ -108,7 +108,7 @@ const SectionSkills = ({forwardRef})=>{
         title={getTitle()}
         desc={getDesc()}
         content={getContent()}
-        backdropColor='#ffffff'
+        backdropColor='#f0eded'
         />
     )
 }

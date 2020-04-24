@@ -20,7 +20,7 @@ const SectionHobbies = ({
         return <Title 
         title='Hobbies' 
         subtitle='I am interested in' 
-        subtitleColor='#787772' />;
+        />;
     }
 
     const getDesc = ()=>{

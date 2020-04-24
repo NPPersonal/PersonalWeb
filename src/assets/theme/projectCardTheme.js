@@ -4,6 +4,10 @@ const theme = createMuiTheme({
     overrides: {
         MuiCard:{
             root:{
+                position:'relative',
+                overflow:'visible',
+                width:'100%',
+                height:'100%',
                 display:'flex',
                 flexDirection:'column',
                 justifyContent:'space-between',

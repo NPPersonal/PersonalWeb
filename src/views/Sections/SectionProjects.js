@@ -111,7 +111,7 @@ class SectionProjects extends React.Component{
                 title={this.getTitle()}
                 desc={this.getDesc()}
                 content={this.getContent()}
-                backdropColor='#ffffff'
+                backdropColor='#f0eded'
                 />
 
                 {

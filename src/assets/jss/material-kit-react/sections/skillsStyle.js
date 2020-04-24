@@ -8,6 +8,9 @@ const skillStyle = {
         alignItems:'center',
         width:'100%',
     },
+    imageWrapper:{
+        width:'100%',
+    },
     image:{
         width:'100%',
         objectFit: 'contain'
@@ -24,6 +27,9 @@ const skillStyle = {
         width:'100%',
         fontWeight: '400',
         textAlign: 'center !important'
+    },
+    gridItem:{
+        padding:'1em',
     }
 }
 

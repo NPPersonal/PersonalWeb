@@ -5,12 +5,12 @@ import {makeStyles} from '@material-ui/core/styles';
 
 const Title = ({
     title,
-    titleColor='#ff005b',
+    titleColor='#ff0b03',
     titleFontSize='2rem', 
     titleFontWeight='800',
     titleUnderline=false,
     subtitle,
-    subtitleColor='#b5b1b1', 
+    subtitleColor='#fc6e1c', 
     subtitleFontSize='1rem',
     subtitleFontWeight='600',
     align='center',

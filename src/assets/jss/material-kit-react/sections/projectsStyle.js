@@ -12,7 +12,7 @@ const experienceStyle = {
     },
     cardWrapper:{
         width:'250px',
-        padding:'10px'
+        margin:'20px'
     }
 }
 

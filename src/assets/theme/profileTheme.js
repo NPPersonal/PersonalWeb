@@ -2,7 +2,7 @@ import { createMuiTheme } from '@material-ui/core/styles';
 
 const borderRadius = '25px';
 const roundedMargin = '1.5% auto 1.5% auto';
-const panelColor = '#fcf8f3';
+const panelColor = '#fff';
 
 const theme = createMuiTheme({
     overrides: {
