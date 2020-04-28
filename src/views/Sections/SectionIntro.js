@@ -27,9 +27,9 @@ const SectionIntro = ({forwardRef}) => {
     const getDesc = ()=>{
         return (
             <div>
-                <p className={classes.descText}>
+                <pre className={classes.descText}>
                 {aboutMe}
-                </p>
+                </pre>
             </div>
         );
     }

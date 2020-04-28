@@ -45,6 +45,8 @@ const SectionContainer = ({
             zIndex:'1',
         },
         desc:{
+            display:'flex',
+            justifyContent:'center',
             padding:'2% 0 2% 0'
         },
     }

@@ -1,8 +1,8 @@
-export const aboutMe = `
-An artist of considerable range, Chet Faker — the name taken by
-Melbourne-raised, Brooklyn-based Nick Murphy — writes, performs
-and records all of his own music, giving it a warm, intimate
-feel with a solid groove structure.
+export const aboutMe = `I was born in Taiwan. Creating useful and reliable product is always being in my dream and software
+development happen to be my choice to fulfil my dream.
+
+I am self taught programmer and have software development background. I spent at least 7 years in
+software development regardless of programming language or framework.
 `;
 
 export const languages = [
