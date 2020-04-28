@@ -8,6 +8,9 @@ const profilePageStyle = {
   container,
   profile: {
     textAlign: "center",
+    backgroundColor: '#e0e0e0',
+    display:'flex',
+    flexDirection:'column',
     "& img": {
       maxWidth: "160px",
       width: "100%",

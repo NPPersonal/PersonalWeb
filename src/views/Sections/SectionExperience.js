@@ -18,6 +18,17 @@ import {expDescription, exps} from 'assets/data/expData';
 
 const useStyle = makeStyles(experienceStyle);
 
+const currentExpStyle={
+    contentStyle:{ background: '#ff7c6b', color: '#000', border:'1px solid #575757' },
+    contentArrowStyle:{ borderRight: '7px solid  #575757' },
+    iconStyle:{ background: '#ff7c6b', color: '#fff' }
+}
+const previousExpStyle={
+    contentStyle:{ background: '#61bbff', color: '#000', border:'1px solid #575757' },
+    contentArrowStyle:{ borderRight: '7px solid  #575757' },
+    iconStyle:{ background: '#61bbff', color: '#fff' }
+}
+
 const SectionExperience = ({forwardRef})=>{
 
     const classes = useStyle();
@@ -27,13 +38,15 @@ const SectionExperience = ({forwardRef})=>{
             <VerticalTimeline>
             {
                 exps.map((exp,index)=>{
+                    const selectedStyle = exp.current?currentExpStyle:previousExpStyle;
+
                     return (
                         <VerticalTimelineElement
                         key={index}
                         className='vertical-timeline-element--work'
-                        contentStyle={{...exp.contentStyle}}
-                        contentArrowStyle={{...exp.contentArrowStyle}}
-                        iconStyle={{...exp.iconStyle}}
+                        contentStyle={{...selectedStyle.contentStyle}}
+                        contentArrowStyle={{...selectedStyle.contentArrowStyle}}
+                        iconStyle={{...selectedStyle.iconStyle}}
                         icon={<WorkOutlineIcon />}
                         >
                             <h3 className="vertical-timeline-element-title">{exp.title}</h3>
@@ -53,7 +66,7 @@ const SectionExperience = ({forwardRef})=>{
         return <Title 
         title='Experience' 
         subtitle='Work experiences' 
-        subtitleColor='#787772' />;
+        />;
     }
 
     const getDesc = ()=>{
@@ -76,7 +89,7 @@ const SectionExperience = ({forwardRef})=>{
         title={getTitle()}
         desc={getDesc()}
         content={getContent()}
-        backdropColor='#decef2'
+        backdropColor='#e0e0e0'
         />
     )
     

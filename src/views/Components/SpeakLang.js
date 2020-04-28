@@ -19,7 +19,8 @@ const SpeakLang = ({
     },
     value=3,
     maxValue=5,
-    precision=1
+    precision=1,
+    ...rest
 }) => {
     const newStyle ={
         ...defaultStyle,
@@ -37,6 +38,7 @@ const SpeakLang = ({
             max={maxValue}
             precision={precision}
             readOnly
+            {...rest}
             />
         </div>
     );

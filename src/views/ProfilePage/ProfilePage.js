@@ -68,7 +68,6 @@ export default function ProfilePage(props) {
       <div>
         <Header
           color="transparent"
-          brand="Profile"
           rightLinks={<HeaderLinks />}
           fixed
           changeColorOnScroll={{
@@ -77,12 +76,12 @@ export default function ProfilePage(props) {
           }}
           {...rest}
         />
-        <Parallax small filter image={require("assets/img/profile-bg.jpg")} />
+        <Parallax small filter image={require('assets/img/profile-bg2.jpeg')} />
         <div className={classNames(classes.main, classes.mainRaised)}>
           <div>
             <div>
               <GridContainer justify="center" alignItems='center' direction='column'>
-                <GridItem xs={12} sm={12} md={10}>
+                <GridItem xs={12}>
                   <div className={classes.profile}>
                     <div>
                       <img src={profile} alt="..." className={imageClasses} />

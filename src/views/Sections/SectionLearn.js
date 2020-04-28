@@ -16,6 +16,17 @@ import {learnDescription, learns} from 'assets/data/learnData';
 
 const useStyle = makeStyles(learnStyle);
 
+const currentLearnStyle={
+    contentStyle:{ background: '#ff7c6b', color: '#000', border:'1px solid #575757' },
+    contentArrowStyle:{ borderRight: '7px solid  #575757' },
+    iconStyle:{ background: '#ff7c6b', color: '#fff' }
+}
+const previousLearnStyle={
+    contentStyle:{ background: '#61bbff', color: '#000', border:'1px solid #575757' },
+    contentArrowStyle:{ borderRight: '7px solid  #575757' },
+    iconStyle:{ background: '#61bbff', color: '#fff' }
+}
+
 const SectionLearn = ({forwardRef}) => {
 
     const classes = useStyle();
@@ -25,13 +36,15 @@ const SectionLearn = ({forwardRef}) => {
             <VerticalTimeline>
             {
                 learns.map((learn,index)=>{
+                    const selectedStyle = learn.current?currentLearnStyle:previousLearnStyle;
+
                     return (
                         <VerticalTimelineElement
                         key={index}
                         className='vertical-timeline-element--work'
-                        contentStyle={{...learn.contentStyle}}
-                        contentArrowStyle={{...learn.contentArrowStyle}}
-                        iconStyle={{...learn.iconStyle}}
+                        contentStyle={{...selectedStyle.contentStyle}}
+                        contentArrowStyle={{...selectedStyle.contentArrowStyle}}
+                        iconStyle={{...selectedStyle.iconStyle}}
                         icon={<MenuBookIcon />}
                         >
                             <h3 className="vertical-timeline-element-title">{learn.school}</h3>
@@ -52,7 +65,7 @@ const SectionLearn = ({forwardRef}) => {
         return <Title 
         title='Learn' 
         subtitle='Education and learning' 
-        subtitleColor='#787772' />;
+        />;
     }
 
     const getDesc = ()=>{
@@ -75,7 +88,7 @@ const SectionLearn = ({forwardRef}) => {
             title={getTitle()}
             desc={getDesc()}
             content={getContent()}
-            backdropColor='#decef2'
+            backdropColor='#e0e0e0'
         />
     );
 };

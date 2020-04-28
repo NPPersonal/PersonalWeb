@@ -21,7 +21,7 @@ const SectionIntro = ({forwardRef}) => {
         return <Title 
         title='About Me' 
         subtitle='everything about me' 
-        subtitleColor='#787772' />;
+        />;
     }
 
     const getDesc = ()=>{
@@ -43,7 +43,7 @@ const SectionIntro = ({forwardRef}) => {
         ref={forwardRef}
         title={getTitle()}
         desc={getDesc()}
-        backdropColor='#decef2'
+        backdropColor='#e0e0e0'
         content={getContent()}
         />
     );

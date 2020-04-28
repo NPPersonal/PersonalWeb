@@ -7,11 +7,13 @@ const skillStyle = {
         justifyContent:'center',
         alignItems:'center',
         width:'100%',
-        backgroundColor:'#f5f2f2'
+    },
+    imageWrapper:{
+        width:'100%',
     },
     image:{
         width:'100%',
-        objectFit: 'cover'
+        objectFit: 'contain'
     },
     cardHeight:{
         height:'100%'
@@ -25,6 +27,9 @@ const skillStyle = {
         width:'100%',
         fontWeight: '400',
         textAlign: 'center !important'
+    },
+    gridItem:{
+        padding:'1em',
     }
 }
 

@@ -30,7 +30,7 @@ const SpeakLangsPage = () => {
             title={lang.langTitle}
             value={lang.rating}
             maxValue={lang.maxRating}
-            precision={lang.precision}  
+            precision={lang.precision}
             />
             )
         })
@@ -40,7 +40,7 @@ const SpeakLangsPage = () => {
         <div className={classes.pageWrapper}>
             <GridContainer direction='column' justify='center' alignItems='center'>
                 <GridItem {...breakPoints}>
-                    <Title title='Languages' subtitle='Languages I can speak' subtitleColor='#787772' />
+                    <Title title='Languages' subtitle='Languages I can speak'/>
                 </GridItem>
                 <GridItem {...breakPoints}>
                     <div className={classes.langWrapper}>

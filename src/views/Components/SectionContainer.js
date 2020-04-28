@@ -32,21 +32,29 @@ const SectionContainer = ({
 }) => {
     const style = {
         backdrop:{
-            backgroundColor: backdropColor
+            backgroundColor: backdropColor,
+            position:'absolute',
+            top:'0',
+            left:'0',
+            width:'100%',
+            height:'100%',
         },
-        contentPadding:{
-            padding: padding
+        content:{
+            padding: padding,
+            position: 'relative',
+            zIndex:'1',
         },
-        descPadding:{
+        desc:{
             padding:'2% 0 2% 0'
-        }
+        },
     }
 
     const classes = makeStyles(style)();
 
     return (
-        <div ref={forwardRef} className={classes.backdrop}>
-            <div className={classes.contentPadding}>
+        <div ref={forwardRef}>
+            <div className={classes.backdrop}></div>
+            <div className={classes.content}>
                 <GridContainer direction='column' justify="center" alignItems='center'>
                     {
                     !title?null:    
@@ -59,7 +67,7 @@ const SectionContainer = ({
                     {
                     !desc?null:
                     <GridItem {...breakPoints}>
-                        <div className={classes.descPadding}>
+                        <div className={classes.desc}>
                         {getContent(desc)}
                         </div>
                     </GridItem>

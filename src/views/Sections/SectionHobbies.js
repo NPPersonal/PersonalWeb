@@ -20,7 +20,7 @@ const SectionHobbies = ({
         return <Title 
         title='Hobbies' 
         subtitle='I am interested in' 
-        subtitleColor='#787772' />;
+        />;
     }
 
     const getDesc = ()=>{
@@ -49,7 +49,7 @@ const SectionHobbies = ({
             height:'150px',
         }
         const frontContentStyle={
-            backgroundColor: '#d903c0'
+            backgroundColor: '#047dff'
         }
         const iconStyle = {
             color:'#ffffff'
@@ -87,7 +87,7 @@ const SectionHobbies = ({
         title={getTitle()}
         desc={getDesc()}
         content={getContent(hobbies)}
-        backdropColor='#decef2'
+        backdropColor='#e0e0e0'
         />
     );
 };
