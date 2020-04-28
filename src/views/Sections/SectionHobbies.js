@@ -49,7 +49,7 @@ const SectionHobbies = ({
             height:'150px',
         }
         const frontContentStyle={
-            backgroundColor: '#d903c0'
+            backgroundColor: '#047dff'
         }
         const iconStyle = {
             color:'#ffffff'

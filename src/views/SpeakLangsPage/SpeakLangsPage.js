@@ -30,7 +30,7 @@ const SpeakLangsPage = () => {
             title={lang.langTitle}
             value={lang.rating}
             maxValue={lang.maxRating}
-            precision={lang.precision}  
+            precision={lang.precision}
             />
             )
         })
