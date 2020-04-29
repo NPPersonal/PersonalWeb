@@ -20,7 +20,7 @@ const SectionIntro = ({forwardRef}) => {
     const getTitle = ()=>{
         return <Title 
         title='About Me' 
-        subtitle='everything about me' 
+        subtitle='Everything about me' 
         />;
     }
 

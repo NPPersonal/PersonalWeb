@@ -70,7 +70,7 @@ const SectionContainer = ({
                     !desc?null:
                     <GridItem {...breakPoints}>
                         <div className={classes.desc}>
-                        {getContent(desc)}
+                        {desc}
                         </div>
                     </GridItem>
                     }

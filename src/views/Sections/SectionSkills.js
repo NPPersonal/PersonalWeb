@@ -73,16 +73,16 @@ const SectionSkills = ({forwardRef})=>{
     const getTitle = ()=>{
         return <Title 
         title='Skills' 
-        subtitle='I am experience in these skills' 
+        subtitle='I have experience in these programming languages' 
         />;
     }
 
     const getDesc = ()=>{
         return (
             <div>
-                <p className={classes.descText}>
+                <pre className={classes.descText}>
                 {skillDescription}
-                </p>
+                </pre>
             </div>
         );
     }
