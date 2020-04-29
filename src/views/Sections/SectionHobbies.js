@@ -19,7 +19,7 @@ const SectionHobbies = ({
     const getTitle = ()=>{
         return <Title 
         title='Hobbies' 
-        subtitle='I am interested in' 
+        subtitle='Activities keep my life going' 
         />;
     }
 

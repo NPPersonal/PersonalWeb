@@ -20,16 +20,16 @@ const SectionIntro = ({forwardRef}) => {
     const getTitle = ()=>{
         return <Title 
         title='About Me' 
-        subtitle='everything about me' 
+        subtitle='Everything about me' 
         />;
     }
 
     const getDesc = ()=>{
         return (
             <div>
-                <p className={classes.descText}>
+                <pre className={classes.descText}>
                 {aboutMe}
-                </p>
+                </pre>
             </div>
         );
     }

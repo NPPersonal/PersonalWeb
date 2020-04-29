@@ -70,6 +70,7 @@ export default function ProfilePage(props) {
           color="transparent"
           rightLinks={<HeaderLinks />}
           fixed
+          brand=''
           changeColorOnScroll={{
             height: 200,
             color: "white"

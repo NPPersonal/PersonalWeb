@@ -30,10 +30,8 @@ export const hobbies = [
     {
         title:'Game',
         icon:<SportsEsportsIcon {...iconProps} />,
-        desc:'Simulation, FPS'
+        desc:'Video game, Card game'
     },
 ]
-export const hobbiesDescription = `An artist of considerable range, Chet Faker — the name taken by
-Melbourne-raised, Brooklyn-based Nick Murphy — writes, performs
-and records all of his own music, giving it a warm, intimate
-feel with a solid groove structure.`;
+export const hobbiesDescription = `I do different activities when I have time and they fulfil
+other part of my life`;
