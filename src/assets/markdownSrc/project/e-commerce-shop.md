@@ -1,46 +1,25 @@
 
-# Live demo
+## Introduction
 
-Changes are automatically rendered as you type.
+A website that was created while I follow along web development course.
 
-## Table of Contents
+The website display different merchandise in shop such as hats, jackets,
+sneakers, womens' dress and mens' dress. User is able to add any merchandise
+they like into their cart and check out online.
 
-* Implements [GitHub Flavored Markdown](https://github.github.com/gfm/)
-* Renders actual, "native" React DOM elements
-* Allows you to escape or skip HTML (try toggling the checkboxes above)
-* If you escape or skip the HTML, no `dangerouslySetInnerHTML` is used! Yay!
+## Technology
 
-## HTML block below
+| framework |
+| --------- |
+| React.js    |
+| Express.js |
+| Firebase |
 
-<blockquote>
-  This blockquote will change based on the HTML settings above.
-</blockquote>
+## Role
 
-## How about some code?
-```js
-var React = require('react');
-var Markdown = require('react-markdown');
+- Front-end
+- Back-end
 
-React.render(
-  <Markdown source="# Your markdown here" />,
-  document.getElementById('content')
-);
-```
+## Link
+[Website](https://tomneo2004.github.io/E-Clothing/)
 
-Pretty neat, eh?
-
-## Tables?
-
-| Feature   | Support |
-| --------- | ------- |
-| tables    | ✔ |
-| alignment | ✔ |
-| wewt      | ✔ |
-
-## More info?
-
-Read usage information and more on [GitHub](//github.com/rexxars/react-markdown)
-
----------------
-
-A component by [Espen Hovlandsdal](https://espen.codes/)

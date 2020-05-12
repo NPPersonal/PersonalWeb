@@ -26,6 +26,14 @@ const Transition = React.forwardRef(function Transition(props, ref) {
     return <Slide direction="down" ref={ref} {...props} />;
   });
 
+const markdownRenderers = {
+    link: (prop)=>{
+        return (
+            <a href={prop.href} target='_blank'>{prop.children}</a>
+        );
+    },
+}
+
 
 class SectionProjects extends React.Component{
     constructor(){
@@ -129,6 +137,7 @@ class SectionProjects extends React.Component{
                         <ReactMarkdown
                         source={this.state.selectedProject.content}
                         escapeHtml={false}
+                        renderers={markdownRenderers}
                         />
                     </DialogContent>
                     <DialogActions>

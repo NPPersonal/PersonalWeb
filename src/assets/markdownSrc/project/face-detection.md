@@ -1,46 +1,28 @@
+## Introduction
 
-# Live demo
+A website that was created while I follow along web development course.
 
-Changes are automatically rendered as you type.
+The website allow member user give a link to an image and detect human face
+in image.
 
-## Table of Contents
+## Technology
 
-* Implements [GitHub Flavored Markdown](https://github.github.com/gfm/)
-* Renders actual, "native" React DOM elements
-* Allows you to escape or skip HTML (try toggling the checkboxes above)
-* If you escape or skip the HTML, no `dangerouslySetInnerHTML` is used! Yay!
+| framework |
+| --------- |
+| React.js    |
+| Express.js |
+| Firebase |
 
-## HTML block below
+## Role
 
-<blockquote>
-  This blockquote will change based on the HTML settings above.
-</blockquote>
+- Front-end
+- Back-end
 
-## How about some code?
-```js
-var React = require('react');
-var Markdown = require('react-markdown');
+## Link
+[Website](https://facedetectfront-59764.herokuapp.com/)
 
-React.render(
-  <Markdown source="# Your markdown here" />,
-  document.getElementById('content')
-);
-```
+Use following credential to login and test
 
-Pretty neat, eh?
-
-## Tables?
-
-| Feature   | Support |
-| --------- | ------- |
-| tables    | ✔ |
-| alignment | ✔ |
-| wewt      | ✔ |
-
-## More info?
-
-Read usage information and more on [GitHub](//github.com/rexxars/react-markdown)
-
----------------
-
-A component by [Espen Hovlandsdal](https://espen.codes/)
+| Email   | Password |
+| -----   | -------- |
+| abc@abc | 123456   |

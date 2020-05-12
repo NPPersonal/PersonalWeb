@@ -1,46 +1,25 @@
 
-# Live demo
+## Introduction
 
-Changes are automatically rendered as you type.
+Neat-Converter is an IOS app. The App simple calculator 
+with unit conversion such as currency, area, length, speed 
+and more. Furthermore, app record any calculation you have 
+done in calculator as history.
 
-## Table of Contents
+Apart from these features, app has pre-build theme for user 
+to select from.
 
-* Implements [GitHub Flavored Markdown](https://github.github.com/gfm/)
-* Renders actual, "native" React DOM elements
-* Allows you to escape or skip HTML (try toggling the checkboxes above)
-* If you escape or skip the HTML, no `dangerouslySetInnerHTML` is used! Yay!
+## Technology
 
-## HTML block below
+| framework |
+| --------- |
+| IOS native |
 
-<blockquote>
-  This blockquote will change based on the HTML settings above.
-</blockquote>
+## Role
 
-## How about some code?
-```js
-var React = require('react');
-var Markdown = require('react-markdown');
+- IOS developer
 
-React.render(
-  <Markdown source="# Your markdown here" />,
-  document.getElementById('content')
-);
-```
+## Video
 
-Pretty neat, eh?
+<iframe width="560" height="315" src="https://www.youtube.com/embed/8EPBZrJRv84" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-## Tables?
-
-| Feature   | Support |
-| --------- | ------- |
-| tables    | ✔ |
-| alignment | ✔ |
-| wewt      | ✔ |
-
-## More info?
-
-Read usage information and more on [GitHub](//github.com/rexxars/react-markdown)
-
----------------
-
-A component by [Espen Hovlandsdal](https://espen.codes/)

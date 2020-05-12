@@ -61,13 +61,13 @@ const projects = [
         `,
         mdSrc: stikyHiveMD
     },
-    {
-        title: 'Virtual Gift',
-        brief: `
-        Send a virtual gift to your friend on your phone. 
-        `,
-        mdSrc: virtualGiftMD
-    },
+    // {
+    //     title: 'Virtual Gift',
+    //     brief: `
+    //     Send a virtual gift to your friend on your phone. 
+    //     `,
+    //     mdSrc: virtualGiftMD
+    // },
     {
         title: 'Visual Traveling Checklist',
         brief: `

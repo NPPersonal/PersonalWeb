@@ -1,46 +1,26 @@
 
-# Live demo
+## Introduction
 
-Changes are automatically rendered as you type.
+Finder E-Book is an app for mobile device and
+allow user to read electronic book within their
+deivce.
 
-## Table of Contents
+User can use app on mobile deivce to connect to
+company's server which provide election book service.
 
-* Implements [GitHub Flavored Markdown](https://github.github.com/gfm/)
-* Renders actual, "native" React DOM elements
-* Allows you to escape or skip HTML (try toggling the checkboxes above)
-* If you escape or skip the HTML, no `dangerouslySetInnerHTML` is used! Yay!
+## Technology
 
-## HTML block below
+| framework |
+| --------- |
+| IOS native |
+| Test flight |
 
-<blockquote>
-  This blockquote will change based on the HTML settings above.
-</blockquote>
+## Role
 
-## How about some code?
-```js
-var React = require('react');
-var Markdown = require('react-markdown');
+- IOS developer
 
-React.render(
-  <Markdown source="# Your markdown here" />,
-  document.getElementById('content')
-);
-```
+## Link
+[Website](https://www.gogofinder.com.tw)
 
-Pretty neat, eh?
+[IOS App](https://apps.apple.com/tw/app/finder-ebook-for-iphone/id1081726714)
 
-## Tables?
-
-| Feature   | Support |
-| --------- | ------- |
-| tables    | ✔ |
-| alignment | ✔ |
-| wewt      | ✔ |
-
-## More info?
-
-Read usage information and more on [GitHub](//github.com/rexxars/react-markdown)
-
----------------
-
-A component by [Espen Hovlandsdal](https://espen.codes/)

@@ -1,46 +1,28 @@
 
-# Live demo
+## Introduction
 
-Changes are automatically rendered as you type.
+Visual Music is an open source project that I participated
+while I am learning web development.
 
-## Table of Contents
+Visual Music is a website that allow user to upload their
+favourite music and convert music stream into visual elements
+on screen while they are listening.
 
-* Implements [GitHub Flavored Markdown](https://github.github.com/gfm/)
-* Renders actual, "native" React DOM elements
-* Allows you to escape or skip HTML (try toggling the checkboxes above)
-* If you escape or skip the HTML, no `dangerouslySetInnerHTML` is used! Yay!
+## Technology
 
-## HTML block below
+| framework |
+| --------- |
+| React.js    |
+| Express.js |
+| Firebase |
+| Travis-CI |
+| Figma |
+| react-p5-wrapper |    
 
-<blockquote>
-  This blockquote will change based on the HTML settings above.
-</blockquote>
+## Role
 
-## How about some code?
-```js
-var React = require('react');
-var Markdown = require('react-markdown');
+Front-end developer
 
-React.render(
-  <Markdown source="# Your markdown here" />,
-  document.getElementById('content')
-);
-```
+## Link
+[Github](https://github.com/zero-to-mastery/visual-music)
 
-Pretty neat, eh?
-
-## Tables?
-
-| Feature   | Support |
-| --------- | ------- |
-| tables    | ✔ |
-| alignment | ✔ |
-| wewt      | ✔ |
-
-## More info?
-
-Read usage information and more on [GitHub](//github.com/rexxars/react-markdown)
-
----------------
-
-A component by [Espen Hovlandsdal](https://espen.codes/)
