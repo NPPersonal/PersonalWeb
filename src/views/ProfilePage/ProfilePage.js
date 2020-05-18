@@ -18,6 +18,7 @@ import GridItem from "components/Grid/GridItem.js";
 import HeaderLinks from "components/Header/HeaderLinks.js";
 import Parallax from "components/Parallax/Parallax.js";
 import Tooltip from '@material-ui/core/Tooltip';
+import Link from '@material-ui/core/Link';
 
 import SectionIntro from 'views/Sections/SectionIntro';
 import SectionSkills from 'views/Sections/SectionSkills';
@@ -93,6 +94,9 @@ export default function ProfilePage(props) {
                         <h3 className={classes.title}>Ming-Chun Hung</h3>
                       </Tooltip>
                       <h6>Programmer</h6>
+                      <Link href='mailto:tomneo2004@gmail.com'>
+                        {'tomneo2004@gmail.com'}
+                      </Link>
                     </div>
                   </div>
                 </GridItem>
