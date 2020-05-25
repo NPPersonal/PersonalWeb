@@ -19,6 +19,26 @@ export default function HeaderLinks(props) {
   const classes = useStyles();
   return (
     <List className={classes.list}>
+    <ListItem className={classes.listItem}>
+        <Tooltip
+          id="email"
+          title="E-mail me"
+          placement={window.innerWidth > 959 ? "top" : "left"}
+          classes={{ tooltip: classes.tooltip }}
+        >
+          <Button
+            href="mailto:tomneo2004@gmail.com"
+            target="_blank"
+            color="transparent"
+            className={classes.navLink}
+          >
+            <i className={classes.socialIcons + " fas fa-paper-plane"} />
+            <Hidden mdUp>
+              {'E-mail me'}
+            </Hidden>
+          </Button>
+        </Tooltip>
+      </ListItem>
       <ListItem className={classes.listItem}>
         <Tooltip
           id="github"

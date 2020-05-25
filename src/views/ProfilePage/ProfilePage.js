@@ -94,9 +94,6 @@ export default function ProfilePage(props) {
                         <h3 className={classes.title}>Ming-Chun Hung</h3>
                       </Tooltip>
                       <h6>Programmer</h6>
-                      <Link href='mailto:tomneo2004@gmail.com'>
-                        {'tomneo2004@gmail.com'}
-                      </Link>
                     </div>
                   </div>
                 </GridItem>
