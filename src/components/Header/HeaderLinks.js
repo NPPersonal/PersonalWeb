@@ -59,6 +59,26 @@ export default function HeaderLinks(props) {
           </Button>
         </Tooltip>
       </ListItem>
+      <ListItem className={classes.listItem}>
+        <Tooltip
+          id="resume"
+          title="Checkout my Resume"
+          placement={window.innerWidth > 959 ? "top" : "left"}
+          classes={{ tooltip: classes.tooltip }}
+        >
+          <Button
+            color="transparent"
+            href="https://www.dropbox.com/s/k5ui6ovd4xku905/Resume.pdf?dl=0"
+            target="_blank"
+            className={classes.navLink}
+          >
+            <i className={classes.socialIcons + " fas fa-file"} />
+            <Hidden mdUp>
+              {'My Resume'}
+            </Hidden>
+          </Button>
+        </Tooltip>
+      </ListItem>
     </List>
   );
 }
