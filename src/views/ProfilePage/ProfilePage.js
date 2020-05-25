@@ -31,7 +31,7 @@ import SectionNav from 'views/Components/SectionNav';
 import {ThemeProvider} from '@material-ui/core/styles';
 import profileTheme from 'assets/theme/profileTheme';
 
-import profile from "assets/img/faces/christian.jpg";
+import profile from "assets/img/faces/me.jpg";
 
 
 import styles from "assets/jss/material-kit-react/views/profilePage.js";
