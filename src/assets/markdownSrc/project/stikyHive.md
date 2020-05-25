@@ -1,46 +1,21 @@
+## Introduction
 
-# Live demo
+StikyHive is a project that provide service for people 
+who are looking for skilled person and people who has 
+skills. 
 
-Changes are automatically rendered as you type.
+Seekers can search person whose skill is in their need or 
+post an advertisement.
+Skilled person can search for person who is looking for 
+specific skill or post what kind of skills they can provide.
 
-## Table of Contents
 
-* Implements [GitHub Flavored Markdown](https://github.github.com/gfm/)
-* Renders actual, "native" React DOM elements
-* Allows you to escape or skip HTML (try toggling the checkboxes above)
-* If you escape or skip the HTML, no `dangerouslySetInnerHTML` is used! Yay!
+## Technology
 
-## HTML block below
+| framework |
+| --------- |
+| IOS native |
 
-<blockquote>
-  This blockquote will change based on the HTML settings above.
-</blockquote>
+## Role
 
-## How about some code?
-```js
-var React = require('react');
-var Markdown = require('react-markdown');
-
-React.render(
-  <Markdown source="# Your markdown here" />,
-  document.getElementById('content')
-);
-```
-
-Pretty neat, eh?
-
-## Tables?
-
-| Feature   | Support |
-| --------- | ------- |
-| tables    | ✔ |
-| alignment | ✔ |
-| wewt      | ✔ |
-
-## More info?
-
-Read usage information and more on [GitHub](//github.com/rexxars/react-markdown)
-
----------------
-
-A component by [Espen Hovlandsdal](https://espen.codes/)
+- IOS developer

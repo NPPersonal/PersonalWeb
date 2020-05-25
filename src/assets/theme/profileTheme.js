@@ -73,26 +73,22 @@ const theme = createMuiTheme({
         },
         MuiCard: {
             root: {
-                border:'1px solid #a1a1a1',
-                '&:before, &:after':{
+                position: 'relative',
+                border:'1px solid rgba(0,0,0,0.5)',
+                overflow: 'visible',
+                '&:before':{
                     position:'absolute',
                     content:'""',
-                    bottom:'22px',
-                    left:'7%',
-                    top:'auto',
-                    width:'44%',
-                    height:'20px',
-                    backgroundColor:'#777',
+                    left:'0',
+                    top:'0',
+                    width:'100%',
+                    height:'100%',
+                    backgroundColor:'rgba(0,0,0,0.2)',
                     zIndex:'-1',
-                    boxShadow: '0 15px 10px #777',
-                    transform: 'rotate(-4deg)',
+                    boxShadow: `0 0 16px rgba(0,0,0,0.85),
+                                0 0 20px rgba(0,0,0,0.3)
+                    `,
                 },
-                '&:after':{
-                    right:'7%',
-                    left:'auto',
-                    transform: 'rotate(4deg)',
-                }
-                
             }
         },
         MuiFab: {
