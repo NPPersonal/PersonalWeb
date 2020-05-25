@@ -50,6 +50,7 @@ const SectionExperience = ({forwardRef})=>{
                         icon={<WorkOutlineIcon />}
                         >
                             <h3 className="vertical-timeline-element-title">{exp.title}</h3>
+                            <h4 className="vertical-timeline-element-subtitle">{exp.company}</h4>
                             <h4 className="vertical-timeline-element-subtitle">{exp.location}</h4>
                             <p>
                             {exp.desc}
