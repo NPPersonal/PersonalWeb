@@ -5,7 +5,7 @@ import finderEBookMD from 'assets/markdownSrc/project/finderEbook.md';
 import mobileDiskMD from 'assets/markdownSrc/project/mobileDisk.md';
 import neatConverterMD from 'assets/markdownSrc/project/neat-converter.md';
 import stikyHiveMD from 'assets/markdownSrc/project/stikyHive.md';
-import virtualGiftMD from 'assets/markdownSrc/project/virtualGift.md';
+// import virtualGiftMD from 'assets/markdownSrc/project/virtualGift.md';
 import vtcMD from 'assets/markdownSrc/project/visual-traveling-checklist.md';
 
 const projects = [

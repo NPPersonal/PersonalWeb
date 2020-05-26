@@ -43,7 +43,7 @@ const SectionSkills = ({forwardRef})=>{
                     <CardMedia>
                         <div className={classes.imageContainer}>
                             <div className={classes.imageWrapper}>
-                                <img className={classes.image} src={lang.imageSource} />
+                                <img className={classes.image} src={lang.imageSource} alt='skill' />
                             </div>
                         </div>
                     </CardMedia>

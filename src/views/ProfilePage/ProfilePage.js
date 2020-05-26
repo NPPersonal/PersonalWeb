@@ -18,7 +18,6 @@ import GridItem from "components/Grid/GridItem.js";
 import HeaderLinks from "components/Header/HeaderLinks.js";
 import Parallax from "components/Parallax/Parallax.js";
 import Tooltip from '@material-ui/core/Tooltip';
-import Link from '@material-ui/core/Link';
 
 import SectionIntro from 'views/Sections/SectionIntro';
 import SectionSkills from 'views/Sections/SectionSkills';

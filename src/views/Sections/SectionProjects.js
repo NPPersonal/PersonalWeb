@@ -29,7 +29,7 @@ const Transition = React.forwardRef(function Transition(props, ref) {
 const markdownRenderers = {
     link: (prop)=>{
         return (
-            <a href={prop.href} target='_blank'>{prop.children}</a>
+            <a href={prop.href} target='_blank' rel="noopener noreferrer">{prop.children}</a>
         );
     },
 }
@@ -46,7 +46,7 @@ class SectionProjects extends React.Component{
         }
     }
 
-    componentWillMount(){
+    componentDidMount(){
         getProjects()
         .then(res=>this.setState({...this.state, md:res}))
     }
