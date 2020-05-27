@@ -29,22 +29,26 @@ preview supported files within app.
 
 ## Screenshots
 
-![alt text](https://www.dropbox.com/s/pwzfyifunfujw78/IMG01.png?dl=1)
+![alt text](https://i.imgur.com/ssc7ZAo.png)
 
 ---
 
-![alt text](https://www.dropbox.com/s/h0lxnbfddala6b2/IMG02.png?dl=1)
+![alt text](https://i.imgur.com/o0vHxBz.png)
 
 ---
 
-![alt text](https://www.dropbox.com/s/b43vpag7euiy0jf/IMG03.png?dl=1)
+![alt text](https://i.imgur.com/O4LNgvw.png)
 
 ---
 
-![alt text](https://www.dropbox.com/s/ivoqqnxx04sdxsm/IMG05.png?dl=1)
+![alt text](https://i.imgur.com/U8ZmTS6.png)
 
 ---
 
-![alt text](https://www.dropbox.com/s/rzr5eft98damxom/IMG09.png?dl=1)
+![alt text](https://i.imgur.com/U8ZmTS6.png)
+
+---
+
+![alt text](https://i.imgur.com/PqOj7hn.png)
 
 

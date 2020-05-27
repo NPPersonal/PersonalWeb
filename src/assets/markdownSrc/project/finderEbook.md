@@ -21,15 +21,15 @@ company's server which provide election book service.
 
 ## Screenshots
 
-<img src="https://www.dropbox.com/s/p901fuo4kymahtr/Screen%20Shot%202020-05-18%20at%2010.35.14%20am.png?dl=1"  width="320" height="568">
+<img src="https://i.imgur.com/P80qM4t.png"  width="320" height="568">
 
 ---
 
-<img src="https://www.dropbox.com/s/lyzb6zubmow644h/Screen%20Shot%202020-05-18%20at%2010.35.24%20am.png?dl=1"  width="320" height="568">
+<img src="https://i.imgur.com/I1r4muo.png"  width="320" height="568">
 
 ---
 
-<img src="https://www.dropbox.com/s/3bbe2c0w77aqy55/Screen%20Shot%202020-05-18%20at%2010.35.37%20am.png?dl=1"  width="320" height="568">
+<img src="https://i.imgur.com/1osInWc.png"  width="320" height="568">
 
 ## Link
 [Website](https://www.gogofinder.com.tw)

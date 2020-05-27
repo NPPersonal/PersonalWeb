@@ -20,7 +20,7 @@ in image.
 
 ## Screenshots
 
-<img src="https://www.dropbox.com/s/6l7a1yu1wzrhn17/Screen%20Shot%202020-05-18%20at%2010.32.49%20am.png?dl=1"  width="500" height="400">
+<img src="https://i.imgur.com/B5iUBGI.png"  width="500" height="400">
 
 ## Link
 [Website](https://facedetectfront-59764.herokuapp.com/)

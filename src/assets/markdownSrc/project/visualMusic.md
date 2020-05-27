@@ -25,15 +25,15 @@ Front-end developer
 
 ## Screenshots
 
-<img src="https://www.dropbox.com/s/ibftsumczsrmdal/Screen%20Shot%202020-05-18%20at%209.58.55%20am.png?dl=1"  width="500" height="400">
+<img src="https://i.imgur.com/8u6Yjc0.png"  width="500" height="400">
 
 ---
 
-<img src="https://www.dropbox.com/s/o5uarqu7txqfcd2/Screen%20Shot%202020-05-18%20at%2010.01.12%20am.png?dl=1"  width="500" height="400">
+<img src="https://i.imgur.com/SZ7Uk7L.png"  width="500" height="400">
 
 ---
 
-<img src="https://www.dropbox.com/s/46klm4efio1loce/Screen%20Shot%202020-05-18%20at%2010.17.27%20am.png?dl=1"  width="500" height="400">
+<img src="https://i.imgur.com/kXPzB1s.png"  width="500" height="400">
 
 
 ## Link
