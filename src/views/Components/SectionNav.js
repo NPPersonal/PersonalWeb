@@ -26,9 +26,7 @@ const useStyles = makeStyles(theme=>({
 
 const SectionNav = ({actions, scrollBlock='start', scrollOffset=0}) => {
     const classes = useStyles();
-    const [direction, setDirection] = useState('up');
     const [open, setOpen] = useState(false);
-    const [hidden, setHidden] = React.useState(false);
 
     const handleClose = () => {
         setOpen(false);
@@ -55,12 +53,12 @@ const SectionNav = ({actions, scrollBlock='start', scrollOffset=0}) => {
         <SpeedDial
         className={classes.speedDail}
         ariaLabel="SpeedDial example"
-        hidden={hidden}
+        hidden={false}
         icon={<SpeedDialIcon icon={<MenuIcon />} openIcon={<MenuOpenIcon/>} />}
         onClose={handleClose}
         onOpen={handleOpen}
         open={open}
-        direction={direction}
+        direction='up'
         >
         {
             actions.map((action, index)=>{
