@@ -12,13 +12,15 @@ const defaultContentStyle={
     justifyContent:'center',
     alignItems:'center',
     borderRadius:'5px',
-    backgroundColor:'#ffffff',
+    backgroundColor:'#fff',
     boxShadow:'0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)',
 }
 const defaultStyle = {
     cardWrapper:{
         position:'relative',
-        margin:'1%',
+        margin:'2%',
+        backgroundColor:'transparent',
+        
     },
     frontContent:{
         ...defaultContentStyle
