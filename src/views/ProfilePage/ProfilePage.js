@@ -79,44 +79,26 @@ export default function ProfilePage(props) {
         />
         <Parallax small filter image={require('assets/img/profile-bg2.jpeg')} />
         <div className={classNames(classes.main, classes.mainRaised)}>
-          <div>
-            <div>
-              <GridContainer justify="center" alignItems='center' direction='column'>
-                <GridItem xs={12}>
-                  <div className={classes.profile}>
-                    <div>
-                      <img src={profile} alt="..." className={imageClasses} />
-                    </div>
-                    <div className={classes.name}>
-                      <Tooltip title='Nelson' placement='bottom'
-                      classes={{tooltip:classes.tooltip}} >
-                        <h3 className={classes.title}>Ming-Chun Hung</h3>
-                      </Tooltip>
-                      <h6>Programmer</h6>
-                    </div>
-                  </div>
-                </GridItem>
-                <GridItem xs={12}>
-                  <SectionIntro ref={introRef} />
-                </GridItem>
-                <GridItem xs={12}>
-                  <SectionSkills ref={skillsRef} />
-                </GridItem>
-                <GridItem xs={12}>
-                  <SectionExp ref={experiencesRef} />
-                </GridItem>
-                <GridItem xs={12}>
-                  <SectionLearn ref={learnRef} />
-                </GridItem>
-                <GridItem xs={12}>
-                  <SectionProj ref={projectsRef} />
-                </GridItem>
-                <GridItem xs={12}>
-                  <SectionHobbies ref={hobbiesRef} />
-                </GridItem>
-              </GridContainer>
+            <div className={classes.contentContainer}>
+              <div className={classes.profile}>
+                <div>
+                  <img src={profile} alt="..." className={imageClasses} />
+                </div>
+                <div className={classes.name}>
+                  <Tooltip title='Nelson' placement='bottom'
+                  classes={{tooltip:classes.tooltip}} >
+                    <h3 className={classes.title}>Ming-Chun Hung</h3>
+                  </Tooltip>
+                  <h6>Programmer</h6>
+                </div>
+              </div>
+              <SectionIntro ref={introRef} />
+              <SectionSkills ref={skillsRef} />
+              <SectionExp ref={experiencesRef} />
+              <SectionLearn ref={learnRef} />
+              <SectionProj ref={projectsRef} />
+              <SectionHobbies ref={hobbiesRef} />
             </div>
-          </div>
         </div>
         <SectionNav actions={actions.reverse()} scrollOffset={-72} />
       </div>

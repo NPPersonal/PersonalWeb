@@ -33,11 +33,9 @@ const SectionContainer = ({
     const style = {
         backdrop:{
             backgroundColor: backdropColor,
-            position:'absolute',
+            position:'relative',
             top:'0',
             left:'0',
-            width:'100%',
-            height:'100%',
         },
         content:{
             padding: padding,
@@ -47,15 +45,14 @@ const SectionContainer = ({
         desc:{
             display:'flex',
             justifyContent:'center',
-            padding:'2% 0 2% 0'
+            padding:'2% 0 2% 0',
         },
     }
 
     const classes = makeStyles(style)();
 
     return (
-        <div ref={forwardRef}>
-            <div className={classes.backdrop}></div>
+        <div ref={forwardRef} className={classes.backdrop}>
             <div className={classes.content}>
                 <GridContainer direction='column' justify="center" alignItems='center'>
                     {
