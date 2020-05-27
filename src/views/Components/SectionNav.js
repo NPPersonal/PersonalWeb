@@ -51,6 +51,7 @@ const SectionNav = ({actions, scrollBlock='start', scrollOffset=0}) => {
         <React.Fragment>
         <Backdrop className={classes.backdrop} open={open} />
         <SpeedDial
+        color='primary'
         className={classes.speedDail}
         ariaLabel="SpeedDial example"
         hidden={false}

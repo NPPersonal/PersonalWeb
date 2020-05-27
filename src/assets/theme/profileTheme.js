@@ -91,14 +91,14 @@ const theme = createMuiTheme({
                 },
             }
         },
-        MuiFab: {
-            primary: {
-                backgroundColor: '#f52d0a',
-                '&:hover': {
-                    backgroundColor: '#f52d0a',
-                },
+        MuiSpeedDial:{
+            fab:{
+                backgroundColor:'#f52d0a',
+                '&:hover':{
+                    backgroundColor:'#f52d0a',
+                }
             }
-        },
+        }
     }
 });
 
