@@ -27,6 +27,8 @@ import SectionProj from 'views/Sections/SectionProjects';
 import SectionHobbies from 'views/Sections/SectionHobbies';
 import SectionNav from 'views/Components/SectionNav';
 
+import HeaderBar from 'views/Components/HeaderBar';
+
 import {ThemeProvider} from '@material-ui/core/styles';
 import profileTheme from 'assets/theme/profileTheme';
 
@@ -66,7 +68,7 @@ export default function ProfilePage(props) {
   return (
     <ThemeProvider theme={profileTheme}>
       <div>
-        <Header
+        {/*<Header
           color="transparent"
           rightLinks={<HeaderLinks />}
           fixed
@@ -76,7 +78,8 @@ export default function ProfilePage(props) {
             color: "white"
           }}
           {...rest}
-        />
+        />*/}
+        <HeaderBar />
         <Parallax small filter image={require('assets/img/profile-bg2.jpeg')} />
         <div className={classNames(classes.main, classes.mainRaised)}>
             <div className={classes.contentContainer}>
