@@ -12,10 +12,6 @@ import DirectionsRunIcon from '@material-ui/icons/DirectionsRun';
 import CollectionsBookmarkIcon from '@material-ui/icons/CollectionsBookmark';
 
 // core components
-import Header from "components/Header/Header.js";
-import GridContainer from "components/Grid/GridContainer.js";
-import GridItem from "components/Grid/GridItem.js";
-import HeaderLinks from "components/Header/HeaderLinks.js";
 import Parallax from "components/Parallax/Parallax.js";
 import Tooltip from '@material-ui/core/Tooltip';
 
@@ -27,7 +23,7 @@ import SectionProj from 'views/Sections/SectionProjects';
 import SectionHobbies from 'views/Sections/SectionHobbies';
 import SectionNav from 'views/Components/SectionNav';
 
-import HeaderBar from 'views/Components/HeaderBar';
+import HeaderBarDrawer from 'views/Components/HeaderBarDrawer';
 
 import {ThemeProvider} from '@material-ui/core/styles';
 import profileTheme from 'assets/theme/profileTheme';
@@ -56,6 +52,34 @@ const actions = [
   { icon: <DirectionsRunIcon />, name: 'Hobbies', sectionRef:hobbiesRef },
 ];
 
+const scrollToSection = (sectionRef, yOffset, behavior='smooth')=>{
+  const top = sectionRef.current.getBoundingClientRect().top;
+  window.scroll({top:window.pageYOffset+top+yOffset, behavior: behavior})
+}
+
+const getDrawerMenuData = ()=>{
+  return(
+    [
+      {
+        title:'common',
+        items:[
+          <div>asdfadsf</div>,
+          <div>asdfadsf</div>,
+          <div>asdfadsf</div>,
+        ]
+      },
+      {
+        title:'sections',
+        items:[
+          <div>asdfadsf</div>,
+          <div>asdfadsf</div>,
+          <div>asdfadsf</div>,
+        ]
+      },
+    ]
+  )
+}
+
 export default function ProfilePage(props) {
   const classes = useStyles();
   const { ...rest } = props;
@@ -79,7 +103,7 @@ export default function ProfilePage(props) {
           }}
           {...rest}
         />*/}
-        <HeaderBar />
+        <HeaderBarDrawer drawerMenuData={getDrawerMenuData()} />
         <Parallax small filter image={require('assets/img/profile-bg2.jpeg')} />
         <div className={classNames(classes.main, classes.mainRaised)}>
             <div className={classes.contentContainer}>

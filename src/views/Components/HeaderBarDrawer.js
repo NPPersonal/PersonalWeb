@@ -1,15 +1,16 @@
 import React from 'react';
 
-import useScrollTrigger from '@material-ui/core/useScrollTrigger';
-import classNames from "classnames";
-
 import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
 import SwipeableDrawer from '@material-ui/core/SwipeableDrawer';
 import IconButton  from "@material-ui/core/IconButton";
+import DrawerMenu from 'views/Components/DrawerMenu';
+
 import Menu from "@material-ui/icons/Menu";
 
 import makeSytles from '@material-ui/core/styles/makeStyles';
+
+
 
 const defaultStyle = {
     appBarContainer:{
@@ -45,10 +46,11 @@ const getStyle = (scrollToTop)=>{
     return newStyle;
 }
 
-const HeaderBar = ({
+const HeaderBarDrawer = ({
     brand,
     title,
     scrollThreshold=100,
+    drawerMenuData
 }) => {
     React.useEffect(()=>{
         window.addEventListener("scroll", onScroll);
@@ -100,11 +102,15 @@ const HeaderBar = ({
             anchor='right'
             open={openDrawer}
             onClose={toggleDrawer}
+            onOpen={toggleDrawer}
             >
-            {'The drawer content will be here'}
+                <DrawerMenu 
+                onSelectItem={toggleDrawer}
+                menuData={drawerMenuData}
+                />
             </SwipeableDrawer>
         </AppBar>
     );
 };
 
-export default HeaderBar;
+export default HeaderBarDrawer;
