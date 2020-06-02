@@ -72,8 +72,7 @@ const SectionSkills = ({forwardRef})=>{
 
     const getTitle = ()=>{
         return <Title 
-        title='Skills' 
-        subtitle='I have experience in these programming languages' 
+        title='Skills'
         />;
     }
 
@@ -108,7 +107,6 @@ const SectionSkills = ({forwardRef})=>{
         title={getTitle()}
         desc={getDesc()}
         content={getContent()}
-        backdropColor='#f0eded'
         />
     )
 }

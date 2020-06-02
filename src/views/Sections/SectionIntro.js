@@ -19,8 +19,7 @@ const SectionIntro = ({forwardRef}) => {
 
     const getTitle = ()=>{
         return <Title 
-        title='About Me' 
-        subtitle='Everything about me' 
+        title='About Me'
         />;
     }
 
@@ -43,7 +42,6 @@ const SectionIntro = ({forwardRef}) => {
         ref={forwardRef}
         title={getTitle()}
         desc={getDesc()}
-        backdropColor='#e0e0e0'
         content={getContent()}
         />
     );

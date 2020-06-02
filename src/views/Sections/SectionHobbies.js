@@ -18,8 +18,7 @@ const SectionHobbies = ({
 
     const getTitle = ()=>{
         return <Title 
-        title='Hobbies' 
-        subtitle='Activities keep my life going' 
+        title='Hobbies'
         />;
     }
 
@@ -87,7 +86,6 @@ const SectionHobbies = ({
         title={getTitle()}
         desc={getDesc()}
         content={getContent(hobbies)}
-        backdropColor='#e0e0e0'
         />
     );
 };

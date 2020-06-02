@@ -147,7 +147,7 @@ export default function ProfilePage() {
                   classes={{tooltip:classes.tooltip}} >
                     <h3 className={classes.title}>Ming-Chun Hung</h3>
                   </Tooltip>
-                  <h6>Programmer</h6>
+                  <h5 className={classes.profileSubtitle}>Programmer</h5>
                 </div>
               </div>
               <SectionIntro ref={introRef} />

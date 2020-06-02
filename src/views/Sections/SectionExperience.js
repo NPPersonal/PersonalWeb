@@ -65,8 +65,7 @@ const SectionExperience = ({forwardRef})=>{
 
     const getTitle = ()=>{
         return <Title 
-        title='Experience' 
-        subtitle='Work experiences' 
+        title='Experience'
         />;
     }
 
@@ -90,7 +89,6 @@ const SectionExperience = ({forwardRef})=>{
         title={getTitle()}
         desc={getDesc()}
         content={getContent()}
-        backdropColor='#e0e0e0'
         />
     )
     

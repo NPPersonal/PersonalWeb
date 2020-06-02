@@ -16,6 +16,7 @@ const SpeakLang = ({
     title,
     titleStyle={
         fontWeight:'400',
+        color:'white',
     },
     value=3,
     maxValue=5,

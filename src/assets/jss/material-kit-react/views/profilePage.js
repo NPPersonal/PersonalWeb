@@ -8,7 +8,7 @@ const profilePageStyle = {
   container,
   profile: {
     textAlign: "center",
-    backgroundColor: '#e0e0e0',
+    backgroundColor: 'transparent',
     display:'flex',
     flexDirection:'column',
     "& img": {
@@ -19,9 +19,15 @@ const profilePageStyle = {
     }
   },
   subtitle:{
-    color: 'grey',
+    color: 'white',
     padding: '2% 0 2% 0',
     fontSize: '1.2rem',
+    fontWeight: '800',
+    textAlign: 'center !important'
+  },
+  profileSubtitle:{
+    color: 'white',
+    fontSize: '1.3em',
     fontWeight: '800',
     textAlign: 'center !important'
   },
@@ -39,7 +45,8 @@ const profilePageStyle = {
   },
   ...imagesStyle,
   main: {
-    background: "#FFFFFF",
+    backgroundImage: `url(${require('assets/img/y-so-serious.png')})`,
+    backgroundRepeat: 'repeat',
     position: "relative",
   },
   mainRaised: {
@@ -58,7 +65,8 @@ const profilePageStyle = {
     position: "relative",
     marginTop: "30px",
     minHeight: "32px",
-    textDecoration: "none"
+    textDecoration: "none",
+    color:'white',
   },
   socials: {
     marginTop: "0",

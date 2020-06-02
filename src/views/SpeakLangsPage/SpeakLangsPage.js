@@ -40,7 +40,11 @@ const SpeakLangsPage = () => {
         <div className={classes.pageWrapper}>
             <GridContainer direction='column' justify='center' alignItems='center'>
                 <GridItem {...breakPoints}>
-                    <Title title='Languages' subtitle='Languages I can speak'/>
+                    <Title 
+                    title='Languages'
+                    titleBackgroundColor='transparent'
+                    titleShadow={false}
+                    />
                 </GridItem>
                 <GridItem {...breakPoints}>
                     <div className={classes.langWrapper}>

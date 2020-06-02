@@ -5,7 +5,9 @@ import {makeStyles} from '@material-ui/core/styles';
 
 const Title = ({
     title,
-    titleColor='#ff0b03',
+    titleColor='#fff',
+    titleBackgroundColor='#f04f27',
+    titleShadow=true,
     titleFontSize='2rem', 
     titleFontWeight='800',
     titleUnderline=false,
@@ -22,9 +24,13 @@ const Title = ({
         },
         title: {
             color: titleColor,
+            backgroundColor: titleBackgroundColor,
             fontSize: titleFontSize,
             fontWeight: titleFontWeight,
-            textDecoration: titleUnderline?'underline':'none'
+            textDecoration: titleUnderline?'underline':'none',
+            lineHeight: '1.5em',
+            borderRadius: '5px',
+            boxShadow: titleShadow?'0 0 20px 0 #ff0b03':'none',
         },
         subtitle: {
             paddingTop:'0.5%',

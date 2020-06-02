@@ -91,7 +91,7 @@ class SectionProjects extends React.Component{
     }
 
     getTitle = ()=>{
-        return <Title title='Projects' subtitle='Projects I worked on' />;
+        return <Title title='Projects' />;
     }
 
     getDesc = ()=>{
@@ -119,7 +119,6 @@ class SectionProjects extends React.Component{
                 title={this.getTitle()}
                 desc={this.getDesc()}
                 content={this.getContent()}
-                backdropColor='#f0eded'
                 />
 
                 {

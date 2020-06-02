@@ -45,7 +45,11 @@ const ToolsPage = () => {
     return (
         <GridContainer direction='column' justify='center' alignItems='center'>
             <GridItem {...breakPoints}>
-                <Title title='Tools' subtitle='Tools I have used'/>
+                <Title 
+                title='Tools'
+                titleBackgroundColor='transparent'
+                titleShadow={false}
+                />
             </GridItem>
             <GridItem {...breakPoints}>
                 <ListPanel panelList={transformToolsToPanels(tools)} />

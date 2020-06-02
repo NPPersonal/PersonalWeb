@@ -27,7 +27,7 @@ const SectionContainer = ({
     desc,
     content,
     padding='2% 2%',
-    backdropColor='#ffffff',
+    backdropColor='transparent',
     breakPoints=defaultBreakPoints
 }) => {
     const style = {

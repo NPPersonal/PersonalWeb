@@ -63,8 +63,7 @@ const SectionLearn = ({forwardRef}) => {
 
     const getTitle = ()=>{
         return <Title 
-        title='Learn' 
-        subtitle='Education and learning' 
+        title='Learn'
         />;
     }
 
@@ -88,7 +87,6 @@ const SectionLearn = ({forwardRef}) => {
             title={getTitle()}
             desc={getDesc()}
             content={getContent()}
-            backdropColor='#e0e0e0'
         />
     );
 };
