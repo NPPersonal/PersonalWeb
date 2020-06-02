@@ -4,7 +4,7 @@ import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
 import SwipeableDrawer from '@material-ui/core/SwipeableDrawer';
 import IconButton  from "@material-ui/core/IconButton";
-import DrawerMenu from 'views/Components/DrawerMenu';
+import DrawerMenu from 'views/Components/DrawerMenu/DrawerMenu';
 
 import Menu from "@material-ui/icons/Menu";
 

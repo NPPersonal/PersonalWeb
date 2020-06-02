@@ -4,8 +4,6 @@ import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import Divider from '@material-ui/core/Divider';
 
-import InboxIcon from '@material-ui/icons/MoveToInbox';
-
 const DrawerMenu = ({
     onSelectItem,
     menuData
@@ -28,7 +26,6 @@ const DrawerMenu = ({
                     itemContents.map((item, i)=>{
                         return (
                         <ListItem 
-                        button 
                         key={`${sectionTitle}${sectionIndex}${i}`}
                         onClick={()=>handleSelectItem(sectionIndex, i)}
                         >
@@ -45,7 +42,6 @@ const DrawerMenu = ({
     }
 
     const handleSelectItem = (sectionIndex, itemIndex)=>{
-        console.log(sectionIndex, itemIndex);
         if(onSelectItem) onSelectItem(sectionIndex, itemIndex);
     }
     return (
