@@ -2,6 +2,7 @@ import React from 'react';
 
 import Rating from '@material-ui/lab/Rating';
 import {makeStyles} from '@material-ui/core/styles';
+import Typography from '@material-ui/core/Typography'
 
 const defaultStyle={
     wrapper:{
@@ -32,7 +33,9 @@ const SpeakLang = ({
 
     return (
         <div className={classes.wrapper}>
-            <div className={classes.title}>{title}:</div>
+            <div className={classes.title}>
+                <Typography variant='h5'>{title}:</Typography>
+            </div>
             <Rating
             value={value} 
             defaultValue={value} 

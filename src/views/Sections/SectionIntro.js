@@ -6,6 +6,7 @@ import SpeakLangsPage from 'views/SpeakLangsPage/SpeakLangsPage';
 
 //import from material-ui core
 import {makeStyles} from '@material-ui/core/styles';
+import Typography from '@material-ui/core/Typography'
 
 import {aboutMe} from 'assets/data/aboutMeData';
 
@@ -25,11 +26,9 @@ const SectionIntro = ({forwardRef}) => {
 
     const getDesc = ()=>{
         return (
-            <div>
-                <pre className={classes.descText}>
-                {aboutMe}
-                </pre>
-            </div>
+            <pre style={{whiteSpace:'pre-wrap'}}>
+                <Typography variant='h5' color='secondary'>{aboutMe}</Typography>
+            </pre>
         );
     }
 

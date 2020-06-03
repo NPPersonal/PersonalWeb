@@ -45,7 +45,7 @@ const profilePageStyle = {
   },
   ...imagesStyle,
   main: {
-    backgroundImage: `url(${require('assets/img/y-so-serious.png')})`,
+    backgroundImage: `url(${require('assets/img/mosaic.png')})`,
     backgroundRepeat: 'repeat',
     position: "relative",
   },
@@ -54,6 +54,13 @@ const profilePageStyle = {
     borderRadius: "6px",
     boxShadow:
       "0 16px 24px 2px rgba(0, 0, 0, 0.14), 0 6px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2)"
+  },
+  page:{
+    background: 'rgb(148,148,149)',
+    background: '-moz-linear-gradient(180deg, rgba(148,148,149,1) 0%, rgba(193,193,193,1) 50%, rgba(235,235,235,1) 100%)',
+    background: '-webkit-linear-gradient(180deg, rgba(148,148,149,1) 0%, rgba(193,193,193,1) 50%, rgba(235,235,235,1) 100%)',
+    background: 'linear-gradient(180deg, rgba(148,148,149,1) 0%, rgba(193,193,193,1) 50%, rgba(235,235,235,1) 100%)',
+    filter: 'progid:DXImageTransform.Microsoft.gradient(startColorstr="#949495",endColorstr="#ebebeb",GradientType=1)',
   },
   contentContainer:{
     display:'flex',

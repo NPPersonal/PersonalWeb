@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 
 //import from material-ui core
-
+import Typography from '@material-ui/core/Typography'
 import ExpansionPanel from '@material-ui/core/ExpansionPanel';
 import ExpansionPanelSummary from '@material-ui/core/ExpansionPanelSummary';
 import ExpansionPanelDetails from '@material-ui/core/ExpansionPanelDetails';
@@ -34,15 +34,11 @@ const ListPanel = ({panelList}) => {
                             <ExpansionPanelSummary
                             expandIcon={<ExpandMoreIcon />}
                             >
-                            {
-                                panel.summary
-                            }
+                                <Typography variant='h5'>{panel.summary}</Typography>
                             </ExpansionPanelSummary>
                             <ExpansionPanelDetails
                             >
-                            {
-                                panel.detail
-                            }
+                                <Typography variant='h5'>{panel.detail}</Typography>
                             </ExpansionPanelDetails>
                         </ExpansionPanel>
                         

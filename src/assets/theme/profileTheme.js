@@ -98,7 +98,7 @@ const theme = createMuiTheme({
                     backgroundColor:'#f52d0a',
                 }
             }
-        }
+        },
     }
 });
 

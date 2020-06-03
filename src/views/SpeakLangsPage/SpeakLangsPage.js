@@ -38,20 +38,20 @@ const SpeakLangsPage = () => {
 
     return (
         <div className={classes.pageWrapper}>
-            <GridContainer direction='column' justify='center' alignItems='center'>
+
+                <Title 
+                title='Languages'
+                titleBackgroundColor='transparent'
+                titleShadow={false}
+                />
+                <GridContainer>
                 <GridItem {...breakPoints}>
-                    <Title 
-                    title='Languages'
-                    titleBackgroundColor='transparent'
-                    titleShadow={false}
-                    />
-                </GridItem>
-                <GridItem {...breakPoints}>
-                    <div className={classes.langWrapper}>
+                <div>
                     {getSpeakLangs(languages)}
-                    </div>
+                </div>
                 </GridItem>
-            </GridContainer>
+                </GridContainer>
+
         </div>
     );
 };

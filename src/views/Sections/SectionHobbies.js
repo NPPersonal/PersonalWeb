@@ -7,6 +7,8 @@ import Title from 'views/Components/Title';
 import SectionContainer from 'views/Components/SectionContainer';
 import HobbieCard from 'views/Components/HobbieCard';
 
+import Typography from '@material-ui/core/Typography'
+
 import {hobbiesDescription, hobbies} from 'assets/data/hobbiesData';
 
 const useStyle = makeStyles(hobbiesStyle);
@@ -24,11 +26,11 @@ const SectionHobbies = ({
 
     const getDesc = ()=>{
         return (
-            <div>
-                <p className={classes.descText}>
-                {hobbiesDescription}
-                </p>
-            </div>
+            <pre style={{whiteSpace:'pre-wrap'}}>
+                <Typography variant='h5' color='secondary'>
+                    {hobbiesDescription}
+                </Typography>
+            </pre>
         );
     }
 

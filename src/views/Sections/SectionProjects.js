@@ -12,6 +12,7 @@ import DialogContent from '@material-ui/core/DialogContent';
 import DialogTitle from '@material-ui/core/DialogTitle';
 import Button from '@material-ui/core/Button';
 import Slide from '@material-ui/core/Slide';
+import Typography from '@material-ui/core/Typography';
 
 import ReactMarkdown from 'react-markdown/with-html';
 
@@ -97,11 +98,9 @@ class SectionProjects extends React.Component{
     getDesc = ()=>{
         const {classes} = this.props;
         return (
-            <div>
-                <p className={classes.descText}>
-                {projectDescription}
-                </p>
-            </div>
+            <pre style={{whiteSpace:'pre-wrap'}}>
+                <Typography variant='h5' color='secondary'>{projectDescription}</Typography>
+            </pre>
         );
     }
 

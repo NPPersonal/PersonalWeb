@@ -15,6 +15,7 @@ import CardMedia from '@material-ui/core/CardMedia';
 import CardContent from '@material-ui/core/CardContent';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
+import Typography from '@material-ui/core/Typography';
 
 import skillStyle from 'assets/jss/material-kit-react/sections/skillsStyle.js';
 
@@ -48,13 +49,17 @@ const SectionSkills = ({forwardRef})=>{
                         </div>
                     </CardMedia>
                     <CardContent>
-                        <div className={classes.cardTitle}>{lang.title}</div>
+                        <div className={classes.cardTitle}>
+                            <Typography variant='h4'>{lang.title}</Typography>
+                        </div>
                         <List>
                         {
                         lang.frameworks.map((framework, index)=>{
                             return (
                                 <ListItem key={index} dense>
-                                    <div className={classes.itemText}>{framework}</div>
+                                    <div className={classes.itemText}>
+                                        <Typography variant='h5'>{framework}</Typography>
+                                    </div>
                                 </ListItem>
                             ) 
                         })
@@ -78,11 +83,9 @@ const SectionSkills = ({forwardRef})=>{
 
     const getDesc = ()=>{
         return (
-            <div>
-                <pre className={classes.descText}>
-                {skillDescription}
-                </pre>
-            </div>
+            <pre style={{whiteSpace:'pre-wrap'}}>
+                <Typography variant='h5' color='secondary'>{skillDescription}</Typography>
+            </pre>
         );
     }
 
