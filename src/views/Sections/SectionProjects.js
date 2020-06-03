@@ -98,8 +98,10 @@ class SectionProjects extends React.Component{
     getDesc = ()=>{
         const {classes} = this.props;
         return (
-            <pre style={{whiteSpace:'pre-wrap'}}>
-                <Typography variant='h5' color='secondary'>{projectDescription}</Typography>
+            <pre className={classes.preText}>
+                <Typography variant='h5' color='secondary' paragraph>
+                {projectDescription}
+                </Typography>
             </pre>
         );
     }

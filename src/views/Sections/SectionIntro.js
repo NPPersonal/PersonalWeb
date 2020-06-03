@@ -26,8 +26,10 @@ const SectionIntro = ({forwardRef}) => {
 
     const getDesc = ()=>{
         return (
-            <pre style={{whiteSpace:'pre-wrap'}}>
-                <Typography variant='h5' color='secondary'>{aboutMe}</Typography>
+            <pre className={classes.preText}>
+                <Typography variant='h5' color='secondary' paragraph>
+                {aboutMe}
+                </Typography>
             </pre>
         );
     }

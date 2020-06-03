@@ -72,7 +72,7 @@ const SectionLearn = ({forwardRef}) => {
 
     const getDesc = ()=>{
         return (
-            <pre style={{whiteSpace:'pre-wrap'}}>
+            <pre className={classes.preText}>
                 <Typography variant='h5' color='secondary' paragraph>
                     {learnDescription}
                 </Typography>

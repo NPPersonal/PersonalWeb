@@ -30,12 +30,25 @@ const SectionContainer = ({
     backdropColor='transparent',
     breakPoints=defaultBreakPoints
 }) => {
-    const style = {
+
+    const style = theme => ({
         backdrop:{
             backgroundColor: backdropColor,
             position:'relative',
             top:'0',
             left:'0',
+            [theme.breakpoints.down('sm')]:{
+                marginTop:'10%',
+            },
+            [theme.breakpoints.down('md')]:{
+                marginTop:'7%',
+            },
+            [theme.breakpoints.down('lg')]:{
+                marginTop:'4%',
+            },
+            [theme.breakpoints.up('lg')]:{
+                marginTop:'3%',
+            }
         },
         content:{
             padding: padding,
@@ -47,7 +60,7 @@ const SectionContainer = ({
             justifyContent:'center',
             padding:'2% 0 2% 0',
         },
-    }
+    })
 
     const classes = makeStyles(style)();
 

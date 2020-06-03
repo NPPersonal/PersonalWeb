@@ -36,6 +36,8 @@ const previousExpStyle={
 
 const SectionExperience = ({forwardRef})=>{
 
+    const classes = useStyle();
+    
     const transformExpToTimeline = (exps)=>{
         return (
             <VerticalTimeline>
@@ -75,8 +77,10 @@ const SectionExperience = ({forwardRef})=>{
 
     const getDesc = ()=>{
         return (
-            <pre style={{whiteSpace:'pre-wrap'}}>
-                <Typography variant='h5' color='secondary'>{expDescription}</Typography>
+            <pre className={classes.preText}>
+                <Typography variant='h5' color='secondary' paragraph>
+                {expDescription}
+                </Typography>
             </pre>
         );
     }

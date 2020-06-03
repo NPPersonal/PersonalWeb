@@ -45,11 +45,9 @@ const SpeakLangsPage = () => {
                 titleShadow={false}
                 />
                 <GridContainer>
-                <GridItem {...breakPoints}>
-                <div>
+                    <GridItem {...breakPoints}>
                     {getSpeakLangs(languages)}
-                </div>
-                </GridItem>
+                    </GridItem>
                 </GridContainer>
 
         </div>

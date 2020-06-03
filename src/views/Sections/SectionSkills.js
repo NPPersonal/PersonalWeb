@@ -83,8 +83,10 @@ const SectionSkills = ({forwardRef})=>{
 
     const getDesc = ()=>{
         return (
-            <pre style={{whiteSpace:'pre-wrap'}}>
-                <Typography variant='h5' color='secondary'>{skillDescription}</Typography>
+            <pre className={classes.preText}>
+                <Typography variant='h5' color='secondary' paragraph>
+                {skillDescription}
+                </Typography>
             </pre>
         );
     }
