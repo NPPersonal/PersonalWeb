@@ -5,6 +5,8 @@ import SectionContainer from 'views/Components/SectionContainer';
 import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
 
+import Typography from '@material-ui/core/Typography';
+
 import WorkOutlineIcon from '@material-ui/icons/WorkOutline';
 
 //import from material-ui core
@@ -19,20 +21,23 @@ import {expDescription, exps} from 'assets/data/expData';
 const useStyle = makeStyles(experienceStyle);
 
 const currentExpStyle={
-    contentStyle:{ background: '#ff7c6b', color: '#000', border:'1px solid #575757' },
-    contentArrowStyle:{ borderRight: '7px solid  #575757' },
+    contentStyle:{ 
+        background: '#ff7c6b', 
+        color: '#000',
+    },
+    contentArrowStyle:{ borderRight: '7px solid  #ff7c6b' },
     iconStyle:{ background: '#ff7c6b', color: '#fff' }
 }
 const previousExpStyle={
-    contentStyle:{ background: '#61bbff', color: '#000', border:'1px solid #575757' },
-    contentArrowStyle:{ borderRight: '7px solid  #575757' },
+    contentStyle:{background: '#61bbff', color: '#000'},
+    contentArrowStyle:{ borderRight: '7px solid  #61bbff' },
     iconStyle:{ background: '#61bbff', color: '#fff' }
 }
 
 const SectionExperience = ({forwardRef})=>{
 
     const classes = useStyle();
-
+    
     const transformExpToTimeline = (exps)=>{
         return (
             <VerticalTimeline>
@@ -43,18 +48,19 @@ const SectionExperience = ({forwardRef})=>{
                     return (
                         <VerticalTimelineElement
                         key={index}
-                        className='vertical-timeline-element--work'
+                        className='vertical-timeline-element'
                         contentStyle={{...selectedStyle.contentStyle}}
                         contentArrowStyle={{...selectedStyle.contentArrowStyle}}
                         iconStyle={{...selectedStyle.iconStyle}}
                         icon={<WorkOutlineIcon />}
                         >
-                            <h3 className="vertical-timeline-element-title">{exp.title}</h3>
-                            <h4 className="vertical-timeline-element-subtitle">{exp.company}</h4>
-                            <h4 className="vertical-timeline-element-subtitle">{exp.location}</h4>
-                            <p>
-                            {exp.desc}
-                            </p>
+                            <div>
+                                <Typography variant='h4'>{exp.title}</Typography>
+                                <Typography variant='h5'>
+                                    {`${exp.company}, ${exp.location}`}
+                                </Typography>
+                                <Typography variant='body1'>{exp.desc}</Typography>
+                            </div>    
                         </VerticalTimelineElement>
                     )
                 })
@@ -65,18 +71,17 @@ const SectionExperience = ({forwardRef})=>{
 
     const getTitle = ()=>{
         return <Title 
-        title='Experience' 
-        subtitle='Work experiences' 
+        title='Experience'
         />;
     }
 
     const getDesc = ()=>{
         return (
-            <div>
-                <p className={classes.descText}>
+            <pre className={classes.preText}>
+                <Typography variant='h5' color='secondary' paragraph>
                 {expDescription}
-                </p>
-            </div>
+                </Typography>
+            </pre>
         );
     }
 
@@ -90,7 +95,6 @@ const SectionExperience = ({forwardRef})=>{
         title={getTitle()}
         desc={getDesc()}
         content={getContent()}
-        backdropColor='#e0e0e0'
         />
     )
     

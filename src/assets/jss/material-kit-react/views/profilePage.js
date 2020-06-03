@@ -8,7 +8,7 @@ const profilePageStyle = {
   container,
   profile: {
     textAlign: "center",
-    backgroundColor: '#e0e0e0',
+    backgroundColor: 'transparent',
     display:'flex',
     flexDirection:'column',
     "& img": {
@@ -19,9 +19,15 @@ const profilePageStyle = {
     }
   },
   subtitle:{
-    color: 'grey',
+    color: 'white',
     padding: '2% 0 2% 0',
     fontSize: '1.2rem',
+    fontWeight: '800',
+    textAlign: 'center !important'
+  },
+  profileSubtitle:{
+    color: 'white',
+    fontSize: '1.3em',
     fontWeight: '800',
     textAlign: 'center !important'
   },
@@ -39,7 +45,8 @@ const profilePageStyle = {
   },
   ...imagesStyle,
   main: {
-    background: "#FFFFFF",
+    backgroundImage: `url(${require('assets/img/mosaic.png')})`,
+    backgroundRepeat: 'repeat',
     position: "relative",
   },
   mainRaised: {
@@ -47,6 +54,10 @@ const profilePageStyle = {
     borderRadius: "6px",
     boxShadow:
       "0 16px 24px 2px rgba(0, 0, 0, 0.14), 0 6px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2)"
+  },
+  page:{
+    background: 'linear-gradient(180deg, rgba(148,148,149,1) 0%, rgba(193,193,193,1) 50%, rgba(235,235,235,1) 100%)',
+    filter: 'progid:DXImageTransform.Microsoft.gradient(startColorstr="#949495",endColorstr="#ebebeb",GradientType=1)',
   },
   contentContainer:{
     display:'flex',
@@ -58,7 +69,8 @@ const profilePageStyle = {
     position: "relative",
     marginTop: "30px",
     minHeight: "32px",
-    textDecoration: "none"
+    textDecoration: "none",
+    color:'white',
   },
   socials: {
     marginTop: "0",

@@ -20,7 +20,7 @@ const defaultStyle = {
         position:'relative',
         margin:'2%',
         backgroundColor:'transparent',
-        
+        cursor:'pointer',
     },
     frontContent:{
         ...defaultContentStyle
@@ -72,8 +72,9 @@ const HobbieCard = ({
     return (
         <div 
         className={classes.cardWrapper}
-        onMouseEnter={handleFlip}
-        onMouseLeave={handleFlip}
+        // onMouseEnter={handleFlip}
+        // onMouseLeave={handleFlip}
+        onClick={handleFlip}
         >
             <animated.div 
             className={classes.frontContent}

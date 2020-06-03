@@ -6,6 +6,7 @@ import SpeakLangsPage from 'views/SpeakLangsPage/SpeakLangsPage';
 
 //import from material-ui core
 import {makeStyles} from '@material-ui/core/styles';
+import Typography from '@material-ui/core/Typography'
 
 import {aboutMe} from 'assets/data/aboutMeData';
 
@@ -19,18 +20,17 @@ const SectionIntro = ({forwardRef}) => {
 
     const getTitle = ()=>{
         return <Title 
-        title='About Me' 
-        subtitle='Everything about me' 
+        title='About Me'
         />;
     }
 
     const getDesc = ()=>{
         return (
-            <div>
-                <pre className={classes.descText}>
+            <pre className={classes.preText}>
+                <Typography variant='h5' color='secondary' paragraph>
                 {aboutMe}
-                </pre>
-            </div>
+                </Typography>
+            </pre>
         );
     }
 
@@ -43,7 +43,6 @@ const SectionIntro = ({forwardRef}) => {
         ref={forwardRef}
         title={getTitle()}
         desc={getDesc()}
-        backdropColor='#e0e0e0'
         content={getContent()}
         />
     );

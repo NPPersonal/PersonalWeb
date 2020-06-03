@@ -5,6 +5,8 @@ import SectionContainer from 'views/Components/SectionContainer';
 import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
 
+import Typography from '@material-ui/core/Typography';
+
 import MenuBookIcon from '@material-ui/icons/MenuBook';
 
 import {makeStyles} from '@material-ui/core/styles';
@@ -17,13 +19,13 @@ import {learnDescription, learns} from 'assets/data/learnData';
 const useStyle = makeStyles(learnStyle);
 
 const currentLearnStyle={
-    contentStyle:{ background: '#ff7c6b', color: '#000', border:'1px solid #575757' },
-    contentArrowStyle:{ borderRight: '7px solid  #575757' },
+    contentStyle:{ background: '#ff7c6b', color: '#000' },
+    contentArrowStyle:{ borderRight: '7px solid  #ff7c6b' },
     iconStyle:{ background: '#ff7c6b', color: '#fff' }
 }
 const previousLearnStyle={
-    contentStyle:{ background: '#61bbff', color: '#000', border:'1px solid #575757' },
-    contentArrowStyle:{ borderRight: '7px solid  #575757' },
+    contentStyle:{ background: '#61bbff', color: '#000' },
+    contentArrowStyle:{ borderRight: '7px solid  #61bbff' },
     iconStyle:{ background: '#61bbff', color: '#fff' }
 }
 
@@ -41,18 +43,19 @@ const SectionLearn = ({forwardRef}) => {
                     return (
                         <VerticalTimelineElement
                         key={index}
-                        className='vertical-timeline-element--work'
+                        className='vertical-timeline-element'
                         contentStyle={{...selectedStyle.contentStyle}}
                         contentArrowStyle={{...selectedStyle.contentArrowStyle}}
                         iconStyle={{...selectedStyle.iconStyle}}
                         icon={<MenuBookIcon />}
                         >
-                            <h3 className="vertical-timeline-element-title">{learn.school}</h3>
-                            <h4 className="vertical-timeline-element-title">{learn.major}</h4>
-                            <h4 className="vertical-timeline-element-subtitle">{learn.location}</h4>
-                            <p>
-                            {learn.desc}
-                            </p>
+                            <div>
+                                <Typography variant='h4'>{learn.school}</Typography>
+                                <Typography variant='h5'>
+                                    {`${learn.major}, ${learn.location}`}
+                                </Typography>
+                                <Typography variant='body1'>{learn.desc}</Typography>
+                            </div> 
                         </VerticalTimelineElement>
                     )
                 })
@@ -63,18 +66,17 @@ const SectionLearn = ({forwardRef}) => {
 
     const getTitle = ()=>{
         return <Title 
-        title='Learn' 
-        subtitle='Education and learning' 
+        title='Learn'
         />;
     }
 
     const getDesc = ()=>{
         return (
-            <div>
-                <p className={classes.descText}>
-                {learnDescription}
-                </p>
-            </div>
+            <pre className={classes.preText}>
+                <Typography variant='h5' color='secondary' paragraph>
+                    {learnDescription}
+                </Typography>
+            </pre>
         );
     }
 
@@ -88,7 +90,6 @@ const SectionLearn = ({forwardRef}) => {
             title={getTitle()}
             desc={getDesc()}
             content={getContent()}
-            backdropColor='#e0e0e0'
         />
     );
 };

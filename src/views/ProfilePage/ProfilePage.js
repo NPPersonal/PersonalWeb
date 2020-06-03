@@ -28,6 +28,8 @@ import SectionHobbies from 'views/Sections/SectionHobbies';
 import HeaderBarDrawer from 'views/Components/HeaderBarDrawer';
 import DrawerMenuItem from 'views/Components/DrawerMenu/DrawerMenuItem';
 
+import Typography from '@material-ui/core/Typography';
+
 import {ThemeProvider} from '@material-ui/core/styles';
 import profileTheme from 'assets/theme/profileTheme';
 
@@ -133,7 +135,7 @@ export default function ProfilePage() {
 
   return (
     <ThemeProvider theme={profileTheme}>
-      <div>
+      <div className={classes.page}>
         <HeaderBarDrawer drawerMenuData={getDrawerMenuData()} />
         <Parallax small filter image={require('assets/img/profile-bg2.jpeg')} />
         <div className={classNames(classes.main, classes.mainRaised)}>
@@ -143,11 +145,14 @@ export default function ProfilePage() {
                   <img src={profile} alt="..." className={imageClasses} />
                 </div>
                 <div className={classes.name}>
-                  <Tooltip title='Nelson' placement='bottom'
-                  classes={{tooltip:classes.tooltip}} >
-                    <h3 className={classes.title}>Ming-Chun Hung</h3>
+                  <Tooltip 
+                  title='Nelson' 
+                  placement='bottom'
+                  classes={{tooltip:classes.tooltip}} 
+                  >
+                    <Typography variant='h4' color='secondary'>Ming-Chun Hung</Typography>
                   </Tooltip>
-                  <h6>Programmer</h6>
+                  <Typography variant='h5' color='secondary'>Programmer</Typography>
                 </div>
               </div>
               <SectionIntro ref={introRef} />

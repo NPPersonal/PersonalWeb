@@ -2,10 +2,13 @@ import React from 'react';
 import classNames from "classnames";
 
 import {makeStyles} from '@material-ui/core/styles';
+import Typography from '@material-ui/core/Typography';
 
 const Title = ({
     title,
-    titleColor='#ff0b03',
+    titleColor='#fff',
+    titleBackgroundColor='#f04f27',
+    titleShadow=true,
     titleFontSize='2rem', 
     titleFontWeight='800',
     titleUnderline=false,
@@ -22,9 +25,13 @@ const Title = ({
         },
         title: {
             color: titleColor,
+            backgroundColor: titleBackgroundColor,
             fontSize: titleFontSize,
             fontWeight: titleFontWeight,
-            textDecoration: titleUnderline?'underline':'none'
+            textDecoration: titleUnderline?'underline':'none',
+            lineHeight: '1.5em',
+            borderRadius: '5px',
+            boxShadow: titleShadow?'0 0 10px 5px #f04f27':'none',
         },
         subtitle: {
             paddingTop:'0.5%',
@@ -49,8 +56,12 @@ const Title = ({
 
     return (
         <div>
-            <div className={titleClasses}>{title}</div>
-            <div className={subtitleClasses}>{subtitle}</div>
+            <div className={titleClasses}>
+                <Typography variant='h3'>{title}</Typography>
+            </div>
+            <div className={subtitleClasses}>
+                <Typography variant='h4'>{subtitle}</Typography>
+            </div>
         </div>
     );
 };

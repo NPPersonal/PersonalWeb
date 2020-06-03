@@ -7,6 +7,8 @@ import Title from 'views/Components/Title';
 import SectionContainer from 'views/Components/SectionContainer';
 import HobbieCard from 'views/Components/HobbieCard';
 
+import Typography from '@material-ui/core/Typography'
+
 import {hobbiesDescription, hobbies} from 'assets/data/hobbiesData';
 
 const useStyle = makeStyles(hobbiesStyle);
@@ -18,18 +20,17 @@ const SectionHobbies = ({
 
     const getTitle = ()=>{
         return <Title 
-        title='Hobbies' 
-        subtitle='Activities keep my life going' 
+        title='Hobbies'
         />;
     }
 
     const getDesc = ()=>{
         return (
-            <div>
-                <p className={classes.descText}>
-                {hobbiesDescription}
-                </p>
-            </div>
+            <pre className={classes.preText}>
+                <Typography variant='h5' color='secondary' paragraph>
+                    {hobbiesDescription}
+                </Typography>
+            </pre>
         );
     }
 
@@ -87,7 +88,6 @@ const SectionHobbies = ({
         title={getTitle()}
         desc={getDesc()}
         content={getContent(hobbies)}
-        backdropColor='#e0e0e0'
         />
     );
 };

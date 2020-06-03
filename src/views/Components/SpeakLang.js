@@ -2,13 +2,14 @@ import React from 'react';
 
 import Rating from '@material-ui/lab/Rating';
 import {makeStyles} from '@material-ui/core/styles';
+import Typography from '@material-ui/core/Typography';
 
 const defaultStyle={
     wrapper:{
+        width:'100%',
         display:'flex',
         justifyContent:'space-between',
         alignItems:'center',
-        padding:'2%'
     },
 }
 
@@ -16,6 +17,7 @@ const SpeakLang = ({
     title,
     titleStyle={
         fontWeight:'400',
+        color:'white',
     },
     value=3,
     maxValue=5,
@@ -24,14 +26,16 @@ const SpeakLang = ({
 }) => {
     const newStyle ={
         ...defaultStyle,
-        title:{...titleStyle}
+        title:{...defaultStyle.title, ...titleStyle}
     }
     const useStyle = makeStyles(newStyle);
     const classes = useStyle();
 
     return (
         <div className={classes.wrapper}>
-            <div className={classes.title}>{title}:</div>
+            <div>
+                <Typography variant='h5' color='secondary'>{title}:</Typography>
+            </div>
             <Rating
             value={value} 
             defaultValue={value} 

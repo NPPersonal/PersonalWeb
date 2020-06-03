@@ -1,10 +1,13 @@
-import { createMuiTheme } from '@material-ui/core/styles';
+import { createMuiTheme, responsiveFontSizes } from '@material-ui/core/styles';
 
 const borderRadius = '25px';
 const roundedMargin = '1.5% auto 1.5% auto';
 const panelColor = '#fff';
 
-const theme = createMuiTheme({
+let theme = createMuiTheme({
+    typography:{
+        fontFamily:['sans-serif']
+    },
     overrides: {
         MuiExpansionPanel: {
             root: {
@@ -98,8 +101,15 @@ const theme = createMuiTheme({
                     backgroundColor:'#f52d0a',
                 }
             }
+        },
+        MuiTypography:{
+            colorSecondary:{
+                color: '#fff'
+            }
         }
     }
 });
+
+theme = responsiveFontSizes(theme);
 
 export default theme;
