@@ -31,6 +31,30 @@ const defaultStyle = {
         color:'white',
         transition: 'all 0.5s ease-in-out'
     },
+    showBrandAnim:{
+        animationName:'$showBrandAnim',
+        animationDuration:'0.5s',
+        animationFillMode:'forwards',
+    },
+    hideBrandAnim:{
+        animationName:'$showBrandAnim',
+        animationDuration:'0.5s',
+        animationDirection:'reverse',
+        animationFillMode:'forwards',
+    },
+    showBrand:{
+        opacity: 1,
+    },
+    hideBrand:{
+        opacity: 0,
+    },
+    '@keyframes showBrandAnim':{
+        '0%': { transform: 'scale(0)', opacity: 0},
+        '50%': { transform: 'scale(1.6)', opacity: .7},
+        '60%': { transform: 'scale(0.6)', opacity: 1},
+        '80%': { transform: 'scale(0.95)' },
+        '100%': { transform: 'scale(1)' },
+    }
 }
 
 const getStyle = (scrollToTop)=>{
@@ -46,12 +70,14 @@ const getStyle = (scrollToTop)=>{
     return newStyle;
 }
 
+
 const HeaderBarDrawer = ({
     brand,
     title,
     scrollThreshold=100,
     drawerMenuData
 }) => {
+
     React.useEffect(()=>{
         window.addEventListener("scroll", onScroll);
 
@@ -63,14 +89,21 @@ const HeaderBarDrawer = ({
     const onScroll = ()=>{
         const scrollYOffset =  window.pageYOffset;
         scrollYOffset>scrollThreshold?setScrollToTop(false):setScrollToTop(true);
+        setBrandAnimValue(true);
+    }
+
+    const setBrandAnimValue = (value)=>{
+        if(brandAnimOn !== value) setBrandAnimOn(value);
     }
 
     const toggleDrawer = ()=>{
         setOpenDrawer(!openDrawer);
+        setBrandAnimValue(false);
     }
 
     const [scrollToTop, setScrollToTop] = React.useState(true);
     const [openDrawer, setOpenDrawer] = React.useState(false);
+    const [brandAnimOn, setBrandAnimOn] = React.useState(false);
 
     const newStyle = getStyle(scrollToTop);
     const useStyle = makeSytles(newStyle);
@@ -80,7 +113,17 @@ const HeaderBarDrawer = ({
         <AppBar className={classes.appBarContainer}>
             <Toolbar>
                 <div className={classes.leftContainer}>
-                {!brand?null:brand}
+                {!brand?null:
+                    <div 
+                    className={
+                        scrollToTop?
+                        !brandAnimOn?classes.hideBrand:classes.hideBrandAnim
+                        :
+                        !brandAnimOn?classes.showBrand:classes.showBrandAnim
+                    }>
+                    {brand}
+                    </div>
+                }
                 {
                     !title?
                     null

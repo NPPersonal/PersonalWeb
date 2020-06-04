@@ -27,6 +27,7 @@ import SectionHobbies from 'views/Sections/SectionHobbies';
 
 import HeaderBarDrawer from 'views/Components/HeaderBarDrawer';
 import DrawerMenuItem from 'views/Components/DrawerMenu/DrawerMenuItem';
+import Logo from 'views/Components/Logo';
 
 import Typography from '@material-ui/core/Typography';
 
@@ -136,7 +137,7 @@ export default function ProfilePage() {
   return (
     <ThemeProvider theme={profileTheme}>
       <div className={classes.page}>
-        <HeaderBarDrawer drawerMenuData={getDrawerMenuData()} />
+        <HeaderBarDrawer brand={<Logo />} drawerMenuData={getDrawerMenuData()} />
         <Parallax small filter image={require('assets/img/profile-bg2.jpeg')} />
         <div className={classNames(classes.main, classes.mainRaised)}>
             <div className={classes.contentContainer}>
