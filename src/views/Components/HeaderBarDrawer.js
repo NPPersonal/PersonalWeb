@@ -118,9 +118,6 @@ const HeaderBarDrawer = ({
                 {!brand?null:
                     <div 
                     className={
-                        /*scrollToTop?
-                        renderCount>1?classes.hideBrandAnim:classes.hideBrand
-                        :classes.showBrandAnim*/
                         scrollToTop?
                         !brandAnimOn?classes.hideBrand:classes.hideBrandAnim
                         :
