@@ -31,6 +31,27 @@ const defaultStyle = {
         color:'white',
         transition: 'all 0.5s ease-in-out'
     },
+    showBrandAnim:{
+        animationName:'$showBrandAnim',
+        animationDuration:'0.5s',
+        animationFillMode:'forwards',
+    },
+    hideBrandAnim:{
+        animationName:'$showBrandAnim',
+        animationDuration:'0.5s',
+        animationDirection:'reverse',
+        animationFillMode:'forwards',
+    },
+    hideBrand:{
+        transform:'scale(0)',
+    },
+    '@keyframes showBrandAnim':{
+        '0%':{transform:'scale(0)'},
+        '40%':{transform:'scale(0.5)'},
+        '60%':{transform:'scale(1.8)'},
+        '80%':{transform:'scale(1.4)'},
+        '100':{transform:'scale(1)'},
+    }
 }
 
 const getStyle = (scrollToTop)=>{
@@ -46,12 +67,15 @@ const getStyle = (scrollToTop)=>{
     return newStyle;
 }
 
+let renderCount = 0;
+
 const HeaderBarDrawer = ({
     brand,
     title,
     scrollThreshold=100,
     drawerMenuData
 }) => {
+    renderCount++;
     React.useEffect(()=>{
         window.addEventListener("scroll", onScroll);
 
@@ -80,7 +104,16 @@ const HeaderBarDrawer = ({
         <AppBar className={classes.appBarContainer}>
             <Toolbar>
                 <div className={classes.leftContainer}>
-                {!brand?null:brand}
+                {!brand?null:
+                    <div 
+                    className={
+                        scrollToTop?
+                        renderCount>1?classes.hideBrandAnim:classes.hideBrand
+                        :classes.showBrandAnim
+                    }>
+                    {brand}
+                    </div>
+                }
                 {
                     !title?
                     null
