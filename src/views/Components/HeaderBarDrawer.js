@@ -42,8 +42,11 @@ const defaultStyle = {
         animationDirection:'reverse',
         animationFillMode:'forwards',
     },
+    showBrand:{
+        opacity: 1,
+    },
     hideBrand:{
-        transform:'scale(0)',
+        opacity: 0,
     },
     '@keyframes showBrandAnim':{
         '0%': { transform: 'scale(0)', opacity: 0},
@@ -76,6 +79,7 @@ const HeaderBarDrawer = ({
     drawerMenuData
 }) => {
     renderCount++;
+
     React.useEffect(()=>{
         window.addEventListener("scroll", onScroll);
 
@@ -87,14 +91,21 @@ const HeaderBarDrawer = ({
     const onScroll = ()=>{
         const scrollYOffset =  window.pageYOffset;
         scrollYOffset>scrollThreshold?setScrollToTop(false):setScrollToTop(true);
+        setBrandAnimValue(true);
+    }
+
+    const setBrandAnimValue = (value)=>{
+        if(brandAnimOn !== value) setBrandAnimOn(value);
     }
 
     const toggleDrawer = ()=>{
         setOpenDrawer(!openDrawer);
+        setBrandAnimValue(false);
     }
 
     const [scrollToTop, setScrollToTop] = React.useState(true);
     const [openDrawer, setOpenDrawer] = React.useState(false);
+    const [brandAnimOn, setBrandAnimOn] = React.useState(false);
 
     const newStyle = getStyle(scrollToTop);
     const useStyle = makeSytles(newStyle);
@@ -107,9 +118,13 @@ const HeaderBarDrawer = ({
                 {!brand?null:
                     <div 
                     className={
-                        scrollToTop?
+                        /*scrollToTop?
                         renderCount>1?classes.hideBrandAnim:classes.hideBrand
-                        :classes.showBrandAnim
+                        :classes.showBrandAnim*/
+                        scrollToTop?
+                        !brandAnimOn?classes.hideBrand:classes.hideBrandAnim
+                        :
+                        !brandAnimOn?classes.showBrand:classes.showBrandAnim
                     }>
                     {brand}
                     </div>
