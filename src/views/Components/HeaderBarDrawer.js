@@ -70,7 +70,6 @@ const getStyle = (scrollToTop)=>{
     return newStyle;
 }
 
-let renderCount = 0;
 
 const HeaderBarDrawer = ({
     brand,
@@ -78,7 +77,6 @@ const HeaderBarDrawer = ({
     scrollThreshold=100,
     drawerMenuData
 }) => {
-    renderCount++;
 
     React.useEffect(()=>{
         window.addEventListener("scroll", onScroll);
