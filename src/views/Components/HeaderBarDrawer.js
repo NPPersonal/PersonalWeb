@@ -46,11 +46,11 @@ const defaultStyle = {
         transform:'scale(0)',
     },
     '@keyframes showBrandAnim':{
-        '0%':{transform:'scale(0)'},
-        '40%':{transform:'scale(0.5)'},
-        '60%':{transform:'scale(1.8)'},
-        '80%':{transform:'scale(1.4)'},
-        '100':{transform:'scale(1)'},
+        '0%': { transform: 'scale(0)', opacity: 0},
+        '50%': { transform: 'scale(1.6)', opacity: .7},
+        '60%': { transform: 'scale(0.6)', opacity: 1},
+        '80%': { transform: 'scale(0.95)' },
+        '100%': { transform: 'scale(1)' },
     }
 }
 
