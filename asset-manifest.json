@@ -1,0 +1,40 @@
+{
+  "files": {
+    "main.css": "/PersonalWeb/static/css/main.fa1ec0f4.chunk.css",
+    "main.js": "/PersonalWeb/static/js/main.5f31a588.chunk.js",
+    "main.js.map": "/PersonalWeb/static/js/main.5f31a588.chunk.js.map",
+    "runtime-main.js": "/PersonalWeb/static/js/runtime-main.a856f8e5.js",
+    "runtime-main.js.map": "/PersonalWeb/static/js/runtime-main.a856f8e5.js.map",
+    "static/css/2.f681e662.chunk.css": "/PersonalWeb/static/css/2.f681e662.chunk.css",
+    "static/js/2.89ed9f77.chunk.js": "/PersonalWeb/static/js/2.89ed9f77.chunk.js",
+    "static/js/2.89ed9f77.chunk.js.map": "/PersonalWeb/static/js/2.89ed9f77.chunk.js.map",
+    "index.html": "/PersonalWeb/index.html",
+    "precache-manifest.9637946fccf62314698e2746eeebdf1d.js": "/PersonalWeb/precache-manifest.9637946fccf62314698e2746eeebdf1d.js",
+    "service-worker.js": "/PersonalWeb/service-worker.js",
+    "static/css/2.f681e662.chunk.css.map": "/PersonalWeb/static/css/2.f681e662.chunk.css.map",
+    "static/css/main.fa1ec0f4.chunk.css.map": "/PersonalWeb/static/css/main.fa1ec0f4.chunk.css.map",
+    "static/js/2.89ed9f77.chunk.js.LICENSE.txt": "/PersonalWeb/static/js/2.89ed9f77.chunk.js.LICENSE.txt",
+    "static/media/csharp.png": "/PersonalWeb/static/media/csharp.de0acd9e.png",
+    "static/media/e-commerce-shop.md": "/PersonalWeb/static/media/e-commerce-shop.78550228.md",
+    "static/media/face-detection.md": "/PersonalWeb/static/media/face-detection.3a643799.md",
+    "static/media/finderEbook.md": "/PersonalWeb/static/media/finderEbook.3830c677.md",
+    "static/media/javascript.png": "/PersonalWeb/static/media/javascript.fbfee0f7.png",
+    "static/media/me.jpg": "/PersonalWeb/static/media/me.2c0f7c4e.jpg",
+    "static/media/mobileDisk.md": "/PersonalWeb/static/media/mobileDisk.cf97dd70.md",
+    "static/media/mosaic.png": "/PersonalWeb/static/media/mosaic.005a1d50.png",
+    "static/media/neat-converter.md": "/PersonalWeb/static/media/neat-converter.777a76a1.md",
+    "static/media/others.png": "/PersonalWeb/static/media/others.8d3836a1.png",
+    "static/media/profile-bg2.jpeg": "/PersonalWeb/static/media/profile-bg2.b17134b4.jpeg",
+    "static/media/stikyHive.md": "/PersonalWeb/static/media/stikyHive.e4ccb801.md",
+    "static/media/swift.png": "/PersonalWeb/static/media/swift.992b13f7.png",
+    "static/media/visual-traveling-checklist.md": "/PersonalWeb/static/media/visual-traveling-checklist.4f3f597b.md",
+    "static/media/visualMusic.md": "/PersonalWeb/static/media/visualMusic.7d0406a1.md"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.a856f8e5.js",
+    "static/css/2.f681e662.chunk.css",
+    "static/js/2.89ed9f77.chunk.js",
+    "static/css/main.fa1ec0f4.chunk.css",
+    "static/js/main.5f31a588.chunk.js"
+  ]
+}
